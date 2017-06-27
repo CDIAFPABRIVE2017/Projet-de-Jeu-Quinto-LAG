@@ -9,11 +9,52 @@ namespace ConsoleApplication1
     {
         private string Mot;
         private string Définition;
+        private bool[] charDecouverts;
+        private string mot;
 
-        /// <summary></summary>
-        public bool IsLetterInPioche(char c)
+        public Pioche(string motATrouver)
         {
-            throw new System.NotImplementedException();
+            mot = motATrouver;
+            int lenght = mot.Length;
+            charDecouverts = new bool[lenght];
+        }
+
+        public Boolean LettreTrouve(Char c)
+        {
+            if (mot.Contains(c))
+            {
+                for (int i = 0; i < mot.Length; i++)
+                {
+                    if (mot[i] == c)
+                        charDecouverts[i] = true;
+                }
+                return true;
+            }
+            return false;
+        }
+
+        public Boolean MotTrouve()
+        {
+            foreach (var item in charDecouverts)
+            {
+                if (item == false)
+                    return false;
+            }
+            return true;
+        }
+
+        public override String ToString()
+        {
+            String s = "";
+            for (int i = 0; i < mot.Length; i++)
+            {
+                if (charDecouverts[i])
+                    s += mot[i];
+                else
+                    s += "_";
+            }
+            return s;
         }
     }
+
 }
