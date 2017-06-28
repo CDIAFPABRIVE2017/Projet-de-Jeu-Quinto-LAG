@@ -56,6 +56,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.PanelClavier);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+
+
+            this.IsMdiContainer = true;
             this.Name = "Quinto";
             this.Text = "Quinto";
             this.Load += new System.EventHandler(this.Quinto_Load);
