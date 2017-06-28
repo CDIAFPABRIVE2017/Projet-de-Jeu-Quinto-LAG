@@ -11,7 +11,7 @@ namespace QuintoLAG
         private int _nbreManches;
         private int _nbreErreurMax;
         private TimeSpan _tempsMax;
-        private bool _longeurMort;
+        private bool _longueurMot;
         private bool _affichageLettre;
 
         public int NbreManches
@@ -53,16 +53,16 @@ namespace QuintoLAG
             }
         }
 
-        public bool LongeurMort
+        public bool LongueurMot
         {
             get
             {
-                return _longeurMort;
+                return _longueurMot;
             }
 
             set
             {
-                _longeurMort = value;
+                _longueurMot = value;
             }
         }
 
