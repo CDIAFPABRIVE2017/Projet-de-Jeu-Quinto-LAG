@@ -25,22 +25,25 @@ namespace CATest
             Stopwatch watch = new Stopwatch();
             watch.Start();
             //testLeo();
-             testLoad();
-            //testScore();
+             //testLoad();
+            testScore();
         }
 
         private static void testScore()
         {
             Scores scores = new Scores();
-         //   Score score1 = new Score() { Pseudo = "tata", Rang = 2, TopScore = 1600 };
-        //    Score score2 = new Score() { Pseudo = "toto", Rang = 2, TopScore = 1500 };
-        //    scores.Add(score1);
-        //    scores.Add(score2);
-            ISauvegarde serialiseur = new SauvegardeXML();
-            scores.Load(serialiseur, Properties.Settings.Default.AppData);
-            foreach (Score item in scores)
+            Score score1 = new Score() { Pseudo = "tata", Rang = 1, TopScore = 1600 };
+            Score score2 = new Score() { Pseudo = "toto", Rang = 2, TopScore = 1500 };
+            scores.Add(score1);
+            scores.Add(score2);
+
+            scores.Sort(); //compare to fonctionne
+
+            //ISauvegarde serialiseur = new SauvegardeXML();
+            //scores.Load(serialiseur, Properties.Settings.Default.AppData);
+            foreach (Score score in scores)
             {
-                Console.WriteLine(item.Pseudo + " " + item.TopScore);
+                Console.WriteLine(score);
             }
             Console.ReadLine();
         }
@@ -50,14 +53,14 @@ namespace CATest
             //E:\CDIAlexis\Projets Collaboratifs\Projet - de - Jeu - Quinto - LAG\QuintoLAG\Data
             Dictionnaire dico = new Dictionnaire();
 
+            //dico.Load(@"C:\Users\x_pan\Google Drive\exos\visualstudio\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
             
-            dico.Load(@"C:\Users\x_pan\Google Drive\exos\visualstudio\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
-            //dico.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+            dico.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
             foreach (string item in dico)
             {
                 Console.WriteLine(item);
             }
-           // dico.Save(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
+            dico.Save(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
 
             Console.ReadLine();
 

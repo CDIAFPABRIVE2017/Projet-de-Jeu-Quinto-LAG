@@ -8,7 +8,8 @@ using Utilitaires;
 namespace QuintoLAG
 {
     [Serializable()]
-    public class Scores: HashSet<Score>
+   // public class Scores: List<Score> 
+   public class Scores: List<Score>
     {
 
 
@@ -24,8 +25,10 @@ namespace QuintoLAG
 
         public void Load(ISauvegarde sauvegarde, string pathRepData)
         {
-            this.SymmetricExceptWith((Scores)sauvegarde.Load(pathRepData, this.GetType()));
+            //this.SymmetricExceptWith((Scores)sauvegarde.Load(pathRepData, this.GetType()));
+            sauvegarde.Load(pathRepData, this.GetType());
         }
+
 
     }
 }

@@ -37,13 +37,14 @@ namespace QuintoLAG
         {
             using (FileStream fs = new FileStream(chemin, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                StreamReader sr = new StreamReader(fs);
-                string strLine = sr.ReadLine();
+                StreamReader sr = new StreamReader(fs, Encoding.Default);
+                string strLine = Normalization(sr.ReadLine());
 
                 while (!string.IsNullOrEmpty(strLine))
                 {
-                    this.stringToED(strLine.ToUpper());
+                    this.stringToED(Normalization(strLine).ToUpper());
                     strLine = sr.ReadLine();
+ 
                 }
                 sr.Close();
                 fs.Close();
@@ -51,29 +52,52 @@ namespace QuintoLAG
         }
         public void stringToED(string S)
         {
+            //char[] delimiterChars = { ' ', ',', '.', ':', '\t', '\n' };
+            //string[] words = S.Split(delimiterChars);
+
+            //foreach (string s in words)
+            //{
+            //    if (s.Length > 4 && s.Length < 25)
+            //    {
+            //        bool test = true;
+            //        foreach (char caractere in s)
+            //        {
+            //            if (!char.IsLetter(caractere))
+            //            {
+            //                test = false; ;
+            //            }
+            //        }
+            //        if (test)
+            //        {
+            //            if (!this.Contains(s))
+            //                this.Add(s.ToUpper());
+            //        }
+            //    }
+            //}
+
             for (int i = 0; i < S.Length && S.Length > 4; i++)
             {
                 if (char.IsLetter(S[i]))
+            {
+                for (int j = i; j < S.Length && char.IsLetter(S[j]); j++)
                 {
-                    for (int j = i; j < S.Length && char.IsLetter(S[j]); j++)
+                    if (j >= i + 4 && ((j == S.Length - 1) || !char.IsLetter(S[j])))
                     {
-                        if (j >= i + 4 && ((j == S.Length - 1) || !char.IsLetter(S[j])))
+                        string chaine = S[i].ToString();
+                        for (i++; i <= j; i++)
                         {
-                            string chaine = S[i].ToString();
-                            for (i++; i <= j; i++)
-                            {
-                                chaine += S[i];
-                            }
-                            if (!this.Contains(chaine))
-                            {
+                            chaine += S[i];
+                        }
+                        if (!this.Contains(chaine))
+                        {
 
-                                this.Add(chaine.ToUpper());
-                            }
+                            this.Add(chaine.ToUpper());
                         }
                     }
                 }
             }
         }
+    }
 
 
         public static string Normalization(string mot)
@@ -82,8 +106,8 @@ namespace QuintoLAG
             string motConverti = String.Empty;
             foreach (char caractere in mot)
             {
-                if (char.IsLetter(caractere))
-                {
+                 if (char.IsLetter(caractere) || char.IsWhiteSpace(caractere))
+                    {
                     motConverti += (caractere.ToString());
                 }
             }
