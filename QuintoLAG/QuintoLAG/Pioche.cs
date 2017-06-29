@@ -8,10 +8,12 @@ namespace QuintoLAG
 {
     public class Pioche
     {
+        #region Champs
         private string _mot;
         private string _definition;
         private bool[] _charDecouverts;
-
+        #endregion
+        #region Propriété
         public string Mot
         {
             get
@@ -49,6 +51,12 @@ namespace QuintoLAG
             {
                 _charDecouverts = value;
             }
+        }
+        #endregion
+       
+        public Pioche()
+        {
+
         }
         public Pioche(string motATrouver)
         {
