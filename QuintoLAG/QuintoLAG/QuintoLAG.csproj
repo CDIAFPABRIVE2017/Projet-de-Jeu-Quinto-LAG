@@ -41,26 +41,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dictionnaire.cs" />
+    <Compile Include="EntreeDictionnaire.cs" />
     <Compile Include="Jeux.cs" />
     <Compile Include="Manche.cs" />
     <Compile Include="Pioche.cs" />
     <Compile Include="Pioches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="quintoRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>quintoRes.resx</DependentUpon>
+=======
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+>>>>>>> c6eedf01526d01bf90d9b669fd993a3cfd879ac2
     </Compile>
     <Compile Include="Score.cs" />
+    <Compile Include="Scores.cs" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="quintoRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>quintoRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+=======
+    <None Include="app.config" />
+>>>>>>> c6eedf01526d01bf90d9b669fd993a3cfd879ac2
     <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilitaires\Utilitaires.csproj">
+      <Project>{c24549e7-9d76-41df-a971-0767d9f005c8}</Project>
+      <Name>Utilitaires</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

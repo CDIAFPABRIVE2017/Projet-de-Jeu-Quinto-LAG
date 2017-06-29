@@ -1,10 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+//using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuintoLAG;
+<<<<<<< HEAD
 using Utilitaires;
+=======
+<<<<<<< HEAD
+using System.Diagnostics;
+=======
+using Utilitaires;
+>>>>>>> Alexis2
+
+>>>>>>> c6eedf01526d01bf90d9b669fd993a3cfd879ac2
 
 namespace CATest
 {
@@ -12,17 +21,69 @@ namespace CATest
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             Dictionnaire ledico = new Dictionnaire();
            
             ISauvegarde serialiseur = MonApplication.DispositifSauvegarde;
             salaries.Load(serialiseur, Properties.Settings.Default.AppData);
 
 
+=======
+<<<<<<< HEAD
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+=======
+            //testLeo();
+             testLoad();
+            //testScore();
+        }
+
+        private static void testScore()
+        {
+            Scores scores = new Scores();
+         //   Score score1 = new Score() { Pseudo = "tata", Rang = 2, TopScore = 1600 };
+        //    Score score2 = new Score() { Pseudo = "toto", Rang = 2, TopScore = 1500 };
+        //    scores.Add(score1);
+        //    scores.Add(score2);
+            ISauvegarde serialiseur = new SauvegardeXML();
+            scores.Load(serialiseur, Properties.Settings.Default.AppData);
+            foreach (Score item in scores)
+            {
+                Console.WriteLine(item.Pseudo + " " + item.TopScore);
+            }
+            Console.ReadLine();
+        }
+
+        private static void testLoad()
+        {
+            //E:\CDIAlexis\Projets Collaboratifs\Projet - de - Jeu - Quinto - LAG\QuintoLAG\Data
+            Dictionnaire dico = new Dictionnaire();
+            dico.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+            foreach (string item in dico)
+            {
+                Console.WriteLine(item);
+            }
+            dico.Save(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
+
+            Console.ReadLine();
+
+        }
+
+        static void testLeo()
+        {
+>>>>>>> Alexis2
+>>>>>>> c6eedf01526d01bf90d9b669fd993a3cfd879ac2
             int i = 9; //nombre de tentatives
 
             DateTime startDate = DateTime.Now;
             Pioche toto = new Pioche("lesmots");
+            Manche manche = new Manche();
+<<<<<<< HEAD
+           
+=======
 
+
+>>>>>>> Alexis2
             Console.WriteLine(toto);
 
             while (!toto.MotTrouve() && i > 0)
@@ -34,13 +95,19 @@ namespace CATest
             if (toto.MotTrouve())
             {
                 TimeSpan ts = DateTime.Now - startDate;
-                Console.WriteLine("gagné en " + ts.ToString(@"ss\:fff") + " s");
+                Console.WriteLine("gagné en " + ts.TotalSeconds + " s");
+                Console.WriteLine("gagné en " + ts.Minutes + " s");
+                Console.WriteLine((int)ts.TotalSeconds);
             }
             else
             {
                 TimeSpan ts = DateTime.Now - startDate;
-                Console.WriteLine("perdu en " + ts.ToString(@"ss\:fff") + " s");
+                Console.WriteLine("perdu en " + ts.TotalSeconds + " s");
             }
+            watch.Stop();
+            TimeSpan time = watch.Elapsed;
+            Console.WriteLine("temps ecoulé" + time);
+            Console.WriteLine(manche.TempsEcoule);
             Console.ReadLine();
         }
     }
