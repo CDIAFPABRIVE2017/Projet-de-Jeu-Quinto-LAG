@@ -207,8 +207,60 @@ namespace WFQuinto
             label2.Text = ((Button)sender).Text; //test ecriture clavier virtuel
                        
         }
-         
+
         #endregion
 
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            if (numericUpDown1.Value==1)
+            {
+                pictureBox1.Image = WFQuinto.Properties.Resources._1;
+                progressBar1.Value = 1;
+            }
+            if (numericUpDown1.Value == 2)
+            {
+                pictureBox1.Image = WFQuinto.Properties.Resources._2;
+                progressBar1.Value = 2;
+            }
+            if (numericUpDown1.Value == 3)
+            {
+                pictureBox1.Image = WFQuinto.Properties.Resources._3;
+                progressBar1.Value = 3;
+            }
+            if (numericUpDown1.Value == 4)
+            {
+                pictureBox1.Image = WFQuinto.Properties.Resources._4;
+                progressBar1.Value = 4;
+            }
+            if (numericUpDown1.Value == 5)
+            {
+                pictureBox1.Image = WFQuinto.Properties.Resources._5;
+                progressBar1.Value = 5;
+            }
+            if (numericUpDown1.Value == 6)
+            {
+                pictureBox1.Image = WFQuinto.Properties.Resources._6;
+                progressBar1.Value = 6;
+            }
+            if (numericUpDown1.Value == 7)
+            {
+                pictureBox1.Image = WFQuinto.Properties.Resources._7;
+                progressBar1.Value = 7;
+
+            }
+            if (numericUpDown1.Value == 8)
+            {
+                pictureBox1.Image = WFQuinto.Properties.Resources._8;
+                progressBar1.Value = 8;
+
+            }
+            if (numericUpDown1.Value == 9)
+            {
+                pictureBox1.Image = WFQuinto.Properties.Resources._9;
+                progressBar1.Value = 9 ;
+
+            }
+            
+        }
     }
 }
