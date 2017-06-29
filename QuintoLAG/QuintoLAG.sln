@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitaires", "Utilitaires\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFQuinto", "WFQuinto\WFQuinto.csproj", "{6B09A845-143C-405F-A670-FC78E289AD2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFInterface", "WFInterface\WFInterface.csproj", "{F6045CA3-B7E7-4887-BAD4-F0104CE11E88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFInterface(aSupprimerPlusTard)", "WFInterface\WFInterface(aSupprimerPlusTard).csproj", "{F6045CA3-B7E7-4887-BAD4-F0104CE11E88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
