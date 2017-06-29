@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuintoLAG;
+using Utilitaires;
 
 namespace CATest
 {
@@ -11,6 +12,12 @@ namespace CATest
     {
         static void Main(string[] args)
         {
+            Dictionnaire ledico = new Dictionnaire();
+           
+            ISauvegarde serialiseur = MonApplication.DispositifSauvegarde;
+            salaries.Load(serialiseur, Properties.Settings.Default.AppData);
+
+
             int i = 9; //nombre de tentatives
 
             DateTime startDate = DateTime.Now;

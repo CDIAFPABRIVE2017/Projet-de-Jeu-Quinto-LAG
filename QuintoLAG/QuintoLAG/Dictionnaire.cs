@@ -9,8 +9,8 @@ using System.Xml;
 
 namespace QuintoLAG
 {
-    [Serializable()]
-    public class Dictionnaire : HashSet<EntreDictoinnaire>
+    [Serializable]
+    public class Dictionnaire : HashSet<EntreDictionnaire>
     {
 
         /// <summary>
@@ -21,10 +21,22 @@ namespace QuintoLAG
 
         }
 
+        public void Add(EntreDictionnaire toto)
+        {
+        //cette methode peut sans doute etre supprime car probablement disponible de base dans les listes hashset
+        }
+
+        public void Remove(EntreDictionnaire toto)
+        {
+            //cette methode peut sans doute etre supprime car probablement disponible de base dans les listes hashset
+        }
+
+
+
     }
 
 
-    public class EntreDictoinnaire
+    public class EntreDictionnaire
     {
 
 
@@ -34,7 +46,7 @@ namespace QuintoLAG
         /// <summary>
         /// Contrusteur par défaut
         /// </summary>
-        public EntreDictoinnaire()
+        public EntreDictionnaire()
         {
 
         }

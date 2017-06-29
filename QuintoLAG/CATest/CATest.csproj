@@ -54,6 +54,10 @@
       <Project>{0a8613e8-95cc-4c4b-ac77-22ed0656df19}</Project>
       <Name>QuintoLAG</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utilitaires\Utilitaires.csproj">
+      <Project>{c24549e7-9d76-41df-a971-0767d9f005c8}</Project>
+      <Name>Utilitaires</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
