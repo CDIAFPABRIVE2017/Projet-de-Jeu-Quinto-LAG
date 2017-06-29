@@ -1,69 +1,96 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+//using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
+using Utilitaires;
+
 
 namespace QuintoLAG
 {
-    [Serializable()]
-    public class Dictionnaire : HashSet<EntreDictoinnaire>
+    [Serializable]
+    public class Dictionnaire : List<string>
     {
 
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
         public Dictionnaire()
+        { }
+        public void Save(string chemin)
         {
+            using (FileStream fs = new FileStream(chemin, FileMode.Truncate, FileAccess.Write, FileShare.Read))
+            {
+                StreamWriter sw = new StreamWriter(fs);
+                foreach (string item in this)
+                {
+                    sw.WriteLine(item);
+                }
+                sw.Close();
+                fs.Close();
+            }
+        }
+        public void Load(string chemin)
+        {
+            using (FileStream fs = new FileStream(chemin, FileMode.Open, FileAccess.Read, FileShare.Read))
+            {
+                StreamReader sr = new StreamReader(fs);
+                string strLine = sr.ReadLine();
+
+                while (!string.IsNullOrEmpty(strLine))
+                {
+                    this.stringToED(strLine.ToUpper());
+                    strLine = sr.ReadLine();
+                }
+                sr.Close();
+                fs.Close();
+            }
+        }
+        public void stringToED(string S)
+        {
+            for (int i = 0; i < S.Length && S.Length > 4; i++)
+            {
+                if (char.IsLetter(S[i]))
+                {
+                    for (int j = i; j < S.Length && char.IsLetter(S[j]); j++)
+                    {
+                        if (j >= i + 4 && ((j == S.Length - 1)||!char.IsLetter(S[j])))
+                        {
+                            string chaine = S[i].ToString();
+                            for (i++; i <= j; i++)
+                            {
+                                chaine +=  S[i];
+                            }
+                            if (!this.Contains(chaine))
+                            {
+
+                                this.Add(chaine.ToUpper());
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        public static string Normalization(string mot)
+        {
+            mot = mot.Normalize(NormalizationForm.FormD);
+            string motConverti = String.Empty;
+            foreach (char caractere in mot)
+            {
+                if (char.IsLetter(caractere))
+                {
+                    motConverti += (caractere.ToString());
+                }
+            }
+            mot = motConverti;
+            return mot;
 
         }
 
-    }
-
-
-    public class EntreDictoinnaire
-    {
-
-
-        private string _entre;
-        private string _definition;
-
-        /// <summary>
-        /// Contrusteur par défaut
-        /// </summary>
-        public EntreDictoinnaire()
-        {
-
-        }
-
-
-        public string Entre
-        {
-            get
-            {
-                return _entre;
-            }
-
-            set
-            {
-                _entre = value;
-            }
-        }
-
-        public string Definition
-        {
-            get
-            {
-                return _definition;
-            }
-
-            set
-            {
-                _definition = value;
-            }
-        }
     }
 }

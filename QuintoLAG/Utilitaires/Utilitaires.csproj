@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ISaveUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialiseurTEXTE.cs" />
     <Compile Include="SerialiseurXML.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
