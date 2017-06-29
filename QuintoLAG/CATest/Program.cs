@@ -4,16 +4,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using QuintoLAG;
-<<<<<<< HEAD
 using Utilitaires;
-=======
-<<<<<<< HEAD
 using System.Diagnostics;
-=======
-using Utilitaires;
->>>>>>> Alexis2
 
->>>>>>> c6eedf01526d01bf90d9b669fd993a3cfd879ac2
+
 
 namespace CATest
 {
@@ -21,18 +15,15 @@ namespace CATest
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
+
             Dictionnaire ledico = new Dictionnaire();
            
-            ISauvegarde serialiseur = MonApplication.DispositifSauvegarde;
-            salaries.Load(serialiseur, Properties.Settings.Default.AppData);
+            //ISauvegarde serialiseur = MonApplication.DispositifSauvegarde;
+           // salaries.Load(serialiseur, Properties.Settings.Default.AppData);
 
 
-=======
-<<<<<<< HEAD
             Stopwatch watch = new Stopwatch();
             watch.Start();
-=======
             //testLeo();
              testLoad();
             //testScore();
@@ -58,12 +49,15 @@ namespace CATest
         {
             //E:\CDIAlexis\Projets Collaboratifs\Projet - de - Jeu - Quinto - LAG\QuintoLAG\Data
             Dictionnaire dico = new Dictionnaire();
-            dico.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+
+            
+            dico.Load(@"C:\Users\x_pan\Google Drive\exos\visualstudio\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+            //dico.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
             foreach (string item in dico)
             {
                 Console.WriteLine(item);
             }
-            dico.Save(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
+           // dico.Save(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
 
             Console.ReadLine();
 
@@ -71,19 +65,14 @@ namespace CATest
 
         static void testLeo()
         {
->>>>>>> Alexis2
->>>>>>> c6eedf01526d01bf90d9b669fd993a3cfd879ac2
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
             int i = 9; //nombre de tentatives
 
             DateTime startDate = DateTime.Now;
             Pioche toto = new Pioche("lesmots");
             Manche manche = new Manche();
-<<<<<<< HEAD
-           
-=======
 
-
->>>>>>> Alexis2
             Console.WriteLine(toto);
 
             while (!toto.MotTrouve() && i > 0)

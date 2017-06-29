@@ -12,11 +12,7 @@ using Utilitaires;
 namespace QuintoLAG
 {
     [Serializable]
-<<<<<<< HEAD
-    public class Dictionnaire : HashSet<EntreDictionnaire>
-=======
     public class Dictionnaire : List<string>
->>>>>>> c6eedf01526d01bf90d9b669fd993a3cfd879ac2
     {
 
         /// <summary>
@@ -37,37 +33,7 @@ namespace QuintoLAG
                 fs.Close();
             }
         }
-<<<<<<< HEAD
-
-        public void Add(EntreDictionnaire toto)
-        {
-        //cette methode peut sans doute etre supprime car probablement disponible de base dans les listes hashset
-        }
-
-        public void Remove(EntreDictionnaire toto)
-        {
-            //cette methode peut sans doute etre supprime car probablement disponible de base dans les listes hashset
-        }
-
-
-
-    }
-
-
-    public class EntreDictionnaire
-    {
-
-
-        private string _entre;
-        private string _definition;
-
-        /// <summary>
-        /// Contrusteur par défaut
-        /// </summary>
-        public EntreDictionnaire()
-=======
         public void Load(string chemin)
->>>>>>> c6eedf01526d01bf90d9b669fd993a3cfd879ac2
         {
             using (FileStream fs = new FileStream(chemin, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
@@ -91,12 +57,12 @@ namespace QuintoLAG
                 {
                     for (int j = i; j < S.Length && char.IsLetter(S[j]); j++)
                     {
-                        if (j >= i + 4 && ((j == S.Length - 1)||!char.IsLetter(S[j])))
+                        if (j >= i + 4 && ((j == S.Length - 1) || !char.IsLetter(S[j])))
                         {
                             string chaine = S[i].ToString();
                             for (i++; i <= j; i++)
                             {
-                                chaine +=  S[i];
+                                chaine += S[i];
                             }
                             if (!this.Contains(chaine))
                             {
