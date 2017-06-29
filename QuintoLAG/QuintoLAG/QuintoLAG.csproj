@@ -51,6 +51,12 @@
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilitaires\Utilitaires.csproj">
+      <Project>{c24549e7-9d76-41df-a971-0767d9f005c8}</Project>
+      <Name>Utilitaires</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

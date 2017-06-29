@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Globalization;
+using Utilitaires;
 
 namespace QuintoLAG
 {
+    [Serializable()]
     public class Score
     {
         private string _pseudo;
@@ -50,5 +55,7 @@ namespace QuintoLAG
                 _topScore = value;
             }
         }
+
+
     }
 }

@@ -11,12 +11,36 @@ namespace CATest
     {
         static void Main(string[] args)
         {
+
+
+
             int i = 9; //nombre de tentatives
             
             DateTime startDate = DateTime.Now;
             Pioche toto = new Pioche("lesmots");
             Manche manche = new Manche();
-            manche.
+
+            Dictionnaire dico = new Dictionnaire();
+
+            Pioches lesPioches = new Pioches();
+            lesPioches.Add(toto);
+
+            //selection aleatoire, fonctionne en hashset aussi
+            Pioches randpioche = new Pioches();
+            Random rand = new Random();
+            int randcount = rand.Next(1, lesPioches.Count);
+            int r = 0;
+            foreach (Pioche item in lesPioches)
+            {
+                if (r == randcount)
+                {
+                    randpioche.Add(item);
+                }
+                r++;
+            }
+            //
+            
+           
             Console.WriteLine(toto);
 
             while (!toto.MotTrouve() && i > 0)
