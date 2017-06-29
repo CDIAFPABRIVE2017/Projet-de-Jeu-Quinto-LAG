@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 
 namespace QuintoLAG
 {
-    public class Manche : Jeux
+    public class Manche
     {
+        #region Champs
         private Pioche _pioche;
         private int _nbreErreur;
-        private TimeSpan _tempsEcoule;
         private int _score;
-
-        internal Pioche Pioche
+        private DateTime _debutManche;
+        private DateTime _finManche;
+        private TimeSpan _tempsEcoule;
+        private TimeSpan _tempsManche;
+        #endregion
+        #region Propriété
+        public Pioche Pioche
         {
             get
             {
@@ -43,26 +48,62 @@ namespace QuintoLAG
         {
             get
             {
-                return _tempsEcoule;
-            }
-
-            set
-            {
-                _tempsEcoule = value;
+                return DateTime.Now - DebutManche;
             }
         }
-
         public int Score
         {
             get
             {
-                return _score;
+                return (int)TempsEcoule.TotalSeconds + 9 * NbreErreur; ;
+            }
+        }
+
+        public DateTime DebutManche
+        {
+            get
+            {
+                return _debutManche;
             }
 
             set
             {
-                _score = value;
+                _debutManche = value;
             }
+        }
+
+        public DateTime FinManche
+        {
+            get
+            {
+                return _finManche;
+            }
+
+            set
+            {
+                _finManche = value;
+            }
+        }
+
+        public TimeSpan TempsManche
+        {
+            get
+            {
+                return FinManche - DebutManche;
+            }
+        }
+        #endregion
+        public Manche()
+        { }
+        /// <summary>
+        /// Initialise une nouvelle manche
+        /// </summary>
+        /// <param name="pioche">instance de l'objet Pioche</param>
+        public Manche(Pioche pioche)
+        {
+            Pioche = pioche;
+            NbreErreur = 0;
+            DebutManche = DateTime.Now;
         }
     }
 }
