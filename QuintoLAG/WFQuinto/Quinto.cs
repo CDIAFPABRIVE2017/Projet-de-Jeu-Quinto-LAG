@@ -14,17 +14,19 @@ namespace WFQuinto
 {
     public partial class Quinto : Form
     {
-        //test chrono
+
+        /// <summary>
+        /// initialisation chrono         
+        /// </summary>
         Stopwatch watch = new Stopwatch();
 
-
-       /// <summary>
-       /// initialisation
-       /// </summary>
+        /// <summary>
+        /// initialisation Formulaire
+        /// </summary>
         public Quinto()
         {
             InitializeComponent();
-           
+
         } 
 
 
@@ -204,63 +206,67 @@ namespace WFQuinto
             ((Button)sender).FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             ((Button)sender).FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             ((Button)sender).UseVisualStyleBackColor = true;
-            label2.Text = ((Button)sender).Text; //test ecriture clavier virtuel
+            label3.Text = ((Button)sender).Text; //test ecriture clavier virtuel
                        
         }
 
         #endregion
 
+
+        /// <summary>
+        /// numeric updown pour tester incrementation erreur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            if (numericUpDown1.Value==1)
-            {
-                pictureBox1.Image = WFQuinto.Properties.Resources._1;
-                progressBar1.Value = 1;
-            }
-            if (numericUpDown1.Value == 2)
-            {
-                pictureBox1.Image = WFQuinto.Properties.Resources._2;
-                progressBar1.Value = 2;
-            }
-            if (numericUpDown1.Value == 3)
-            {
-                pictureBox1.Image = WFQuinto.Properties.Resources._3;
-                progressBar1.Value = 3;
-            }
-            if (numericUpDown1.Value == 4)
-            {
-                pictureBox1.Image = WFQuinto.Properties.Resources._4;
-                progressBar1.Value = 4;
-            }
-            if (numericUpDown1.Value == 5)
-            {
-                pictureBox1.Image = WFQuinto.Properties.Resources._5;
-                progressBar1.Value = 5;
-            }
-            if (numericUpDown1.Value == 6)
-            {
-                pictureBox1.Image = WFQuinto.Properties.Resources._6;
-                progressBar1.Value = 6;
-            }
-            if (numericUpDown1.Value == 7)
-            {
-                pictureBox1.Image = WFQuinto.Properties.Resources._7;
-                progressBar1.Value = 7;
-
-            }
-            if (numericUpDown1.Value == 8)
-            {
-                pictureBox1.Image = WFQuinto.Properties.Resources._8;
-                progressBar1.Value = 8;
-
-            }
-            if (numericUpDown1.Value == 9)
-            {
-                pictureBox1.Image = WFQuinto.Properties.Resources._9;
-                progressBar1.Value = 9 ;
-
-            }
             
+            switch (numericUpDown1.Value.ToString())
+            {
+
+                case "0":
+                    pictureBox1.Image = WFQuinto.Properties.Resources.potence;                    
+                    break; 
+                case "1":
+                    pictureBox1.Image = WFQuinto.Properties.Resources._1;
+                    break;
+                case "2":
+                    pictureBox1.Image = WFQuinto.Properties.Resources._2;
+                    break;
+                case "3":
+                    pictureBox1.Image = WFQuinto.Properties.Resources._3;
+                    break;
+                case "4":
+                    pictureBox1.Image = WFQuinto.Properties.Resources._4;
+                    break;
+                case "5":
+                    pictureBox1.Image = WFQuinto.Properties.Resources._5;
+                    break;
+                case "6":
+                    pictureBox1.Image = WFQuinto.Properties.Resources._6;
+                    break;
+                case "7":
+                    pictureBox1.Image = WFQuinto.Properties.Resources._7;
+                    break;
+                case "8":
+                    pictureBox1.Image = WFQuinto.Properties.Resources._8;
+                    break;
+                case "9":
+                    pictureBox1.Image = WFQuinto.Properties.Resources._9;
+                    break;
+                case "perdu":
+                    pictureBox1.Image = WFQuinto.Properties.Resources.Rsod;
+
+                    break;
+
+                default:
+                   
+                    break;
+                    
+            }
+
         }
+
+
     }
 }
