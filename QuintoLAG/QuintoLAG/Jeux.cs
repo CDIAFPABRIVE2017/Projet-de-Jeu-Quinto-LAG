@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace QuintoLAG
 {
-    public class Jeux
+    public class Jeux : List<Manche>
     {
+        #region Champs
         private int _nbreManches;
         private int _nbreErreurMax;
-        private TimeSpan _tempsMax;
-        private bool _longueurMot;
         private bool _affichageLettre;
-
+        #endregion
+        #region Propriétés
         public int NbreManches
         {
             get
@@ -39,33 +39,6 @@ namespace QuintoLAG
                 _nbreErreurMax = value;
             }
         }
-
-        public TimeSpan TempsMax
-        {
-            get
-            {
-                return _tempsMax;
-            }
-
-            set
-            {
-                _tempsMax = value;
-            }
-        }
-
-        public bool LongueurMot
-        {
-            get
-            {
-                return _longueurMot;
-            }
-
-            set
-            {
-                _longueurMot = value;
-            }
-        }
-
         public bool AffichageLettre
         {
             get
@@ -78,5 +51,31 @@ namespace QuintoLAG
                 _affichageLettre = value;
             }
         }
+        #endregion
+        #region Constructeurs
+        public Jeux()
+        { }
+        public Jeux(int nbreManches, int nbreErreurMax, bool affichageLettre)
+        {
+            NbreManches = nbreManches;
+            NbreErreurMax = nbreErreurMax;
+            AffichageLettre = affichageLettre;
+        }
+        #endregion
+        #region Méthodes
+        public void NouvellePArtie()
+        {
+            Dictionnaire dicoload = new Dictionnaire();
+            Pioches pioches = new Pioches();
+            dicoload.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
+            pioches.PiocheRand(dicoload);
+
+            foreach (Pioche item in pioches)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+        #endregion
     }
 }

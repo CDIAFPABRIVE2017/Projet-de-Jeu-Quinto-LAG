@@ -10,7 +10,6 @@ namespace QuintoLAG
     public class Score : IComparable<Score>
     {
         private string _pseudo;
-        private int _rang;
         private int _topScore;
 
         public string Pseudo
@@ -25,20 +24,6 @@ namespace QuintoLAG
                 _pseudo = value;
             }
         }
-
-        public int Rang
-        {
-            get
-            {
-                return _rang;
-            }
-
-            set
-            {
-                _rang = value;
-            }
-        }
-
         public int TopScore
         {
             get
@@ -59,8 +44,7 @@ namespace QuintoLAG
 
         public override string ToString()
         {
-
-            return string.Format(@"#{0} ; res.Name : {1}; res.Score : {2}", this.Rang, this.Pseudo, this.TopScore);
+            return string.Format(@"#{0} ; res.Name : {1}; res.Score : {2}", this.Pseudo, this.TopScore);
         }
     }
 }

@@ -15,25 +15,19 @@ namespace CATest
     {
         static void Main(string[] args)
         {
-
-            Dictionnaire ledico = new Dictionnaire();
-           
-            //ISauvegarde serialiseur = MonApplication.DispositifSauvegarde;
-           // salaries.Load(serialiseur, Properties.Settings.Default.AppData);
-
-
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
             //testLeo();
-             //testLoad();
-            testScore();
+            //testLoad();
+            //testScore();
+            Jeux jeux = new Jeux(2,9,true);
+            jeux.NouvellePArtie();
+            
         }
 
         private static void testScore()
         {
             Scores scores = new Scores();
-            Score score1 = new Score() { Pseudo = "tata", Rang = 1, TopScore = 1600 };
-            Score score2 = new Score() { Pseudo = "toto", Rang = 2, TopScore = 1500 };
+            Score score1 = new Score() { Pseudo = "tata",  TopScore = 1600 };
+            Score score2 = new Score() { Pseudo = "toto",  TopScore = 1500 };
             scores.Add(score1);
             scores.Add(score2);
 
@@ -54,8 +48,9 @@ namespace CATest
             Dictionnaire dico = new Dictionnaire();
 
             //dico.Load(@"C:\Users\x_pan\Google Drive\exos\visualstudio\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
-            
+
             dico.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+            int i = 0;
             foreach (string item in dico)
             {
                 Console.WriteLine(item);
@@ -88,7 +83,7 @@ namespace CATest
             {
                 TimeSpan ts = DateTime.Now - startDate;
                 Console.WriteLine("gagné en " + ts.TotalSeconds + " s");
-                Console.WriteLine("gagné en " + ts.Minutes + " s");
+                Console.WriteLine("gagné en " + ts.Minutes + " m");
                 Console.WriteLine((int)ts.TotalSeconds);
             }
             else
@@ -98,7 +93,7 @@ namespace CATest
             }
             watch.Stop();
             TimeSpan time = watch.Elapsed;
-            Console.WriteLine("temps ecoulé" + time);
+            Console.WriteLine("temps ecoulé " + time);
             Console.WriteLine(manche.TempsEcoule);
             Console.ReadLine();
         }

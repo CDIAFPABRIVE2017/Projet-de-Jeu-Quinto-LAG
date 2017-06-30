@@ -17,7 +17,7 @@ namespace QuintoLAG
         private TimeSpan _tempsEcoule;
         private TimeSpan _tempsManche;
         #endregion
-        #region Propriété
+        #region Propriétés
         public Pioche Pioche
         {
             get
@@ -93,6 +93,7 @@ namespace QuintoLAG
             }
         }
         #endregion
+        #region Constructeurs
         public Manche()
         { }
         /// <summary>
@@ -105,5 +106,6 @@ namespace QuintoLAG
             NbreErreur = 0;
             DebutManche = DateTime.Now;
         }
+        #endregion
     }
 }

@@ -13,7 +13,7 @@ namespace QuintoLAG
         private string _definition;
         private bool[] _charDecouverts;
         #endregion
-        #region Propriété
+        #region Propriétés
         public string Mot
         {
             get
@@ -53,18 +53,17 @@ namespace QuintoLAG
             }
         }
         #endregion
-       
+        #region Constructeurs
         public Pioche()
-        {
-
-        }
+        { }
         public Pioche(string motATrouver)
         {
             Mot = motATrouver;
             int lenght = Mot.Length;
             CharDecouverts = new bool[lenght];
         }
-
+        #endregion
+        #region Méthodes
         public bool LettreTrouve(char c)
         {
             if (Mot.Contains(c))
@@ -101,5 +100,6 @@ namespace QuintoLAG
             }
             return s;
         }
+        #endregion
     }
 }
