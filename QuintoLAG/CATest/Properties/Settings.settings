@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="AppData" Type="System.String" Scope="User">
-      <Value Profile="(Default)">E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\Data</Value>
+      <Value Profile="(Default)">D:\Data</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -25,7 +25,7 @@ namespace CATest.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("E:\\CDIAlexis\\Projets Collaboratifs\\Projet-de-Jeu-Quinto-LAG\\QuintoLAG\\Data")]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Data")]
         public string AppData {
             get {
                 return ((string)(this["AppData"]));
