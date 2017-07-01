@@ -68,7 +68,8 @@ namespace QuintoLAG
             Dictionnaire dicoload = new Dictionnaire();
             Pioches pioches = new Pioches();
             dicoload.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
-            pioches.PiocheRand(dicoload);
+            Pioche unePioche = new Pioche(dicoload.Random());
+            pioches.Add(unePioche);
 
             foreach (Pioche item in pioches)
             {

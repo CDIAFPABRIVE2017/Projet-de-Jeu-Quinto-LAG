@@ -11,20 +11,27 @@ using Utilitaires;
 
 namespace QuintoLAG
 {
-    [Serializable]
+
+
+    
+
+        [Serializable]
     public class Dictionnaire : HashSet<string>
     {
+        private static Random rand;
 
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
         public Dictionnaire()
-        { }
+        {
+            rand = new Random();
+        }
         public void Save(string chemin)
         {
             using (FileStream fs = new FileStream(chemin, FileMode.Truncate, FileAccess.Write, FileShare.Read))
             {
-                StreamWriter sw = new StreamWriter(fs);
+                StreamWriter sw = new StreamWriter(fs, Encoding.Default);
                 foreach (string item in this)
                 {
                     sw.WriteLine(item);
@@ -67,6 +74,8 @@ namespace QuintoLAG
                 fs.Close();
             }
         }
+
+      
         public void stringToED(string S)
         {
             char[] delimiterChars = { ' ', ',', '.', ':', '\t', '\n' };
@@ -74,7 +83,7 @@ namespace QuintoLAG
 
             foreach (string s in words)
             {
-                if (s.Length > 4 && s.Length < 25)
+                if (s.Length > Properties.Settings.Default.TailleMotMin && s.Length < Properties.Settings.Default.TailleMotMax)
                 {
                     bool test = true;
                     foreach (char caractere in s)
@@ -132,6 +141,24 @@ namespace QuintoLAG
             return mot;
 
         }
+
+        public string Random()
+        {
+
+            // Random rand = new Random();
+            int randcount = rand.Next(1, this.Count);
+            int r = 0;
+            foreach (string item in this)
+            {
+                if (r == randcount)
+                {
+                    return item;
+                }
+                r++;
+            }
+            return null;
+        }
+
 
     }
 }

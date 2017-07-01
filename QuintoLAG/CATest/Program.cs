@@ -9,6 +9,7 @@ using System.Diagnostics;
 
 
 
+
 namespace CATest
 {
     class Program
@@ -17,22 +18,23 @@ namespace CATest
         {
 
             Dictionnaire ledico = new Dictionnaire();
-           
+
             //ISauvegarde serialiseur = MonApplication.DispositifSauvegarde;
-           // salaries.Load(serialiseur, Properties.Settings.Default.AppData);
+            //salaries.Load(serialiseur, Properties.Settings.Default.AppData);
 
 
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
-            //testLeo();
-             //testLoad();
-            testScore();
+            testLeo();
+           // testLoad();
+            // testScore();
+            // Jeux jeux = new Jeux(2, 9, true);
+            // jeux.NouvellePArtie();
         }
 
+        #region testScore
         private static void testScore()
         {
             Scores scores = new Scores();
-            /* 
+
             Score score1 = new Score() { Pseudo = "Alan", TopScore = 1600 };
             Score score2 = new Score() { Pseudo = "Bernard", TopScore = 1200 };
             Score score3 = new Score() { Pseudo = "Christian", TopScore = 555 };
@@ -56,24 +58,31 @@ namespace CATest
             scores.Add(score9);
             scores.Add(score10);
             scores.Add(score11);
-            scores.Add(score12);*/
+            scores.Add(score12);
 
-            // scores.Sort(); //compare to fonctionne
+            Console.WriteLine("Les scores sont :");
+            Console.WriteLine(scores);
 
             ISauvegarde serialiseur = new SauvegardeXML();
-            scores.Load(serialiseur, Properties.Settings.Default.AppData);
+            scores.Save(serialiseur, Properties.Settings.Default.AppData);
 
-            //foreach (Score score in scores)
+            Console.WriteLine("Les scores chargés sont :");
+            Scores scoresLoad = new Scores();
+
+
+            scoresLoad.Load(serialiseur, Properties.Settings.Default.AppData);
+            Console.WriteLine(scoresLoad);
+
+
+            //foreach (Score score in scoresLoad)
             //{
             //    Console.WriteLine(score);
             //}
 
-    
-
-                Console.WriteLine(scores);
             Console.ReadLine();
 
         }
+        #endregion
 
         private static void testLoad()
         {
@@ -81,52 +90,53 @@ namespace CATest
             Dictionnaire dico = new Dictionnaire();
 
             //dico.Load(@"C:\Users\x_pan\Google Drive\exos\visualstudio\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+            dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
             
-            dico.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+            //dico.Load(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
             foreach (string item in dico)
             {
                 Console.WriteLine(item);
             }
-            dico.Save(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
 
+            Console.WriteLine("Selection random :");
+            string test =dico.Random();
+            Console.WriteLine(test);
+ 
+
+            dico.Save(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
+            //dico.Save(@"E:\CDIAlexis\Projets Collaboratifs\Projet-de-Jeu-Quinto-LAG\QuintoLAG\test.csv");
             Console.ReadLine();
 
         }
 
         static void testLeo()
         {
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
+            Dictionnaire dico = new Dictionnaire();
+            dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+     
+
+            Pioche toto = new Pioche(dico.Random());
+            Manche manche = new Manche(toto);
+            Console.WriteLine(manche.Pioche);
+
             int i = 9; //nombre de tentatives
-
-            DateTime startDate = DateTime.Now;
-            Pioche toto = new Pioche("lesmots");
-            Manche manche = new Manche();
-
-            Console.WriteLine(toto);
-
-            while (!toto.MotTrouve() && i > 0)
+            while (!manche.Pioche.MotTrouve() && i > 0)
             {
-                toto.LettreTrouve(Console.ReadKey().KeyChar);
-                Console.WriteLine("\n" + toto);
+                manche.Pioche.LettreTrouve(Console.ReadKey().KeyChar);
+                Console.WriteLine("\n" + manche.Pioche);
                 i--;
             }
-            if (toto.MotTrouve())
+            if (manche.Pioche.MotTrouve())
             {
-                TimeSpan ts = DateTime.Now - startDate;
-                Console.WriteLine("gagné en " + ts.TotalSeconds + " s");
-                Console.WriteLine("gagné en " + ts.Minutes + " s");
-                Console.WriteLine((int)ts.TotalSeconds);
+                Console.WriteLine("gagné en " + manche.TempsEcoule + " s");
+
             }
             else
             {
-                TimeSpan ts = DateTime.Now - startDate;
-                Console.WriteLine("perdu en " + ts.TotalSeconds + " s");
+                Console.WriteLine("perdu en " + manche.TempsEcoule + " s");
             }
-            watch.Stop();
-            TimeSpan time = watch.Elapsed;
-            Console.WriteLine("temps ecoulé" + time);
-            Console.WriteLine(manche.TempsEcoule);
+
+
             Console.ReadLine();
         }
     }

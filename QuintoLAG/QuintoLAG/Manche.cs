@@ -95,7 +95,9 @@ namespace QuintoLAG
         #endregion
         #region Constructeurs
         public Manche()
-        { }
+        {
+            DebutManche = DateTime.Now;
+        }
         /// <summary>
         /// Initialise une nouvelle manche
         /// </summary>

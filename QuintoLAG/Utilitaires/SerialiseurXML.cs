@@ -56,17 +56,7 @@ namespace Utilitaires
 
             return objet as IEnumerable;
         }
-        sealed class BinderType : SerializationBinder
-        {
 
-            public override Type BindToType(string assemblyName, string typeName)
-            {
-                Type typeToDeserialize = null;
-                typeToDeserialize = Type.GetType(assemblyName);
-
-                return typeToDeserialize;
-            }
-        }
     }
     sealed class BinderType : SerializationBinder
     {

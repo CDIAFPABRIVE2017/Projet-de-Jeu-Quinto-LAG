@@ -66,6 +66,7 @@ namespace QuintoLAG
         #region Méthodes
         public bool LettreTrouve(char c)
         {
+            c = char.ToUpper(c);
             if (Mot.Contains(c))
             {
                 for (int i = 0; i < Mot.Length; i++)

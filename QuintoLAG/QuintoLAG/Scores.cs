@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Utilitaires;
 
+
 namespace QuintoLAG
 {
-    [Serializable()]
+    [Serializable]
    // public class Scores: List<Score> 
-   public class Scores: List<Score>
+   public class Scores: List<Score>, ICollectionMetier
     {
 
         int tailleLeaderboard =10;
@@ -19,22 +20,24 @@ namespace QuintoLAG
 
         }
 
+
+
         new public void Add(Score score)
         {
 
             base.Add(score);
             this.Sort();
             if (this.Count > tailleLeaderboard)
-                this.RemoveAt(this.Count-1);       
+                this.RemoveAt(this.Count - 1);
 
         }
 
         public override string ToString()
         {
-            string leaderboard ="";
+            string leaderboard = "";
             foreach (Score item in this)
             {
-                leaderboard += string.Format("#{0}  {1}  \n",IndexOf(item)+1, item);
+                leaderboard += string.Format("#{0}  {1}  \n", IndexOf(item) + 1, item);
             }
             return leaderboard;
         }
@@ -46,8 +49,8 @@ namespace QuintoLAG
 
         public void Load(ISauvegarde sauvegarde, string pathRepData)
         {
-            //this.SymmetricExceptWith((Scores)sauvegarde.Load(pathRepData, this.GetType()));
-            sauvegarde.Load(pathRepData, this.GetType());
+            this.AddRange((Scores)sauvegarde.Load(pathRepData, this.GetType()));
+          //  this.sauvegarde.Load(pathRepData, this.GetType());
         }
 
 
