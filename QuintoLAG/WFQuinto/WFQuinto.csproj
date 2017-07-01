@@ -52,6 +52,12 @@
     <Compile Include="AlimenterPioche.Designer.cs">
       <DependentUpon>AlimenterPioche.cs</DependentUpon>
     </Compile>
+    <Compile Include="HighScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScore.Designer.cs">
+      <DependentUpon>HighScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,18 @@
     </Compile>
     <Compile Include="Options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartieGagnee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartieGagnee.Designer.cs">
+      <DependentUpon>PartieGagnee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartiePerdue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartiePerdue.Designer.cs">
+      <DependentUpon>PartiePerdue.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -83,8 +101,17 @@
     <Compile Include="Scores.Designer.cs">
       <DependentUpon>Scores.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="HighScore.resx">
+      <DependentUpon>HighScore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartieGagnee.resx">
+      <DependentUpon>PartieGagnee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartiePerdue.resx">
+      <DependentUpon>PartiePerdue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +151,9 @@
     <Content Include="Resources\Bsod.jpg" />
     <None Include="Resources\Wsod.jpg" />
     <None Include="Resources\Bsod1.jpg" />
+    <None Include="Resources\gameoverX.png" />
+    <None Include="Resources\golden-trophy.jpg" />
+    <None Include="Resources\high_score_320x320.png" />
     <Content Include="Resources\potence.png" />
     <None Include="Resources\potence1.png" />
     <Content Include="Resources\Rsod.png" />

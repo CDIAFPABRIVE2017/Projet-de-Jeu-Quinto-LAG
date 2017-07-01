@@ -27,7 +27,7 @@ namespace WFQuinto
         {
             InitializeComponent();
 
-        } 
+        }
 
 
         /// <summary>
@@ -36,15 +36,15 @@ namespace WFQuinto
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Quinto_Load(object sender, EventArgs e)
-        {    
-             
+        {
+
             int lettre = 0;
             char[] alphabet;
-            alphabet = new char[26] { 'A', 'Z', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Q', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'W', 'X', 'C', 'V', 'B', 'N' };           
-            for (lettre = 0; lettre < 10 ; lettre++)
-            {               
-                Button toucheClavier = new Button();                
-                toucheClavier.Name = "Bouton" + alphabet[lettre].ToString(); 
+            alphabet = new char[26] { 'A', 'Z', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Q', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'W', 'X', 'C', 'V', 'B', 'N' };
+            for (lettre = 0; lettre < 10; lettre++)
+            {
+                Button toucheClavier = new Button();
+                toucheClavier.Name = "Bouton" + alphabet[lettre].ToString();
                 toucheClavier.Size = new System.Drawing.Size(50, 50);
                 toucheClavier.Cursor = System.Windows.Forms.Cursors.Hand;
                 toucheClavier.Text = alphabet[lettre].ToString();
@@ -56,14 +56,14 @@ namespace WFQuinto
                 toucheClavier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
                 toucheClavier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 toucheClavier.UseVisualStyleBackColor = true;
-                toucheClavier.Click += new System.EventHandler(this.toucheClavier_Click);                 
+                toucheClavier.Click += new System.EventHandler(this.toucheClavier_Click);
                 this.ClavierLigne1.Controls.Add(toucheClavier);
             }
 
             for (lettre = 10; lettre < 20; lettre++)
             {
                 Button toucheClavier = new Button();
-                toucheClavier.Name = "Bouton" + alphabet[lettre].ToString();  
+                toucheClavier.Name = "Bouton" + alphabet[lettre].ToString();
                 toucheClavier.Size = new System.Drawing.Size(50, 50);
                 toucheClavier.Cursor = System.Windows.Forms.Cursors.Hand;
                 toucheClavier.Text = alphabet[lettre].ToString();
@@ -73,14 +73,14 @@ namespace WFQuinto
                 toucheClavier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
                 toucheClavier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 toucheClavier.UseVisualStyleBackColor = true;
-                toucheClavier.Click += new System.EventHandler(this.toucheClavier_Click); 
+                toucheClavier.Click += new System.EventHandler(this.toucheClavier_Click);
                 this.ClavierLigne2.Controls.Add(toucheClavier);
             }
 
             for (lettre = 20; lettre < 26; lettre++)
             {
                 Button toucheClavier = new Button();
-                toucheClavier.Name = "Bouton" + alphabet[lettre].ToString();                  
+                toucheClavier.Name = "Bouton" + alphabet[lettre].ToString();
                 toucheClavier.Size = new System.Drawing.Size(50, 50);
                 toucheClavier.Cursor = System.Windows.Forms.Cursors.Hand;
                 toucheClavier.Text = alphabet[lettre].ToString();
@@ -90,13 +90,13 @@ namespace WFQuinto
                 toucheClavier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
                 toucheClavier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 toucheClavier.UseVisualStyleBackColor = true;
-                toucheClavier.Click += new System.EventHandler(this.toucheClavier_Click);  
+                toucheClavier.Click += new System.EventHandler(this.toucheClavier_Click);
                 this.ClavierLigne3.Controls.Add(toucheClavier);
             }
 
-            
-        }    
-        
+
+        }
+
 
         #region chrono
 
@@ -106,7 +106,7 @@ namespace WFQuinto
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
-        {               
+        {
             watch.Start();
         }
         /// <summary>
@@ -121,7 +121,7 @@ namespace WFQuinto
 
             labelTempsFinal.Text = tempsFinal.ToString(@"hh\:mm\:ss");
         }
-        
+
         /// <summary>
         /// Gestion du timer (rafraichissment horloge a la seconde)
         /// </summary>
@@ -131,11 +131,11 @@ namespace WFQuinto
         {
             TimeSpan tempsReel = watch.Elapsed;
             labelTempsReel.Text = tempsReel.ToString(@"hh\:mm\:ss");
-        }   
-    
+        }
+
         #endregion
-        
-                
+
+
         #region saisie clavier
 
         /// <summary>
@@ -149,10 +149,10 @@ namespace WFQuinto
             //gestion clavier ligne 1---------------------------------
             foreach (Control bouton in ClavierLigne1.Controls)
             {
-                    if (bouton.Text.ToLower() == e.KeyChar.ToString())
-                    {
-                        toucheClavier_Click(bouton, e);
-                    }
+                if (bouton.Text.ToLower() == e.KeyChar.ToString() & (bouton.Enabled != false))
+                {
+                    toucheClavier_Click(bouton, e);
+                }
             }
             //---------------------------------------------------------
 
@@ -161,7 +161,7 @@ namespace WFQuinto
             //gestion clavier ligne 2----------------------------------
             foreach (Control bouton in ClavierLigne2.Controls)
             {
-                if (bouton.Text.ToLower() == e.KeyChar.ToString())
+                if (bouton.Text.ToLower() == e.KeyChar.ToString() & (bouton.Enabled != false))
                 {
                     toucheClavier_Click(bouton, e);
                 }
@@ -173,7 +173,7 @@ namespace WFQuinto
             //gestion clavier ligne 3----------------------------------
             foreach (Control bouton in ClavierLigne3.Controls)
             {
-                if (bouton.Text.ToLower() == e.KeyChar.ToString())
+                if (bouton.Text.ToLower() == e.KeyChar.ToString() & (bouton.Enabled != false))
                 {
                     toucheClavier_Click(bouton, e);
                 }
@@ -190,15 +190,16 @@ namespace WFQuinto
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void toucheClavier_Click(object sender, EventArgs e)
-        {   
-            //réaffichage des boutons utilisés
+        {
+
+            //réaffichage des boutons utilisés dans un autre label
             Button buttonCopie = new Button();
             buttonCopie.Text = ((Button)sender).Text;
-            buttonCopie.Size = new System.Drawing.Size(50, 50);
+            buttonCopie.Size = new System.Drawing.Size(40, 40);
             buttonCopie.Cursor = System.Windows.Forms.Cursors.No;
             toucheUtilisées.Controls.Add(buttonCopie);
 
-            //modification graphique des boutons utilisés
+            ///modification graphique des boutons utilisés
             ((Button)sender).Enabled = false;
             ((Button)sender).Cursor = System.Windows.Forms.Cursors.No;
             ((Button)sender).FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
@@ -207,7 +208,7 @@ namespace WFQuinto
             ((Button)sender).FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             ((Button)sender).UseVisualStyleBackColor = true;
             label3.Text = ((Button)sender).Text; //test ecriture clavier virtuel
-                       
+
         }
 
         #endregion
@@ -220,13 +221,13 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            
+
             switch (numericUpDown1.Value.ToString())
             {
 
                 case "0":
-                    pictureBox1.Image = WFQuinto.Properties.Resources.potence;                    
-                    break; 
+                    pictureBox1.Image = WFQuinto.Properties.Resources.potence;
+                    break;
                 case "1":
                     pictureBox1.Image = WFQuinto.Properties.Resources._1;
                     break;
@@ -254,15 +255,73 @@ namespace WFQuinto
                 case "9":
                     pictureBox1.Image = WFQuinto.Properties.Resources._9;
                     break;
-                case "perdu":
-                    pictureBox1.Image = WFQuinto.Properties.Resources.Rsod;
+                case "10":
+                    PartieGagnee DialogueModalFRMPartieGagnee = new PartieGagnee();
+                    DialogResult Victoire = DialogueModalFRMPartieGagnee.ShowDialog();
+                    switch (Victoire)
+                    {
+                        case DialogResult.None:
+                            DialogueModalFRMPartieGagnee.ShowDialog();
+                            break;
+                        case DialogResult.OK:
+                           // this.Close();
+                            break;
+                        case DialogResult.Cancel:
+                            //this.Close();
+                            break;                        
+                        default:
+                            break;
+                    }
+                    break;
+                case "11":   // test partie perdue
+                    PartiePerdue DialogueModalFRMPartiePerdue = new PartiePerdue();
+                    DialogResult Gameover = DialogueModalFRMPartiePerdue.ShowDialog();
+                    switch (Gameover)
+                    {
+                        case DialogResult.None:
+                            DialogueModalFRMPartiePerdue.ShowDialog();
+                            break;
+                        case DialogResult.OK:
+                            DialogueModalFRMPartiePerdue.Close();
+                            //this.Close();
+                            break;
+                        case DialogResult.Cancel:
+                            DialogueModalFRMPartiePerdue.ShowDialog();
+                            break;
+                        case DialogResult.Abort:
+                            DialogueModalFRMPartiePerdue.ShowDialog();
+                            break;
+                    }
+                    break;
+
+
+                case "12": // test highscore
+
+                    HighScore DialogueModalFRMhighscore = new HighScore();
+                    DialogResult highscore = DialogueModalFRMhighscore.ShowDialog();
+                    switch (highscore)
+                    {
+                        case DialogResult.None:
+                            DialogueModalFRMhighscore.ShowDialog();
+                            break;
+                        case DialogResult.OK:
+                            DialogueModalFRMhighscore.Close();
+                            //this.Close();
+                            break;
+                        case DialogResult.Cancel:
+                            DialogueModalFRMhighscore.ShowDialog();
+                            break;
+                        case DialogResult.Abort:
+                            DialogueModalFRMhighscore.ShowDialog();
+                            break;
+                    }
 
                     break;
 
                 default:
-                   
+
                     break;
-                    
+
             }
 
         }
