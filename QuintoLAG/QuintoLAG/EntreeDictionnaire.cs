@@ -10,9 +10,11 @@ namespace QuintoLAG
     [Serializable]
     public class EntreeDictionnaire
     {
+        #region Champs
         private string _entree;
         private string _definition;
-
+        #endregion
+        #region Propriétés
         public string Entree
         {
             get
@@ -38,6 +40,7 @@ namespace QuintoLAG
                 _definition = value;
             }
         }
+        #endregion
         public EntreeDictionnaire()
         { }
     }
