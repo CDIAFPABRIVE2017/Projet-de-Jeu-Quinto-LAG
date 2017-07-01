@@ -9,8 +9,8 @@ namespace QuintoLAG
     public class Jeux : List<Manche>
     {
         #region Champs
-        private int _nbreManches;
-        private int _nbreErreurMax;
+        private int _nbreManches = Properties.Settings.Default.NbManches;
+        private int _nbreErreurMax = Properties.Settings.Default.NbEssais;
         private bool _affichageLettre;
         #endregion
         #region Propriétés

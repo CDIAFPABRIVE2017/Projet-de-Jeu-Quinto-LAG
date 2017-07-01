@@ -115,29 +115,34 @@ namespace CATest
             dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
      
 
-            Pioche toto = new Pioche(dico.Random());
-            Manche manche = new Manche(toto);
-            Console.WriteLine(manche.Pioche);
+           // Pioche toto = new Pioche(dico.Random());
 
-            int i = 9; //nombre de tentatives
-            while (!manche.Pioche.MotTrouve() && i > 0)
+            Jeux partie = new Jeux();
+
+            while (partie.NbreManches>0)
             {
-                manche.Pioche.LettreTrouve(Console.ReadKey().KeyChar);
-                Console.WriteLine("\n" + manche.Pioche);
-                i--;
-            }
-            if (manche.Pioche.MotTrouve())
-            {
-                Console.WriteLine("gagné en " + manche.TempsEcoule + " s");
+                Manche manche = new Manche(new Pioche(dico.Random()));
+                Console.WriteLine(manche.Pioche);
+                while (!manche.Pioche.MotTrouve() && manche.NbreErreurMax > 0)
+                {
+                    manche.Pioche.LettreTrouve(Console.ReadKey().KeyChar);
+                    Console.WriteLine("\n" + manche.Pioche);
+                    manche.NbreErreurMax--;
+                }
+                if (manche.Pioche.MotTrouve())
+                {
+                    Console.WriteLine("gagné en " + manche.TempsEcoule + " s");
 
-            }
-            else
-            {
-                Console.WriteLine("perdu en " + manche.TempsEcoule + " s");
+                }
+                else
+                {
+                    Console.WriteLine("perdu en " + manche.TempsEcoule + " s");
+                }
+
+                partie.NbreManches--;
+                Console.ReadLine();
             }
 
-
-            Console.ReadLine();
         }
     }
 }

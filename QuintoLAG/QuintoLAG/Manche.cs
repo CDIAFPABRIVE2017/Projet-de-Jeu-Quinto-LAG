@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuintoLAG
 {
-    public class Manche
+    public class Manche : Jeux
     {
         #region Champs
         private Pioche _pioche;
