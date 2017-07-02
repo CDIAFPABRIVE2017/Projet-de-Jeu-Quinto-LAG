@@ -28,7 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox1.Location = new System.Drawing.Point(12, 537);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(1409, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // HighScore
             // 
@@ -37,13 +46,17 @@
             this.BackgroundImage = global::WFQuinto.Properties.Resources.high_score_320x320;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1433, 684);
+            this.Controls.Add(this.textBox1);
             this.Name = "HighScore";
             this.Text = "HighScore";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -23,5 +23,6 @@ namespace WFQuinto
             this.Close();
 
         }
+        //prevoir enregistrement score
     }
 }

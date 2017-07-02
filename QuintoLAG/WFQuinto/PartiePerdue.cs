@@ -17,18 +17,10 @@ namespace WFQuinto
             InitializeComponent();
         }
 
-        private void textBoxRecord_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxRecord.Text != null&& textBoxRecord.Text.Length>=3)
-            {
-                button1OK.Visible = true;
-
-            }
-        }
-
+      
         private void button1_Click(object sender, EventArgs e)
         {
-            // ajouter enregistremetn score
+            // retour menu principal
 
             this.DialogResult = DialogResult.OK;
             this.Close();
