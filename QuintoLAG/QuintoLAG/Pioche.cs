@@ -56,18 +56,20 @@ namespace QuintoLAG
 
         public int Erreurs { get => _erreurs; set => _erreurs = value; }
         #endregion
+
         #region Constructeurs
         public Pioche()
         { }
         public Pioche(string motATrouver)
         {
-            Mot = motATrouver;
+            Mot = motATrouver.ToUpper();
             int lenght = Mot.Length;
             CharDecouverts = new bool[lenght];
         }
         #endregion
-        #region Méthodes
 
+
+        #region Méthodes
 
         public bool LettreTrouve(char c)
         {

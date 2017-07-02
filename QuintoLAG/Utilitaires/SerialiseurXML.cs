@@ -23,7 +23,7 @@ namespace Utilitaires
             Type type = objetASauvegarder.GetType();
 
             string pathXmlDocument = string.Format("{0}\\{1}.Xml", pathRepData, type.FullName);
-            using (FileStream fileStream = new FileStream(pathXmlDocument, FileMode.Create, FileAccess.Write, FileShare.Read))
+            using (FileStream fileStream = new FileStream(pathXmlDocument, FileMode.Create, FileAccess.Write, FileShare.ReadWrite))
             {
                 XmlTextWriter xmlTW = new XmlTextWriter(fileStream, Encoding.UTF8);
                 XmlSerializer xmlS = new XmlSerializer(type);
@@ -43,14 +43,14 @@ namespace Utilitaires
             Object objet = null;
 
             string pathXmlDocument = string.Format("{0}\\{1}.Xml", pathRepData, typeACharger.FullName);
-            using (FileStream fileStream = new FileStream(pathXmlDocument, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (FileStream fileStream = new FileStream(pathXmlDocument, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
             {
 
                 XmlTextReader xmlTR = new XmlTextReader(fileStream);
                 XmlSerializer xmlS = new XmlSerializer(typeACharger);
 
                 objet = xmlS.Deserialize(xmlTR);
-                xmlTR.Close();
+                xmlTR.Close();             
                 fileStream.Close();
             }
 

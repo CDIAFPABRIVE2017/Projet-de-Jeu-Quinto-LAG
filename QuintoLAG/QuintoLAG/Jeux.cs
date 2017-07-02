@@ -8,7 +8,16 @@ namespace QuintoLAG
 {
     public class Jeux : List<Manche>
     {
+        public Scores leaderboard = new Scores();
+        
+        
+        //   public List<Manche> manches = new List<Manche>();
+        //public Manche manche = new Manche();
+
+
+
         #region Champs
+        private int _nbreTotalManches = Properties.Settings.Default.NbManches;
         private int _nbreManches = Properties.Settings.Default.NbManches;
         private int _nbreErreurMax = Properties.Settings.Default.NbEssais;
         private bool _affichageLettre;
@@ -44,6 +53,7 @@ namespace QuintoLAG
         {
             get
             {
+                
                 return _affichageLettre;
             }
 
@@ -57,19 +67,32 @@ namespace QuintoLAG
         {
             get
             {
+                foreach (Manche item in this)
+                {
+                    _scoreMoyenne += item.ScoreFinManche;
+
+                }
+                if(_scoreMoyenne !=0)
+                _scoreMoyenne = _scoreMoyenne / _nbreTotalManches;
+
+                Score scorepartie = new Score() { Pseudo = "ABC", TopScore = _scoreMoyenne };
+                
+                leaderboard.Add(scorepartie);
                 return _scoreMoyenne;
             }
-            set
-            {
-                _scoreMoyenne = value;
-            }
+            //set
+            //{
+            //    _scoreMoyenne = value;
+            //}
         }
 
 
         #endregion
         #region Constructeurs
         public Jeux()
-        { }
+        {
+            leaderboard.LoadScores();
+        }
         public Jeux(int nbreManches, int nbreErreurMax, bool affichageLettre)
         {
             NbreManches = nbreManches;
@@ -91,6 +114,25 @@ namespace QuintoLAG
                 Console.WriteLine(item);
             }
             Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Initialise une nouvelle manche avec pioche aléatoire
+        /// </summary>
+        public void nouvelleManche()
+        {
+            this.Add(new Manche(new Pioche()));
+
+        }
+
+        /// <summary>
+        /// Initialise une nouvelle manche
+        /// </summary>
+        /// <param name="motAtrouver"></param>
+        public void nouvelleManche(string motAtrouver)
+        {
+            this.Add(new Manche(new Pioche(motAtrouver)));
+
         }
         #endregion
     }

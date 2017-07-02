@@ -64,7 +64,7 @@ namespace CATest
             Console.WriteLine(scores);
 
             ISauvegarde serialiseur = new SauvegardeXML();
-            scores.Save(serialiseur, Properties.Settings.Default.AppData);
+          //  scores.Save(serialiseur, Properties.Settings.Default.AppData);
 
             Console.WriteLine("Les scores chargés sont :");
             Scores scoresLoad = new Scores();
@@ -84,6 +84,7 @@ namespace CATest
         }
         #endregion
 
+        #region testload
         private static void testLoad()
         {
             //E:\CDIAlexis\Projets Collaboratifs\Projet - de - Jeu - Quinto - LAG\QuintoLAG\Data
@@ -108,33 +109,35 @@ namespace CATest
             Console.ReadLine();
 
         }
+        #endregion
+
 
         static void testLeo()
         {
             Dictionnaire dico = new Dictionnaire();
             dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
-     
 
-           // Pioche toto = new Pioche(dico.Random());
-
+            
             Jeux partie = new Jeux();
 
             while (partie.NbreManches>0)
             {
                 
-                //Manche manche = new Manche(new Pioche(dico.Random()));
-                Manche manche = new Manche(new Pioche("SOLEIL"));
+                //Manche manche = new Manche(new Pioche(dico.Random()));                
+                Manche manche = new Manche(new Pioche("soleil"));
+                //partie.nouvelleManche();
+                partie.Add(manche);
+                             
+                //Manche manche = partie.nouvelleManche();
                 Console.WriteLine(manche.Pioche);
                 while (!manche.MancheGagne && manche.NbreErreurMax > manche.NbreErreur)
                 {
 
-
                     manche.Pioche.LettreTrouve(Console.ReadKey().KeyChar);
   
-
                     Console.WriteLine("\n" + manche.NbreErreur);
                     Console.WriteLine("\n" + manche.Pioche);
-                   // manche.NbreErreurMax--;
+
                 }
 
                 //si le mot est trouvé (fin de partie...)
@@ -143,12 +146,6 @@ namespace CATest
                     Console.WriteLine("gagné en " + manche.CurrentTempsEcoule + " s");
                     Console.WriteLine("score : " + manche.ScoreFinManche + " // currentscore : " + manche.CurrentScore);
                     Console.WriteLine("Temps : " + manche.TempsFinManche);
-                    //bloc en dessous juste pour check la non evolution du temps, a supprimer un fois reglé
-                    Console.WriteLine("laisson ecouler du temps...");
-                    Console.ReadLine();
-                    Console.WriteLine("score : " + manche.ScoreFinManche + " // currentscore : " + manche.CurrentScore);
-                    Console.WriteLine("Temps : " + manche.TempsFinManche);
-
                 }
                 else
                 {
@@ -157,14 +154,13 @@ namespace CATest
                 }
 
                 partie.NbreManches--;
-                Console.ReadLine();
-                //bloc en dessous juste pour check la non evolution du temps, a supprimer un fois reglé
-                if (!manche.MancheGagne)
-                {
-                    Console.WriteLine("manche.MancheGagne perdu en " + manche.CurrentTempsEcoule + " score : "+ manche.ScoreFinManche);
-                }
-            }
 
+            }
+            Console.WriteLine("Moyenne Score Final :" + partie.ScoreMoyenne);
+            Console.ReadLine();
+            Console.WriteLine("Les scores du leaderboard sont :");
+            Console.WriteLine(partie.leaderboard);
+            Console.ReadLine();
         }
     }
 }
