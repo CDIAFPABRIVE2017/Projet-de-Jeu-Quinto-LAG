@@ -124,6 +124,7 @@
     <EmbeddedResource Include="Scores.resx">
       <DependentUpon>Scores.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -154,6 +155,7 @@
     <None Include="Resources\gameoverX.png" />
     <None Include="Resources\golden-trophy.jpg" />
     <None Include="Resources\high_score_320x320.png" />
+    <None Include="Resources\gameoverSpace.jpg" />
     <Content Include="Resources\potence.png" />
     <None Include="Resources\potence1.png" />
     <Content Include="Resources\Rsod.png" />
