@@ -116,7 +116,6 @@ namespace CATest
         {
             Dictionnaire dico = new Dictionnaire();
             dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
-
             
             Jeux partie = new Jeux();
 
@@ -137,27 +136,22 @@ namespace CATest
   
                     Console.WriteLine("\n" + manche.NbreErreur);
                     Console.WriteLine("\n" + manche.Pioche);
-
                 }
 
                 //si le mot est trouvé (fin de partie...)
                 if (manche.MancheGagne)
                 {
-                    Console.WriteLine("gagné en " + manche.CurrentTempsEcoule + " s");
                     Console.WriteLine("score : " + manche.ScoreFinManche + " // currentscore : " + manche.CurrentScore);
-                    Console.WriteLine("Temps : " + manche.TempsFinManche);
+                    Console.WriteLine("Temps : " + manche.TempsFinManche + " // current temps : " + manche.CurrentTempsEcoule);
                 }
                 else
                 {
-                    Console.WriteLine("perdu en " + manche.CurrentTempsEcoule + " s");
-                    Console.WriteLine("score : " + manche.ScoreFinManche);
+                    Console.WriteLine("perdu en " + manche.CurrentTempsEcoule + " s " + "score : " + manche.ScoreFinManche);
                 }
-
                 partie.NbreManches--;
 
             }
             Console.WriteLine("Moyenne Score Final :" + partie.ScoreMoyenne);
-            Console.ReadLine();
             Console.WriteLine("Les scores du leaderboard sont :");
             Console.WriteLine(partie.leaderboard);
             Console.ReadLine();
