@@ -121,9 +121,11 @@ namespace CATest
 
             while (partie.NbreManches>0)
             {
-                Manche manche = new Manche(new Pioche(dico.Random()));
+                
+                //Manche manche = new Manche(new Pioche(dico.Random()));
+                Manche manche = new Manche(new Pioche("SOLEIL"));
                 Console.WriteLine(manche.Pioche);
-                while (!manche.Pioche.MotTrouve() && manche.NbreErreurMax > manche.NbreErreur)
+                while (!manche.MancheGagne && manche.NbreErreurMax > manche.NbreErreur)
                 {
 
 
@@ -134,20 +136,33 @@ namespace CATest
                     Console.WriteLine("\n" + manche.Pioche);
                    // manche.NbreErreurMax--;
                 }
-                if (manche.Pioche.MotTrouve())
+
+                //si le mot est trouvé (fin de partie...)
+                if (manche.MancheGagne)
                 {
-                    Console.WriteLine("gagné en " + manche.TempsEcoule + " s");
-                    Console.WriteLine("score : " + manche.Score);
+                    Console.WriteLine("gagné en " + manche.CurrentTempsEcoule + " s");
+                    Console.WriteLine("score : " + manche.ScoreFinManche + " // currentscore : " + manche.CurrentScore);
+                    Console.WriteLine("Temps : " + manche.TempsFinManche);
+                    //bloc en dessous juste pour check la non evolution du temps, a supprimer un fois reglé
+                    Console.WriteLine("laisson ecouler du temps...");
+                    Console.ReadLine();
+                    Console.WriteLine("score : " + manche.ScoreFinManche + " // currentscore : " + manche.CurrentScore);
+                    Console.WriteLine("Temps : " + manche.TempsFinManche);
 
                 }
                 else
                 {
-                    Console.WriteLine("perdu en " + manche.TempsEcoule + " s");
-                    Console.WriteLine("score : " + manche.Score);
+                    Console.WriteLine("perdu en " + manche.CurrentTempsEcoule + " s");
+                    Console.WriteLine("score : " + manche.ScoreFinManche);
                 }
 
                 partie.NbreManches--;
                 Console.ReadLine();
+                //bloc en dessous juste pour check la non evolution du temps, a supprimer un fois reglé
+                if (!manche.MancheGagne)
+                {
+                    Console.WriteLine("manche.MancheGagne perdu en " + manche.CurrentTempsEcoule + " score : "+ manche.ScoreFinManche);
+                }
             }
 
         }

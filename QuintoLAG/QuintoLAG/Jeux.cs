@@ -12,6 +12,7 @@ namespace QuintoLAG
         private int _nbreManches = Properties.Settings.Default.NbManches;
         private int _nbreErreurMax = Properties.Settings.Default.NbEssais;
         private bool _affichageLettre;
+        private int _scoreMoyenne;
         #endregion
         #region Propriétés
         public int NbreManches
@@ -51,6 +52,20 @@ namespace QuintoLAG
                 _affichageLettre = value;
             }
         }
+
+        public int ScoreMoyenne
+        {
+            get
+            {
+                return _scoreMoyenne;
+            }
+            set
+            {
+                _scoreMoyenne = value;
+            }
+        }
+
+
         #endregion
         #region Constructeurs
         public Jeux()

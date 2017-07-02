@@ -11,11 +11,14 @@ namespace QuintoLAG
         #region Champs
         private Pioche _pioche;
         private int _nbreErreur;
-        private int _score;
+        private int _scoreFinManche;
         private DateTime _debutManche;
         private DateTime _finManche;
-        private TimeSpan _tempsEcoule;
-        private TimeSpan _tempsManche;
+
+        private TimeSpan _tempsFinManche;
+        private bool _mancheGagne;
+        private bool _mancheTermine = false;
+
         #endregion
         #region Propriétés
         public Pioche Pioche
@@ -44,18 +47,19 @@ namespace QuintoLAG
             }
         }
 
-        public TimeSpan TempsEcoule
+        public TimeSpan CurrentTempsEcoule
         {
             get
             {
                 return DateTime.Now - DebutManche;
             }
         }
-        public int Score
+        public int CurrentScore
         {
             get
             {
-                return (((int)TempsEcoule.TotalSeconds* Properties.Settings.Default.PointsParSec) + (Properties.Settings.Default.PointsParErreurs * NbreErreur));
+
+                return (((int)CurrentTempsEcoule.TotalSeconds* Properties.Settings.Default.PointsParSec) + (Properties.Settings.Default.PointsParErreurs * NbreErreur));
             }
         }
 
@@ -92,6 +96,32 @@ namespace QuintoLAG
                 return FinManche - DebutManche;
             }
         }
+
+        public bool MancheGagne
+        {
+
+
+            get
+            {
+                if (Pioche.MotTrouve() && !_mancheTermine)
+                {
+                    //ScoreFinManche = CurrentScore;
+                    _scoreFinManche = CurrentScore;
+                    TempsFinManche = CurrentTempsEcoule;
+                    _mancheTermine = true;
+                }
+               
+
+
+                return Pioche.MotTrouve();
+            }
+
+          //  set => _mancheGagne = value;
+        }
+
+        public int ScoreFinManche { get => _scoreFinManche; set => _scoreFinManche = value; }
+        public TimeSpan TempsFinManche { get => _tempsFinManche; set => _tempsFinManche = value; }
+
         #endregion
         #region Constructeurs
         public Manche()
