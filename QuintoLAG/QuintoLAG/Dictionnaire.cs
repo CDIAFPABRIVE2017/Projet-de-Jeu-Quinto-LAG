@@ -7,18 +7,26 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
 using Utilitaires;
-
+using System.Runtime.Serialization;
 
 namespace QuintoLAG
 {
 
 
-    
 
-        [Serializable]
+
+    [Serializable]
     public class Dictionnaire : HashSet<string>
     {
         private static Random rand;
+
+        protected Dictionnaire(
+           SerializationInfo info, StreamingContext context) :
+         base(info, context)
+        {
+            // derivedValue = info.GetInt32("derivedValue");
+        }
+
 
         /// <summary>
         /// Constructeur par défaut
@@ -66,7 +74,7 @@ namespace QuintoLAG
 
                 while (!string.IsNullOrEmpty(strLine))
                 {
-                    this.stringToED(Normalization(strLine).ToUpper());
+                    this.StringToED(Normalization(strLine).ToUpper());
                     strLine = sr.ReadLine();
 
                 }
@@ -75,8 +83,8 @@ namespace QuintoLAG
             }
         }
 
-      
-        public void stringToED(string S)
+
+        public void StringToED(string S)
         {
             char[] delimiterChars = { ' ', ',', '.', ':', '\t', '\n' };
             string[] words = S.Split(delimiterChars);

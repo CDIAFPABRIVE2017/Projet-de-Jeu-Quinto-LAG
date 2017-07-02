@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+//using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -76,7 +76,20 @@ namespace QuintoLAG
                 _scoreMoyenne = _scoreMoyenne / _nbreTotalManches;
 
                 Score scorepartie = new Score() { Pseudo = "ABC", TopScore = _scoreMoyenne };
-                
+
+
+                //On compare ici le score avec ceux déjà present dans le LB,
+                //comme cela on demande uniquement le Pseudo si le score est dans le top 10
+                //il faut ss doute externaliser la methode pour que ça fonctionne en winform (faire un delegué ?)
+                // ps compare to renvois -1 ou 1
+                if ((scorepartie.CompareTo(leaderboard[leaderboard.Count-1])< 0)||(leaderboard.Count<leaderboard.TailleLeaderboard))
+                {
+                  
+                    Console.WriteLine("### ^_^ Youpi vous entre dans le leaderboard ^_^ ###");
+                    Console.WriteLine("Entrez pseudo 3 lettre (verif a coder) :");
+                    scorepartie.Pseudo = Console.ReadLine();
+                }
+
                 leaderboard.Add(scorepartie);
                 return _scoreMoyenne;
             }
@@ -119,7 +132,7 @@ namespace QuintoLAG
         /// <summary>
         /// Initialise une nouvelle manche avec pioche aléatoire
         /// </summary>
-        public void nouvelleManche()
+        public void NouvelleManche()
         {
             this.Add(new Manche(new Pioche()));
 
@@ -129,7 +142,7 @@ namespace QuintoLAG
         /// Initialise une nouvelle manche
         /// </summary>
         /// <param name="motAtrouver"></param>
-        public void nouvelleManche(string motAtrouver)
+        public void NouvelleManche(string motAtrouver)
         {
             this.Add(new Manche(new Pioche(motAtrouver)));
 

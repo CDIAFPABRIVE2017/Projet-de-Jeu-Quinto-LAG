@@ -16,7 +16,7 @@ namespace QuintoLAG
         private DateTime _finManche;
 
         private TimeSpan _tempsFinManche;
-        private bool _mancheGagne;
+       // private bool _mancheGagne;
         private bool _mancheTermine = false;
 
         #endregion

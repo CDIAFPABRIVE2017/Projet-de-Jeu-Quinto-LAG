@@ -1,14 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using Utilitaires;
 
+
 namespace QuintoLAG
 {
+    [Serializable]
     public class Pioches : HashSet<Pioche>
     {
+
+        protected Pioches(
+   SerializationInfo info, StreamingContext context) : 
+         base(info, context)
+      {
+            //derivedValue = info.GetInt32("derivedValue");
+        }
+
         public Pioches()
         { }
 

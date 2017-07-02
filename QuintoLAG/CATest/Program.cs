@@ -23,7 +23,7 @@ namespace CATest
             //salaries.Load(serialiseur, Properties.Settings.Default.AppData);
 
 
-            testLeo();
+            TestLeo();
            // testLoad();
             // testScore();
             // Jeux jeux = new Jeux(2, 9, true);
@@ -31,7 +31,7 @@ namespace CATest
         }
 
         #region testScore
-        private static void testScore()
+        private static void TestScore()
         {
             Scores scores = new Scores();
 
@@ -85,7 +85,7 @@ namespace CATest
         #endregion
 
         #region testload
-        private static void testLoad()
+        private static void TestLoad()
         {
             //E:\CDIAlexis\Projets Collaboratifs\Projet - de - Jeu - Quinto - LAG\QuintoLAG\Data
             Dictionnaire dico = new Dictionnaire();
@@ -112,7 +112,7 @@ namespace CATest
         #endregion
 
 
-        static void testLeo()
+        static void TestLeo()
         {
             Dictionnaire dico = new Dictionnaire();
             dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");

@@ -20,10 +20,12 @@ namespace QuintoLAG
 
         int tailleLeaderboard =10;
 
+        public int TailleLeaderboard { get => tailleLeaderboard; }
+
         public Scores()
         {
+         
 
-           
         }
 
         public void LoadScores()
@@ -40,7 +42,7 @@ namespace QuintoLAG
             //moyennement testé
             if (this.Count != 0)
             {
-                this.RemoveRange(0, tailleLeaderboard - 1);
+                this.RemoveRange(0, TailleLeaderboard - 1);
                 this.Save(serialiseur, Properties.Settings.Default.AppData);
             }
             else
@@ -54,7 +56,7 @@ namespace QuintoLAG
        
             base.Add(score);
             this.Sort();
-            if (this.Count > tailleLeaderboard)
+            if (this.Count > TailleLeaderboard)
                 this.RemoveAt(this.Count - 1);
             this.Save(serialiseur, Properties.Settings.Default.AppData);
         }
