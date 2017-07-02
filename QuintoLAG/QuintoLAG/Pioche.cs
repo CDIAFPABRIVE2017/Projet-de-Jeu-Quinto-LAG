@@ -12,6 +12,7 @@ namespace QuintoLAG
         private string _mot;
         private string _definition;
         private bool[] _charDecouverts;
+        private int _erreurs;
         #endregion
         #region Propriétés
         public string Mot
@@ -52,6 +53,8 @@ namespace QuintoLAG
                 _charDecouverts = value;
             }
         }
+
+        public int Erreurs { get => _erreurs; set => _erreurs = value; }
         #endregion
         #region Constructeurs
         public Pioche()
@@ -64,6 +67,8 @@ namespace QuintoLAG
         }
         #endregion
         #region Méthodes
+
+
         public bool LettreTrouve(char c)
         {
             c = char.ToUpper(c);
@@ -76,6 +81,7 @@ namespace QuintoLAG
                 }
                 return true;
             }
+            Erreurs++;
             return false;
         }
 

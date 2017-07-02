@@ -35,7 +35,7 @@ namespace QuintoLAG
         {
             get
             {
-                return _nbreErreur;
+                return Pioche.Erreurs;
             }
 
             set
@@ -55,7 +55,7 @@ namespace QuintoLAG
         {
             get
             {
-                return (int)TempsEcoule.TotalSeconds + 9 * NbreErreur; ;
+                return (((int)TempsEcoule.TotalSeconds* Properties.Settings.Default.PointsParSec) + (Properties.Settings.Default.PointsParErreurs * NbreErreur));
             }
         }
 

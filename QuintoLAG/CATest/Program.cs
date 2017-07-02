@@ -123,20 +123,27 @@ namespace CATest
             {
                 Manche manche = new Manche(new Pioche(dico.Random()));
                 Console.WriteLine(manche.Pioche);
-                while (!manche.Pioche.MotTrouve() && manche.NbreErreurMax > 0)
+                while (!manche.Pioche.MotTrouve() && manche.NbreErreurMax > manche.NbreErreur)
                 {
+
+
                     manche.Pioche.LettreTrouve(Console.ReadKey().KeyChar);
+  
+
+                    Console.WriteLine("\n" + manche.NbreErreur);
                     Console.WriteLine("\n" + manche.Pioche);
-                    manche.NbreErreurMax--;
+                   // manche.NbreErreurMax--;
                 }
                 if (manche.Pioche.MotTrouve())
                 {
                     Console.WriteLine("gagné en " + manche.TempsEcoule + " s");
+                    Console.WriteLine("score : " + manche.Score);
 
                 }
                 else
                 {
                     Console.WriteLine("perdu en " + manche.TempsEcoule + " s");
+                    Console.WriteLine("score : " + manche.Score);
                 }
 
                 partie.NbreManches--;
