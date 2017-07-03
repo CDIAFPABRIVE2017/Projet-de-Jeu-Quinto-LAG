@@ -33,7 +33,7 @@
             this.ClavierLigne1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ClavierLigne3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelClavier = new System.Windows.Forms.Panel();
-            this.startChrono = new System.Windows.Forms.Button();
+            this.startGame = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -43,7 +43,6 @@
             this.toucheUtilisées = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBoxErreur = new System.Windows.Forms.GroupBox();
             this.label2nbreErreur = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,7 +53,6 @@
             this.label2CurrentScore = new System.Windows.Forms.Label();
             this.label2ScoreTotal = new System.Windows.Forms.Label();
             this.panelClavier.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBoxErreur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -96,21 +94,22 @@
             this.panelClavier.Size = new System.Drawing.Size(770, 202);
             this.panelClavier.TabIndex = 0;
             // 
-            // startChrono
+            // startGame
             // 
-            this.startChrono.Cursor = System.Windows.Forms.Cursors.No;
-            this.startChrono.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.startChrono.FlatAppearance.BorderSize = 2;
-            this.startChrono.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumBlue;
-            this.startChrono.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
-            this.startChrono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.startChrono.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.startChrono.Location = new System.Drawing.Point(850, 346);
-            this.startChrono.Name = "startChrono";
-            this.startChrono.Size = new System.Drawing.Size(40, 42);
-            this.startChrono.TabIndex = 3;
-            this.startChrono.Text = "START";
-            this.startChrono.UseVisualStyleBackColor = true;
+            this.startGame.Cursor = System.Windows.Forms.Cursors.No;
+            this.startGame.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.startGame.FlatAppearance.BorderSize = 2;
+            this.startGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumBlue;
+            this.startGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
+            this.startGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.startGame.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.startGame.Location = new System.Drawing.Point(788, 346);
+            this.startGame.Name = "startGame";
+            this.startGame.Size = new System.Drawing.Size(114, 42);
+            this.startGame.TabIndex = 3;
+            this.startGame.Text = "Départ Partie";
+            this.startGame.UseVisualStyleBackColor = true;
+            this.startGame.Click += new System.EventHandler(this.startGame_Click);
             // 
             // label1
             // 
@@ -151,7 +150,7 @@
             this.stopChrono.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
             this.stopChrono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stopChrono.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.stopChrono.Location = new System.Drawing.Point(794, 346);
+            this.stopChrono.Location = new System.Drawing.Point(862, 496);
             this.stopChrono.Name = "stopChrono";
             this.stopChrono.Size = new System.Drawing.Size(40, 42);
             this.stopChrono.TabIndex = 10;
@@ -196,7 +195,7 @@
             // 
             this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.textBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.textBox1.Location = new System.Drawing.Point(784, 454);
+            this.textBox1.Location = new System.Drawing.Point(784, 452);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(128, 20);
             this.textBox1.TabIndex = 19;
@@ -207,25 +206,11 @@
             this.label6.AutoSize = true;
             this.label6.Cursor = System.Windows.Forms.Cursors.No;
             this.label6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label6.Location = new System.Drawing.Point(791, 412);
+            this.label6.Location = new System.Drawing.Point(781, 427);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 13);
             this.label6.TabIndex = 20;
             this.label6.Text = "Test ecriture clavier";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.numericUpDown1.Location = new System.Drawing.Point(792, 428);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(113, 20);
-            this.numericUpDown1.TabIndex = 24;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // groupBoxErreur
             // 
@@ -252,6 +237,7 @@
             this.label2nbreErreur.TabIndex = 0;
             this.label2nbreErreur.Text = "X";
             this.label2nbreErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2nbreErreur.TextChanged += new System.EventHandler(this.label2nbreErreur_TextChanged);
             // 
             // pictureBox1
             // 
@@ -295,7 +281,7 @@
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.No;
             this.label3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label3.Location = new System.Drawing.Point(789, 393);
+            this.label3.Location = new System.Drawing.Point(784, 412);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 13);
             this.label3.TabIndex = 30;
@@ -304,6 +290,7 @@
             // labelMotaDeviner
             // 
             this.labelMotaDeviner.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelMotaDeviner.CausesValidation = false;
             this.labelMotaDeviner.Cursor = System.Windows.Forms.Cursors.Cross;
             this.labelMotaDeviner.Font = new System.Drawing.Font("Lucida Handwriting", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMotaDeviner.ForeColor = System.Drawing.Color.Fuchsia;
@@ -349,7 +336,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxErreur);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
@@ -359,7 +345,7 @@
             this.Controls.Add(this.stopChrono);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.startChrono);
+            this.Controls.Add(this.startGame);
             this.Controls.Add(this.panelClavier);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Crimson;
@@ -373,7 +359,6 @@
             this.Load += new System.EventHandler(this.Quinto_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Quinto_KeyPress);
             this.panelClavier.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBoxErreur.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -387,7 +372,7 @@
         private System.Windows.Forms.FlowLayoutPanel ClavierLigne1;
         private System.Windows.Forms.FlowLayoutPanel ClavierLigne3;
         private System.Windows.Forms.Panel panelClavier;
-        private System.Windows.Forms.Button startChrono;
+        private System.Windows.Forms.Button startGame;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timer1;
@@ -398,7 +383,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.GroupBox groupBoxErreur;
         private System.Windows.Forms.Label label2nbreErreur;
         private System.Windows.Forms.GroupBox groupBox1;

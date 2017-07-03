@@ -119,6 +119,7 @@
             this.Controls.Add(this.Options);
             this.Controls.Add(this.AlimenterPioche);
             this.Controls.Add(this.NouvellePartie);
+            this.IsMdiContainer = true;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";

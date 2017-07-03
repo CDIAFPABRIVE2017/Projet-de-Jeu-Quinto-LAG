@@ -58,12 +58,6 @@
     <Compile Include="HighScore.Designer.cs">
       <DependentUpon>HighScore.cs</DependentUpon>
     </Compile>
-    <Compile Include="Initialisation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Initialisation.Designer.cs">
-      <DependentUpon>Initialisation.cs</DependentUpon>
-    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,9 +108,6 @@
     </Compile>
     <EmbeddedResource Include="HighScore.resx">
       <DependentUpon>HighScore.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Initialisation.resx">
-      <DependentUpon>Initialisation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
