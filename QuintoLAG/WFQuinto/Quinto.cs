@@ -286,37 +286,37 @@ namespace WFQuinto
                             //this.Close();
                             break;
                         case DialogResult.Cancel:
-                            DialogueModalFRMPartiePerdue.ShowDialog();
+                            DialogueModalFRMPartiePerdue.Close();
                             break;
                         case DialogResult.Abort:
-                            DialogueModalFRMPartiePerdue.ShowDialog();
+                            DialogueModalFRMPartiePerdue.Close();
                             break;
                     }
                     break;
 
 
-                case "12": // test highscore
+                //case "12": // test highscore
 
-                    HighScore DialogueModalFRMhighscore = new HighScore();
-                    DialogResult highscore = DialogueModalFRMhighscore.ShowDialog();
-                    switch (highscore)
-                    {
-                        case DialogResult.None:
-                            DialogueModalFRMhighscore.ShowDialog();
-                            break;
-                        case DialogResult.OK:
-                            DialogueModalFRMhighscore.Close();
-                            //this.Close();
-                            break;
-                        case DialogResult.Cancel:
-                            DialogueModalFRMhighscore.ShowDialog();
-                            break;
-                        case DialogResult.Abort:
-                            DialogueModalFRMhighscore.ShowDialog();
-                            break;
-                    }
+                //    HighScore DialogueModalFRMhighscore = new HighScore();
+                //    DialogResult highscore = DialogueModalFRMhighscore.ShowDialog();
+                //    switch (highscore)
+                //    {
+                //        case DialogResult.None:
+                //            DialogueModalFRMhighscore.ShowDialog();
+                //            break;
+                //        case DialogResult.OK:
+                //            DialogueModalFRMhighscore.Close();
+                //            //this.Close();
+                //            break;
+                //        case DialogResult.Cancel:
+                //            DialogueModalFRMhighscore.ShowDialog();
+                //            break;
+                //        case DialogResult.Abort:
+                //            DialogueModalFRMhighscore.ShowDialog();
+                //            break;
+                //    }
 
-                    break;
+                //    break;
 
                 default:
 
