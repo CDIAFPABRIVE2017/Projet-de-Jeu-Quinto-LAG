@@ -17,7 +17,7 @@ namespace WFQuinto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipal());
+            Application.Run(new Initialisation());
             ////test chrono
             //Stopwatch watch = new Stopwatch();
         }

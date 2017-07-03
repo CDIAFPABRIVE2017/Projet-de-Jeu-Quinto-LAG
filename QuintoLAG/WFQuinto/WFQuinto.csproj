@@ -58,6 +58,12 @@
     <Compile Include="HighScore.Designer.cs">
       <DependentUpon>HighScore.cs</DependentUpon>
     </Compile>
+    <Compile Include="Initialisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Initialisation.Designer.cs">
+      <DependentUpon>Initialisation.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ressources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ressources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Scores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +114,9 @@
     </Compile>
     <EmbeddedResource Include="HighScore.resx">
       <DependentUpon>HighScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Initialisation.resx">
+      <DependentUpon>Initialisation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -124,10 +138,13 @@
     <EmbeddedResource Include="Quinto.resx">
       <DependentUpon>Quinto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ressources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ressources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Scores.resx">
       <DependentUpon>Scores.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -141,7 +158,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\QuintoLAG\QuintoLAG.csproj">
+      <Project>{0a8613e8-95cc-4c4b-ac77-22ed0656df19}</Project>
+      <Name>QuintoLAG</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\1.jpg" />
     <Content Include="Resources\2.jpg" />
@@ -153,6 +175,7 @@
     <Content Include="Resources\8.jpg" />
     <Content Include="Resources\9.jpg" />
     <Content Include="Resources\Bsod.jpg" />
+    <None Include="Resources\zivLeiE.jpg" />
     <None Include="Resources\Wsod.jpg" />
     <None Include="Resources\Bsod1.jpg" />
     <None Include="Resources\gameoverX.png" />
@@ -163,6 +186,7 @@
     <None Include="Resources\potence1.png" />
     <Content Include="Resources\Rsod.png" />
     <None Include="Resources\Rsod1.png" />
+    <None Include="Resources\top10.jpg" />
     <Content Include="Resources\téléchargement.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -49,17 +49,18 @@
             // 
             // PartiePerdue
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WFQuinto.Properties.Resources.gameoverSpace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(969, 546);
             this.Controls.Add(this.button1);
+            this.MinimumSize = new System.Drawing.Size(985, 585);
             this.Name = "PartiePerdue";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PartiePerdue";
             this.TopMost = true;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

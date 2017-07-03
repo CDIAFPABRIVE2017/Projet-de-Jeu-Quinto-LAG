@@ -43,7 +43,7 @@
             this.textBox1Highscore.Name = "textBox1Highscore";
             this.textBox1Highscore.Size = new System.Drawing.Size(1250, 47);
             this.textBox1Highscore.TabIndex = 0;
-            this.textBox1Highscore.Text = "Veuillez saisir ICI votre nom/prenom/pseudo.";
+            this.textBox1Highscore.Text = "Veuillez saisir ICI votre pseudo.";
             this.textBox1Highscore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1Highscore.Click += new System.EventHandler(this.textBox1Highscore_Click);
             this.textBox1Highscore.TextChanged += new System.EventHandler(this.textBox1Highscore_TextChanged);
@@ -59,7 +59,7 @@
             this.button1Enregistrer.Name = "button1Enregistrer";
             this.button1Enregistrer.Size = new System.Drawing.Size(1250, 74);
             this.button1Enregistrer.TabIndex = 1;
-            this.button1Enregistrer.Text = "Enregister votre score !";
+            this.button1Enregistrer.Text = "Enregistrer votre score !";
             this.button1Enregistrer.UseVisualStyleBackColor = false;
             this.button1Enregistrer.Visible = false;
             this.button1Enregistrer.Click += new System.EventHandler(this.button1Enregistrer_Click);
@@ -73,9 +73,10 @@
             this.ClientSize = new System.Drawing.Size(1274, 613);
             this.Controls.Add(this.button1Enregistrer);
             this.Controls.Add(this.textBox1Highscore);
+            this.MinimumSize = new System.Drawing.Size(1290, 652);
             this.Name = "HighScore";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "HighScore";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

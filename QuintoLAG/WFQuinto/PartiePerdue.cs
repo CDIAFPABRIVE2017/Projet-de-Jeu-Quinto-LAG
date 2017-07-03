@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuintoLAG;
 
 namespace WFQuinto
 {
@@ -17,7 +18,9 @@ namespace WFQuinto
             InitializeComponent();
         }
 
-                 
+        
+
+
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -27,5 +30,7 @@ namespace WFQuinto
             this.DialogResult = DialogResult.OK;
             //this.Close();
         }
+
+       
     }
 }

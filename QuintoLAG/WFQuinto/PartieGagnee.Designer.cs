@@ -52,7 +52,7 @@
             // 
             // button1Record
             // 
-            this.button1Record.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.button1Record.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1Record.BackColor = System.Drawing.Color.White;
             this.button1Record.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -79,9 +79,10 @@
             this.ClientSize = new System.Drawing.Size(950, 649);
             this.Controls.Add(this.button1Record);
             this.Controls.Add(this.button1OK);
+            this.MinimumSize = new System.Drawing.Size(966, 688);
             this.Name = "PartieGagnee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PartieGagnee";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
