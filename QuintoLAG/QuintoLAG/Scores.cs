@@ -59,7 +59,6 @@ namespace QuintoLAG
 
         new public void Add(Score score)
         {
-       
             base.Add(score);
             this.Sort();
             if (this.Count > TailleLeaderboard)

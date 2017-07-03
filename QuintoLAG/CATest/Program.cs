@@ -25,7 +25,7 @@ namespace CATest
 
             TestLeo();
            // testLoad();
-            // testScore();
+            //TestScore();
             // Jeux jeux = new Jeux(2, 9, true);
             // jeux.NouvellePArtie();
         }
@@ -115,7 +115,7 @@ namespace CATest
         static void TestLeo()
         {
             Dictionnaire dico = new Dictionnaire();
-            dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+            dico.LoadTriage(@"E:\Data\liste_francais.csv");
             
             Jeux partie = new Jeux();
 
@@ -141,15 +141,23 @@ namespace CATest
                 //si le mot est trouvé (fin de partie...)
                 if (manche.MancheGagne)
                 {
-                    Console.WriteLine("score : " + manche.ScoreFinManche + " // currentscore : " + manche.CurrentScore);
-                    Console.WriteLine("Temps : " + manche.TempsFinManche + " // current temps : " + manche.CurrentTempsEcoule);
+                    manche.FinManche = DateTime.Now;
+                    Console.WriteLine("score : " + manche.ScoreManche );
+                    Console.WriteLine("Temps : " + manche.TempsManche );
                 }
                 else
                 {
-                    Console.WriteLine("perdu en " + manche.CurrentTempsEcoule + " s " + "score : " + manche.ScoreFinManche);
+                    manche.FinManche = DateTime.Now;
+                    Console.WriteLine("perdu en " + manche.TempsManche + " s " + "score : " + manche.ScoreManche);
                 }
                 partie.NbreManches--;
 
+            }
+
+            if(partie.IsLeaderBoard())
+            {
+                Console.WriteLine("Entrez Pseudo");
+                partie.addLeaderBoard(Console.ReadLine());
             }
             Console.WriteLine("Moyenne Score Final :" + partie.ScoreMoyenne);
             Console.WriteLine("Les scores du leaderboard sont :");

@@ -11,13 +11,14 @@ namespace QuintoLAG
         #region Champs
         private Pioche _pioche;
         private int _nbreErreur;
-        private int _scoreFinManche;
+        private int _scoreManche;
         private DateTime _debutManche;
         private DateTime _finManche;
+        private TimeSpan _tempsManche;
+        private bool _mancheGagne;
+        private bool _mancheTermine;
 
-        private TimeSpan _tempsFinManche;
-       // private bool _mancheGagne;
-        private bool _mancheTermine = false;
+        bool passageFM = true;
 
         #endregion
         #region Propriétés
@@ -33,7 +34,6 @@ namespace QuintoLAG
                 _pioche = value;
             }
         }
-
         public int NbreErreur
         {
             get
@@ -46,23 +46,13 @@ namespace QuintoLAG
                 _nbreErreur = value;
             }
         }
-
-        public TimeSpan CurrentTempsEcoule
+        public int ScoreManche
         {
             get
             {
-                return DateTime.Now - DebutManche;
+                return (((int)TempsManche.TotalSeconds * Properties.Settings.Default.PointsParSec) + (Properties.Settings.Default.PointsParErreurs * NbreErreur));
             }
         }
-        public int CurrentScore
-        {
-            get
-            {
-
-                return (((int)CurrentTempsEcoule.TotalSeconds* Properties.Settings.Default.PointsParSec) + (Properties.Settings.Default.PointsParErreurs * NbreErreur));
-            }
-        }
-
         public DateTime DebutManche
         {
             get
@@ -75,20 +65,25 @@ namespace QuintoLAG
                 _debutManche = value;
             }
         }
-
         public DateTime FinManche
         {
             get
             {
-                return _finManche;
+                if (MancheTermine)
+                {
+                    return _finManche;
+                }
+                return DateTime.Now;
             }
-
             set
             {
-                _finManche = value;
+                if (passageFM)
+                {
+                    _finManche = value;
+                    passageFM = false;
+                }
             }
         }
-
         public TimeSpan TempsManche
         {
             get
@@ -96,58 +91,32 @@ namespace QuintoLAG
                 return FinManche - DebutManche;
             }
         }
-
+        public bool MancheTermine
+        {
+            get
+            {
+                if (NbreErreur >= this.NbreErreurMax || Pioche.MotTrouve())
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
         public bool MancheGagne
         {
-
-
             get
             {
-                if (Pioche.MotTrouve() && !_mancheTermine)
+                if (Pioche.MotTrouve() && MancheTermine)
                 {
-                    //ScoreFinManche = CurrentScore;
-                    _scoreFinManche = CurrentScore;
-                    TempsFinManche = CurrentTempsEcoule;
-                    _mancheTermine = true;
+                    return true;
                 }
-               
-
-
-                return Pioche.MotTrouve();
+                return false;
             }
-
-          //  set => _mancheGagne = value;
         }
-
-        public int ScoreFinManche
-        {
-            get
-            {
-                return _scoreFinManche;
-            }
-            set
-            {
-                _scoreFinManche = value;
-            }
-       }
-        public TimeSpan TempsFinManche
-        {
-            get
-            {
-                return _tempsFinManche;
-            }
-            set
-            {
-                _tempsFinManche = value;
-            }
-         }
-
         #endregion
         #region Constructeurs
         public Manche()
-        {
-            DebutManche = DateTime.Now;
-        }
+        { }
         /// <summary>
         /// Initialise une nouvelle manche
         /// </summary>
