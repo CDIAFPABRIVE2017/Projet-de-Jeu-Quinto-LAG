@@ -5,5 +5,8 @@
     <Setting Name="AppData" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\Data</Value>
     </Setting>
+    <Setting Name="DossierFichier" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\CDI\Projet-de-Jeu-Quinto-LAG\QuintoLAG\</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

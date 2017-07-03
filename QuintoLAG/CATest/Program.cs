@@ -17,17 +17,18 @@ namespace CATest
         static void Main(string[] args)
         {
 
-            Dictionnaire ledico = new Dictionnaire();
+            //Dictionnaire ledico = new Dictionnaire();
 
             //ISauvegarde serialiseur = MonApplication.DispositifSauvegarde;
             //salaries.Load(serialiseur, Properties.Settings.Default.AppData);
 
 
-            TestLeo();
-           // testLoad();
+            //TestLeo();
+            // testLoad();
             // testScore();
             // Jeux jeux = new Jeux(2, 9, true);
             // jeux.NouvellePArtie();
+             testAlimenter();
         }
 
         #region testScore
@@ -111,12 +112,30 @@ namespace CATest
         }
         #endregion
 
+        private static void testAlimenter()
+        {
+            Dictionnaire dico = new Dictionnaire();
+            Dictionnaire secondDico = new Dictionnaire();
+            dico.LoadTriage(Properties.Settings.Default.DossierFichier+"liste_francais.csv");
+            secondDico.LoadTriage(Properties.Settings.Default.DossierFichier + "testleo.txt");
+
+            foreach (string item in secondDico)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            Console.WriteLine("FIN");
+            Console.ReadLine();
+
+
+        }
 
         static void TestLeo()
         {
             Dictionnaire dico = new Dictionnaire();
-            dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
-            
+   //         dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+            dico.LoadTriage(@"D:\CDI\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
             Jeux partie = new Jeux();
 
             while (partie.NbreManches>0)
@@ -126,7 +145,7 @@ namespace CATest
                 Manche manche = new Manche(new Pioche("soleil"));
                 //partie.nouvelleManche();
                 partie.Add(manche);
-                             
+                   
                 //Manche manche = partie.nouvelleManche();
                 Console.WriteLine(manche.Pioche);
                 while (!manche.MancheGagne && manche.NbreErreurMax > manche.NbreErreur)
