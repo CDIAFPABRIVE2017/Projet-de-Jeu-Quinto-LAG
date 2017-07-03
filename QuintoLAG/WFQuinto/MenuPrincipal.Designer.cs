@@ -42,7 +42,7 @@
             // NouvellePartie
             // 
             this.NouvellePartie.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.NouvellePartie.Location = new System.Drawing.Point(6, 442);
+            this.NouvellePartie.Location = new System.Drawing.Point(6, 601);
             this.NouvellePartie.Name = "NouvellePartie";
             this.NouvellePartie.Size = new System.Drawing.Size(302, 51);
             this.NouvellePartie.TabIndex = 0;
@@ -53,7 +53,7 @@
             // AlimenterPioche
             // 
             this.AlimenterPioche.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.AlimenterPioche.Location = new System.Drawing.Point(312, 442);
+            this.AlimenterPioche.Location = new System.Drawing.Point(784, 601);
             this.AlimenterPioche.Name = "AlimenterPioche";
             this.AlimenterPioche.Size = new System.Drawing.Size(302, 51);
             this.AlimenterPioche.TabIndex = 1;
@@ -64,7 +64,7 @@
             // Options
             // 
             this.Options.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Options.Location = new System.Drawing.Point(312, 498);
+            this.Options.Location = new System.Drawing.Point(467, 601);
             this.Options.Name = "Options";
             this.Options.Size = new System.Drawing.Size(302, 51);
             this.Options.TabIndex = 2;
@@ -75,7 +75,7 @@
             // Scores
             // 
             this.Scores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Scores.Location = new System.Drawing.Point(6, 498);
+            this.Scores.Location = new System.Drawing.Point(784, 544);
             this.Scores.Name = "Scores";
             this.Scores.Size = new System.Drawing.Size(302, 51);
             this.Scores.TabIndex = 3;
@@ -93,6 +93,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // labelRegles
             // 
@@ -105,6 +106,7 @@
             this.labelRegles.TabIndex = 6;
             this.labelRegles.Text = resources.GetString("labelRegles.Text");
             this.labelRegles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelRegles.Visible = false;
             // 
             // MenuPrincipal
             // 

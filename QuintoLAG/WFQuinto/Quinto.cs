@@ -16,6 +16,12 @@ namespace WFQuinto
     public partial class Quinto : Form
     {
 
+
+
+
+
+        //////////////////////////////////////////////
+
         /// <summary>
         /// initialisation chrono         
         /// </summary>
@@ -27,10 +33,21 @@ namespace WFQuinto
         public Quinto()
         {
             InitializeComponent();
-
+           
         }
 
+        Jeux partie = new Jeux();
+        Manche manche = new Manche(new Pioche("soleil"));
+        
 
+
+
+
+        private void refresh()
+        {
+            label2nbreErreur.Text = manche.NbreErreur.ToString();
+            labelMotaDeviner.Text = manche.Pioche.ToString();
+        }
         /// <summary>
         /// chargement de la page
         /// </summary>
@@ -38,7 +55,7 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void Quinto_Load(object sender, EventArgs e)
         {
-
+            mancheNombreManche.Text = (partie.Count+1) + "/" + partie.NbreManches;
             label2nbreErreur.Text = "0";
 
             int lettre = 0;
@@ -157,7 +174,9 @@ namespace WFQuinto
                 }
             }
             //---------------------------------------------------------
-           
+            manche.Pioche.LettreTrouve(e.KeyChar);
+
+            refresh();
         }
 
         /// <summary>
@@ -197,8 +216,8 @@ namespace WFQuinto
         private void startGame_Click(object sender, EventArgs e)
         {
             Dictionnaire dico = new Dictionnaire();
-            dico.LoadTriage(@"E:\GitHubCDI Guillaume\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
-
+      //      dico.LoadTriage(@"E:\GitHubCDI Guillaume\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+            dico.LoadTriage(Properties.Settings.Default.AppData+"liste_francais.csv");
             Jeux partie = new Jeux();
 
             while (partie.NbreManches > 0)
@@ -214,8 +233,6 @@ namespace WFQuinto
                 mancheNombreManche.Text = partie.Count + "/" + partie.NbreManches.ToString();
 
                 label2nbreErreur.Text = manche.NbreManches.ToString();
-
-
                 labelMotaDeviner.Text = manche.Pioche.Mot;
                 //labelMotaDeviner.Text = "erer";
 
@@ -254,10 +271,10 @@ namespace WFQuinto
                             break;
                     }
 
-                    label2CurrentScore.Text = (" // currentscore : " + manche.CurrentScore);
-                    label2ScoreTotal.Text = ("score : " + manche.ScoreFinManche);
+                    label2CurrentScore.Text = (" // currentscore : " + manche.ScoreManche);
+                    label2ScoreTotal.Text = ("score : " + manche.ScoreManche);
                     //labelTempsFinal("Temps : " + manche.TempsFinManche + " // current temps : " + manche.CurrentTempsEcoule);
-                    labelTempsFinal.Text = ("Temps : " + manche.TempsFinManche);
+                    labelTempsFinal.Text = ("Temps : " + manche.TempsManche);
 
                     #endregion
                 }
