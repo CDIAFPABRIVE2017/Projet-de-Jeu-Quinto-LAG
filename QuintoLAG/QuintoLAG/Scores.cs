@@ -20,7 +20,13 @@ namespace QuintoLAG
 
         int tailleLeaderboard =10;
 
-        public int TailleLeaderboard { get => tailleLeaderboard; }
+        public int TailleLeaderboard
+        {
+            get
+            {
+                return tailleLeaderboard;
+            }
+        }
 
         public Scores()
         {

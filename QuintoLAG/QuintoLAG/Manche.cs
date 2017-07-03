@@ -119,8 +119,28 @@ namespace QuintoLAG
           //  set => _mancheGagne = value;
         }
 
-        public int ScoreFinManche { get => _scoreFinManche; set => _scoreFinManche = value; }
-        public TimeSpan TempsFinManche { get => _tempsFinManche; set => _tempsFinManche = value; }
+        public int ScoreFinManche
+        {
+            get
+            {
+                return _scoreFinManche;
+            }
+            set
+            {
+                _scoreFinManche = value;
+            }
+       }
+        public TimeSpan TempsFinManche
+        {
+            get
+            {
+                return _tempsFinManche;
+            }
+            set
+            {
+                _tempsFinManche = value;
+            }
+         }
 
         #endregion
         #region Constructeurs

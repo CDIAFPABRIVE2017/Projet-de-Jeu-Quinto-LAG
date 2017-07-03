@@ -3,7 +3,7 @@
   <Class Name="QuintoLAG.Dictionnaire">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgIAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAgIAAAAAAAAiAAAAAAAAAABAABAAAAAAAAAAAAAA=</HashCode>
       <FileName>Dictionnaire.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,22 +17,8 @@
   <Class Name="QuintoLAG.Jeux">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACABAAAAAAAAAAAAAAAEAAAAAAQAAAAQAACEwEAAAA=</HashCode>
+      <HashCode>AAAABAAAAAAABAAACAAAEAAAAAAQAAAAAAIAMwiAAAA=</HashCode>
       <FileName>Jeux.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="QuintoLAG.Manche">
-    <Position X="4.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AQAgAAMAAEAAAggAAAACAAAAAAAACAAAQABIAgAAAAE=</HashCode>
-      <FileName>Manche.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="QuintoLAG.Pioche">
-    <Position X="2.5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAEAgAECAAEAAAAAAAAAAQAEAAAIAQAAAAAAAA=</HashCode>
-      <FileName>Pioche.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="QuintoLAG.Pioches">
@@ -51,10 +37,24 @@
   <Class Name="QuintoLAG.Score">
     <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAACAUEEAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAACAUEAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Score.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="QuintoLAG.Manche">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAAEAAEAAgAgAAAACAAQAQAAAIAAAUABAAgAAAAE=</HashCode>
+      <FileName>Manche.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuintoLAG.Pioche">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEEAgAECAAEAAAAAAABAAQAEAAAIAQAAAAAAAA=</HashCode>
+      <FileName>Pioche.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

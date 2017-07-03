@@ -54,7 +54,17 @@ namespace QuintoLAG
             }
         }
 
-        public int Erreurs { get => _erreurs; set => _erreurs = value; }
+        public int Erreurs
+        {
+            get
+            {
+                 return _erreurs;
+            }
+            set
+            {
+                _erreurs = value;
+            }
+        }
         #endregion
 
         #region Constructeurs
