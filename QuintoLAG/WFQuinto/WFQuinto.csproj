@@ -107,6 +107,9 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PartieGagnee.resx">
       <DependentUpon>PartieGagnee.cs</DependentUpon>
     </EmbeddedResource>
