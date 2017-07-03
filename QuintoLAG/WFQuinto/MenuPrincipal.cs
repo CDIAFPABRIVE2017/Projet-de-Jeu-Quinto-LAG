@@ -31,9 +31,9 @@ namespace WFQuinto
         {
 
             Quinto quinto = new Quinto();
-            //quinto.MdiParent = this;
+            quinto.MdiParent = this;
             quinto.Show();
-            this.Close();
+            //this.Close();
 
         }
 
@@ -45,9 +45,9 @@ namespace WFQuinto
         private void button3_Click(object sender, EventArgs e)
         {
             Options option = new Options();
-           // option.MdiParent = this;
+            option.MdiParent = this;
             option.Show();
-            this.Close();
+            //this.Close();
 
 
         }
@@ -55,9 +55,9 @@ namespace WFQuinto
         private void AlimenterPioche_Click(object sender, EventArgs e)
         {
             AlimenterPioche alimenterPioche = new AlimenterPioche();
-            //alimenterPioche.MdiParent = this;
+            alimenterPioche.MdiParent = this;
             alimenterPioche.Show();
-            this.Close();
+            //this.Close();
 
 
         }
@@ -65,9 +65,9 @@ namespace WFQuinto
         private void Scores_Click(object sender, EventArgs e)
         {
             Scores scores = new Scores();
-            //scores.MdiParent = this;
+            scores.MdiParent = this;
             scores.Show();
-            this.Close();
+            //this.Close();
 
 
 
