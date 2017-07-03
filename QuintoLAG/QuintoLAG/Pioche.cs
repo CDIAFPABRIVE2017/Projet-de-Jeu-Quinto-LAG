@@ -66,7 +66,6 @@ namespace QuintoLAG
             }
         }
         #endregion
-
         #region Constructeurs
         public Pioche()
         { }

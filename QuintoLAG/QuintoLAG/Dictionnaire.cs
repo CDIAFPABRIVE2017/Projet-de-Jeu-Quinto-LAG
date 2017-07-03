@@ -11,22 +11,16 @@ using System.Runtime.Serialization;
 
 namespace QuintoLAG
 {
-
-
-
-
     [Serializable]
     public class Dictionnaire : HashSet<string>
     {
         private static Random rand;
 
-        protected Dictionnaire(
-           SerializationInfo info, StreamingContext context) :
-         base(info, context)
+        protected Dictionnaire(SerializationInfo info, StreamingContext context) : base(info, context)
         {
             // derivedValue = info.GetInt32("derivedValue");
         }
-
+        
 
         /// <summary>
         /// Constructeur par défaut
@@ -108,32 +102,7 @@ namespace QuintoLAG
                     }
                 }
             }
-
-            //for (int i = 0; i < S.Length && S.Length > 4; i++)
-            //{
-            //    if (char.IsLetter(S[i]))
-            //    {
-            //        for (int j = i; j < S.Length && char.IsLetter(S[j]); j++)
-            //        {
-            //            if ((j >= i + 4 && j <= i + 24) && ((j == S.Length - 1) || !char.IsLetter(S[j])))
-            //            {
-            //                string chaine = S[i].ToString();
-            //                for (i++; i <= j; i++)
-            //                {
-            //                    chaine += S[i];
-            //                }
-            //                if (!this.Contains(chaine))
-            //                {
-
-            //                    this.Add(chaine);
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
         }
-
-
         public static string Normalization(string mot)
         {
             mot = mot.Normalize(NormalizationForm.FormD);
@@ -147,13 +116,9 @@ namespace QuintoLAG
             }
             mot = motConverti;
             return mot;
-
         }
-
         public string Random()
         {
-
-            // Random rand = new Random();
             int randcount = rand.Next(1, this.Count);
             int r = 0;
             foreach (string item in this)
@@ -166,7 +131,5 @@ namespace QuintoLAG
             }
             return null;
         }
-
-
     }
 }

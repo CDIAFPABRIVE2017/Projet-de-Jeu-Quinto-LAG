@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="AppData" Type="System.String" Scope="User">
-      <Value Profile="(Default)">D:\Data</Value>
+      <Value Profile="(Default)">E:\Data</Value>
     </Setting>
     <Setting Name="NbManches" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>

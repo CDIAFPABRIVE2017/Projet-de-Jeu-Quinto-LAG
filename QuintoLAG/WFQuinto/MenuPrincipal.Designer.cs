@@ -41,6 +41,7 @@
             // 
             // NouvellePartie
             // 
+            this.NouvellePartie.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.NouvellePartie.Location = new System.Drawing.Point(6, 442);
             this.NouvellePartie.Name = "NouvellePartie";
             this.NouvellePartie.Size = new System.Drawing.Size(302, 51);
@@ -51,6 +52,7 @@
             // 
             // AlimenterPioche
             // 
+            this.AlimenterPioche.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.AlimenterPioche.Location = new System.Drawing.Point(312, 442);
             this.AlimenterPioche.Name = "AlimenterPioche";
             this.AlimenterPioche.Size = new System.Drawing.Size(302, 51);
@@ -61,6 +63,7 @@
             // 
             // Options
             // 
+            this.Options.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Options.Location = new System.Drawing.Point(312, 498);
             this.Options.Name = "Options";
             this.Options.Size = new System.Drawing.Size(302, 51);
@@ -71,6 +74,7 @@
             // 
             // Scores
             // 
+            this.Scores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Scores.Location = new System.Drawing.Point(6, 498);
             this.Scores.Name = "Scores";
             this.Scores.Size = new System.Drawing.Size(302, 51);
@@ -81,7 +85,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::WFQuinto.Properties.Resources.téléchargement;
             this.pictureBox1.Location = new System.Drawing.Point(6, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -92,7 +96,7 @@
             // 
             // labelRegles
             // 
-            this.labelRegles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelRegles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelRegles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelRegles.Location = new System.Drawing.Point(312, 5);
             this.labelRegles.Name = "labelRegles";
@@ -106,7 +110,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 555);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1098, 664);
             this.Controls.Add(this.labelRegles);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Scores);
@@ -115,7 +121,9 @@
             this.Controls.Add(this.NouvellePartie);
             this.IsMdiContainer = true;
             this.Name = "MenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

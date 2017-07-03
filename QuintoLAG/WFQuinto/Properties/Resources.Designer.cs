@@ -233,9 +233,29 @@ namespace WFQuinto.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap top10 {
+            get {
+                object obj = ResourceManager.GetObject("top10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Wsod {
             get {
                 object obj = ResourceManager.GetObject("Wsod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zivLeiE {
+            get {
+                object obj = ResourceManager.GetObject("zivLeiE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
