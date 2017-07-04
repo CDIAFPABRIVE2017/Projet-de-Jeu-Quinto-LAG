@@ -72,8 +72,7 @@ namespace QuintoLAG
         public Pioche(string motATrouver)
         {
             Mot = motATrouver.ToUpper();
-            int lenght = Mot.Length;
-            CharDecouverts = new bool[lenght];
+            CharDecouverts = new bool[Mot.Length];
         }
         #endregion
 

@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace WFQuinto
 {
-    public partial class Scores : Form
+    public partial class Aide : Form
     {
-        public Scores()
+        public Aide()
         {
             InitializeComponent();
         }
-
-        
     }
 }

@@ -29,84 +29,63 @@
             /// </summary>
             private void InitializeComponent()
             {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
-            this.NouvellePartie = new System.Windows.Forms.Button();
-            this.AlimenterPioche = new System.Windows.Forms.Button();
-            this.Options = new System.Windows.Forms.Button();
-            this.Scores = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelRegles = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.nouvellePartieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alimenterPiocheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // NouvellePartie
+            // menuStrip1
             // 
-            this.NouvellePartie.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.NouvellePartie.Location = new System.Drawing.Point(6, 601);
-            this.NouvellePartie.Name = "NouvellePartie";
-            this.NouvellePartie.Size = new System.Drawing.Size(302, 51);
-            this.NouvellePartie.TabIndex = 0;
-            this.NouvellePartie.Text = "Nouvelle Partie";
-            this.NouvellePartie.UseVisualStyleBackColor = true;
-            this.NouvellePartie.Click += new System.EventHandler(this.button1_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nouvellePartieToolStripMenuItem,
+            this.alimenterPiocheToolStripMenuItem,
+            this.optionsToolStripMenuItem,
+            this.scoresToolStripMenuItem,
+            this.aideToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1098, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // AlimenterPioche
+            // nouvellePartieToolStripMenuItem
             // 
-            this.AlimenterPioche.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.AlimenterPioche.Location = new System.Drawing.Point(784, 601);
-            this.AlimenterPioche.Name = "AlimenterPioche";
-            this.AlimenterPioche.Size = new System.Drawing.Size(302, 51);
-            this.AlimenterPioche.TabIndex = 1;
-            this.AlimenterPioche.Text = "Alimenter Pioche";
-            this.AlimenterPioche.UseVisualStyleBackColor = true;
-            this.AlimenterPioche.Click += new System.EventHandler(this.AlimenterPioche_Click);
+            this.nouvellePartieToolStripMenuItem.Name = "nouvellePartieToolStripMenuItem";
+            this.nouvellePartieToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.nouvellePartieToolStripMenuItem.Text = "Nouvelle Partie";
+            this.nouvellePartieToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Options
+            // alimenterPiocheToolStripMenuItem
             // 
-            this.Options.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Options.Location = new System.Drawing.Point(467, 601);
-            this.Options.Name = "Options";
-            this.Options.Size = new System.Drawing.Size(302, 51);
-            this.Options.TabIndex = 2;
-            this.Options.Text = "Options";
-            this.Options.UseVisualStyleBackColor = true;
-            this.Options.Click += new System.EventHandler(this.button3_Click);
+            this.alimenterPiocheToolStripMenuItem.Name = "alimenterPiocheToolStripMenuItem";
+            this.alimenterPiocheToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.alimenterPiocheToolStripMenuItem.Text = "Alimenter Pioche";
+            this.alimenterPiocheToolStripMenuItem.Click += new System.EventHandler(this.AlimenterPioche_Click);
             // 
-            // Scores
+            // optionsToolStripMenuItem
             // 
-            this.Scores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Scores.Location = new System.Drawing.Point(784, 544);
-            this.Scores.Name = "Scores";
-            this.Scores.Size = new System.Drawing.Size(302, 51);
-            this.Scores.TabIndex = 3;
-            this.Scores.Text = "Scores";
-            this.Scores.UseVisualStyleBackColor = true;
-            this.Scores.Click += new System.EventHandler(this.Scores_Click);
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Text = "Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox1
+            // scoresToolStripMenuItem
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::WFQuinto.Properties.Resources.téléchargement;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 432);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            this.scoresToolStripMenuItem.Name = "scoresToolStripMenuItem";
+            this.scoresToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.scoresToolStripMenuItem.Text = "Scores";
+            this.scoresToolStripMenuItem.Click += new System.EventHandler(this.Scores_Click);
             // 
-            // labelRegles
+            // aideToolStripMenuItem
             // 
-            this.labelRegles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelRegles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelRegles.Location = new System.Drawing.Point(312, 5);
-            this.labelRegles.Name = "labelRegles";
-            this.labelRegles.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelRegles.Size = new System.Drawing.Size(302, 432);
-            this.labelRegles.TabIndex = 6;
-            this.labelRegles.Text = resources.GetString("labelRegles.Text");
-            this.labelRegles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelRegles.Visible = false;
+            this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
+            this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.aideToolStripMenuItem.Text = "Aide";
+            this.aideToolStripMenuItem.Click += new System.EventHandler(this.aideToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
@@ -115,29 +94,26 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1098, 664);
-            this.Controls.Add(this.labelRegles);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Scores);
-            this.Controls.Add(this.Options);
-            this.Controls.Add(this.AlimenterPioche);
-            this.Controls.Add(this.NouvellePartie);
+            this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
             }
 
             #endregion
-
-            private System.Windows.Forms.Button NouvellePartie;
-            private System.Windows.Forms.Button AlimenterPioche;
-            private System.Windows.Forms.Button Options;
-            private System.Windows.Forms.Button Scores;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelRegles;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem nouvellePartieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alimenterPiocheToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
     }
 }

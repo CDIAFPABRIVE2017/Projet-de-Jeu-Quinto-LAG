@@ -117,7 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="labelRegles.Text" xml:space="preserve">
+    <value>
+Le jeu
+
+L'objectif du jeu est de découvrir un mot en devinant les lettres le composant. 
+
+À chaque tour, les joueur iront simultanément choisir une lettre de l'alphabet qu'ils estiment pouvant faire partie du mot à deviner. 
+
+Au cas ou le mot contienne cette lettre, celle-ci sera montrée et placée à sa position dans la composition du mot. 
+
+Mais, si la lettre choisie ne fait pas partie du mot, un croquis représentant un corps humain sera peu à peu formé.
+
+Dès que les 9 parties de ce croquis seront terminées, la manche est perdue, et la partie terminée.
+
+Score
+
+Le jeu se joue en 5 manches. Chacune d'elles avec un mot différent à découvrir. 
+1 point par secondes ecoulées .
+7 points par erreurs.
+Exemple: 160 secondes pour trouver un mot en faisant 5 erreurs = (160*1)+(7*5)=195 Points
+(C'est plutôt mauvais !!!)
+Et oui , vous l aurez compris, le meilleur score sera le plus petit.
+
+Visez le TOP10 !
+ 
+</value>
+  </data>
 </root>

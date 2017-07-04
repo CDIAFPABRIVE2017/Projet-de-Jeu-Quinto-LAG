@@ -7,17 +7,10 @@
       <FileName>Dictionnaire.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="QuintoLAG.EntreDictionnaire">
-    <Position X="0.75" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAACAABAAAAAAABAAAAEAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Dictionnaire.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="QuintoLAG.Jeux">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAAABAAACAAAEAAAAAAQAAAAAAIAMwiAAAA=</HashCode>
+      <HashCode>AAAABAAAAAAAAAAAKAAAEAAAAAAQAAAEAEIAMwiAAAA=</HashCode>
       <FileName>Jeux.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -45,12 +38,12 @@
   <Class Name="QuintoLAG.Manche">
     <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAgAAEAAEAAgAgAAAACAAQAQAAAIAAAUABAAgAAAAE=</HashCode>
+      <HashCode>AQggAAMAAEAQAAAAAQACAAAAQAAAQAAAQADAAgAAAAE=</HashCode>
       <FileName>Manche.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="QuintoLAG.Pioche">
-    <Position X="2.5" Y="1.75" Width="1.5" />
+    <Position X="0.75" Y="3.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAEEAgAECAAEAAAAAAABAAQAEAAAIAQAAAAAAAA=</HashCode>
       <FileName>Pioche.cs</FileName>

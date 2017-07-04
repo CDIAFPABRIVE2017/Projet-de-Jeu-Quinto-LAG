@@ -33,12 +33,12 @@ namespace WFQuinto
         public Quinto()
         {
             InitializeComponent();
-           
+
         }
 
         Jeux partie = new Jeux();
         Manche manche = new Manche(new Pioche("soleil"));
-        
+
 
 
 
@@ -48,6 +48,8 @@ namespace WFQuinto
             label2nbreErreur.Text = manche.NbreErreur.ToString();
             labelMotaDeviner.Text = manche.Pioche.ToString();
         }
+
+
         /// <summary>
         /// chargement de la page
         /// </summary>
@@ -55,7 +57,9 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void Quinto_Load(object sender, EventArgs e)
         {
-            mancheNombreManche.Text = (partie.Count+1) + "/" + partie.NbreManches;
+            watch.Reset();
+            watch.Start();
+            mancheNombreManche.Text = (partie.Count + 1) + "/" + partie.NbreManches;
             label2nbreErreur.Text = "0";
 
             int lettre = 0;
@@ -113,9 +117,6 @@ namespace WFQuinto
                 toucheClavier.Click += new System.EventHandler(this.toucheClavier_Click);
                 this.ClavierLigne3.Controls.Add(toucheClavier);
             }
-
-
-           
         }
 
 
@@ -126,8 +127,8 @@ namespace WFQuinto
         /// <param name="e"></param>                     
         private void timer1_Tick(object sender, EventArgs e)
         {
-            TimeSpan tempsReel = watch.Elapsed;
-            labelTempsReel.Text = tempsReel.ToString(@"hh\:mm\:ss");
+            
+            labelTempsReel.Text = manche.TempsManche.ToString(@"hh\:mm\:ss");
         }
 
 
@@ -184,9 +185,9 @@ namespace WFQuinto
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private  void toucheClavier_Click(object sender, EventArgs e)
+        private void toucheClavier_Click(object sender, EventArgs e)
         {
-            
+
             //réaffichage des boutons utilisés dans un autre label
             Button buttonCopie = new Button();
             buttonCopie.Text = ((Button)sender).Text;
@@ -202,115 +203,118 @@ namespace WFQuinto
             ((Button)sender).FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             ((Button)sender).FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             ((Button)sender).UseVisualStyleBackColor = true;
-            label3.Text = ((Button)sender).Text; //test ecriture clavier virtuel   
+
         }
 
         #endregion
-      
+
 
         /// <summary>
         /// depart de la partie
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void startGame_Click(object sender, EventArgs e)
-        {
-            Dictionnaire dico = new Dictionnaire();
-      //      dico.LoadTriage(@"E:\GitHubCDI Guillaume\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
-            dico.LoadTriage(Properties.Settings.Default.AppData+"liste_francais.csv");
-            Jeux partie = new Jeux();
+        //  private void startGame_Click(object sender, EventArgs e)
+        //  {
+        //      Dictionnaire dico = new Dictionnaire();
+        ////      dico.LoadTriage(@"E:\GitHubCDI Guillaume\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
+        //      dico.LoadTriage(Properties.Settings.Default.AppData+"liste_francais.csv");
+        //      Jeux partie = new Jeux();
 
-            while (partie.NbreManches > 0)
-            {
-                //depart chrono
-                watch.Reset();
-                watch.Start();
-
-
-
-                Manche manche = new Manche(new Pioche(dico.Random()));
-                partie.Add(manche);
-                mancheNombreManche.Text = partie.Count + "/" + partie.NbreManches.ToString();
-
-                label2nbreErreur.Text = manche.NbreManches.ToString();
-                labelMotaDeviner.Text = manche.Pioche.Mot;
-                //labelMotaDeviner.Text = "erer";
+        //      while (partie.NbreManches > 0)
+        //      {
+        //          //depart chrono
+        //          watch.Reset();
+        //          watch.Start();
 
 
-                while (!manche.MancheGagne && manche.NbreErreurMax > manche.NbreErreur)
-                {
-                    #region Deroulement des manches//ecoute clavier
-                    //char toucheChar = ((Button)sender).Text[0];
+
+        //          Manche manche = new Manche(new Pioche(dico.Random()));
+        //          partie.Add(manche);
+        //          mancheNombreManche.Text = partie.Count + "/" + partie.NbreManches.ToString();
+
+        //          label2nbreErreur.Text = manche.NbreManches.ToString();
+        //          labelMotaDeviner.Text = manche.Pioche.Mot;
+        //          //labelMotaDeviner.Text = "erer";
 
 
-                    //manche.Pioche.LettreTrouve(toucheChar);
+        //          while (!manche.MancheGagne && manche.NbreErreurMax > manche.NbreErreur)
+        //          {
+        //              #region Deroulement des manches//ecoute clavier
+        //              //char toucheChar = ((Button)sender).Text[0];
 
-                    #endregion
-                }
+
+        //              //manche.Pioche.LettreTrouve(toucheChar);
+
+        //              #endregion
+        //          }
 
 
-                //si le mot est trouvé (fin de partie...)
-                if (manche.MancheGagne)
-                {
-                    #region Partie Gagnee
+        //          //si le mot est trouvé (fin de partie...)
+        //          if (manche.MancheGagne)
+        //          {
+        //              #region Partie Gagnee
 
-                    PartieGagnee DialogueModalFRMPartieGagnee = new PartieGagnee();
-                    DialogResult Victoire = DialogueModalFRMPartieGagnee.ShowDialog();
-                    switch (Victoire)
-                    {
-                        case DialogResult.None:
-                            DialogueModalFRMPartieGagnee.ShowDialog();
-                            break;
-                        case DialogResult.OK:
-                            this.Close();
-                            break;
-                        case DialogResult.Cancel:
-                            this.Close();
-                            break;
-                        default:
-                            break;
-                    }
+        //              PartieGagnee DialogueModalFRMPartieGagnee = new PartieGagnee();
+        //              DialogResult Victoire = DialogueModalFRMPartieGagnee.ShowDialog();
+        //              switch (Victoire)
+        //              {
+        //                  case DialogResult.None:
+        //                      DialogueModalFRMPartieGagnee.ShowDialog();
+        //                      break;
+        //                  case DialogResult.OK:
+        //                      this.Close();
+        //                      break;
+        //                  case DialogResult.Cancel:
+        //                      this.Close();
+        //                      break;
+        //                  default:
+        //                      break;
+        //              }
 
-                    label2CurrentScore.Text = (" // currentscore : " + manche.ScoreManche);
-                    label2ScoreTotal.Text = ("score : " + manche.ScoreManche);
-                    //labelTempsFinal("Temps : " + manche.TempsFinManche + " // current temps : " + manche.CurrentTempsEcoule);
-                    labelTempsFinal.Text = ("Temps : " + manche.TempsManche);
+        //              labelScore.Text = (" // currentscore : " + manche.ScoreManche);
+        //              label2ScoreTotal.Text = ("score : " + manche.ScoreManche);
+        //              //labelTempsFinal("Temps : " + manche.TempsFinManche + " // current temps : " + manche.CurrentTempsEcoule);
 
-                    #endregion
-                }
-                else
-                {
-                    #region Partie Perdue
-                    watch.Stop();
-                    TimeSpan tempsFinal = watch.Elapsed;
-                    labelTempsFinal.Text = tempsFinal.ToString(@"hh\:mm\:ss");
 
-                    PartiePerdue DialogueModalFRMPartiePerdue = new PartiePerdue();
-                    DialogResult Gameover = DialogueModalFRMPartiePerdue.ShowDialog();
-                    switch (Gameover)
-                    {
-                        case DialogResult.None:
-                            DialogueModalFRMPartiePerdue.ShowDialog();
-                            break;
-                        case DialogResult.OK:
-                            DialogueModalFRMPartiePerdue.Close();
-                            this.Close();
-                            break;
-                        case DialogResult.Cancel:
-                            DialogueModalFRMPartiePerdue.Close();
-                            break;
-                        case DialogResult.Abort:
-                            DialogueModalFRMPartiePerdue.Close();
-                            break;
-                    }
+        //              #endregion
+        //          }
+        //          else
+        //          {
+        //              #region Partie Perdue
+        //              watch.Stop();
+        //              TimeSpan tempsFinal = watch.Elapsed;
+        //              labelTempsFinal.Text = tempsFinal.ToString(@"hh\:mm\:ss");
 
-                    #endregion
-                }
+        //              PartiePerdue DialogueModalFRMPartiePerdue = new PartiePerdue();
+        //              DialogResult Gameover = DialogueModalFRMPartiePerdue.ShowDialog();
+        //              switch (Gameover)
+        //              {
+        //                  case DialogResult.None:
+        //                      DialogueModalFRMPartiePerdue.ShowDialog();
+        //                      break;
+        //                  case DialogResult.OK:
+        //                      DialogueModalFRMPartiePerdue.Close();
+        //                      this.Close();
+        //                      break;
+        //                  case DialogResult.Cancel:
+        //                      DialogueModalFRMPartiePerdue.Close();
+        //                      break;
+        //                  case DialogResult.Abort:
+        //                      DialogueModalFRMPartiePerdue.Close();
+        //                      break;
+        //              }
 
-                partie.NbreManches--;
+        //              #endregion
+        //          }
 
-            }
-        }
+        //          partie.NbreManches--;
+
+        //      }
+        //  }
+
+
+
 
         /// <summary>
         /// Lien image/erreur
@@ -354,29 +358,29 @@ namespace WFQuinto
                     pictureBox1.Image = WFQuinto.Properties.Resources._9;
                     break;
 
-                /// highscore
+                    /// highscore
 
-                case "12": // test highscore                        
-                    HighScore DialogueModalFRMhighscore = new HighScore();
-                    DialogResult highscore = DialogueModalFRMhighscore.ShowDialog();
-                    switch (highscore)
-                    {
-                        case DialogResult.None:
-                            DialogueModalFRMhighscore.ShowDialog();
-                            break;
-                        case DialogResult.OK:
-                            DialogueModalFRMhighscore.Close();
-                            //this.Close();
-                            break;
-                        case DialogResult.Cancel:
-                            DialogueModalFRMhighscore.ShowDialog();
-                            break;
-                        case DialogResult.Abort:
-                            DialogueModalFRMhighscore.ShowDialog();
-                            break;
+                    //case "12": // test highscore                        
+                    //    HighScore DialogueModalFRMhighscore = new HighScore();
+                    //    DialogResult highscore = DialogueModalFRMhighscore.ShowDialog();
+                    //    switch (highscore)
+                    //    {
+                    //        case DialogResult.None:
+                    //            DialogueModalFRMhighscore.ShowDialog();
+                    //            break;
+                    //        case DialogResult.OK:
+                    //            DialogueModalFRMhighscore.Close();
+                    //            //this.Close();
+                    //            break;
+                    //        case DialogResult.Cancel:
+                    //            DialogueModalFRMhighscore.ShowDialog();
+                    //            break;
+                    //        case DialogResult.Abort:
+                    //            DialogueModalFRMhighscore.ShowDialog();
+                    //            break;
 
-                    }
-                    break;
+                    // }
+                    // break;
 
             }
         }
