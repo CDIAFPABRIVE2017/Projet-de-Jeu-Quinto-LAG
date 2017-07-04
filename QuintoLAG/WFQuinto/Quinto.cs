@@ -15,41 +15,48 @@ namespace WFQuinto
 {
     public partial class Quinto : Form
     {
+        enum Contextes
+        {
+            Initial = 0,
+            NouvelleManche = 1,
+        }
+        void GestionnaireContextes(Contextes contexte)
+        {
+            switch (contexte)
+            {
+                case Contextes.Initial:
 
-
-
-
-
-        //////////////////////////////////////////////
-
-        /// <summary>
-        /// initialisation chrono         
-        /// </summary>
-        Stopwatch watch = new Stopwatch();
-
+                    break;
+                case Contextes.NouvelleManche:
+                    ClavierLigne1.Controls.Clear();
+                    ClavierLigne2.Controls.Clear();
+                    ClavierLigne3.Controls.Clear();
+                    GenererClavier();
+                    manche = new Manche(new Pioche("soleil"));
+                    refresh();
+                    partie.Add(manche);
+                    mancheNombreManche.Text = partie.Count + "/" + partie.NbreManches;
+                    break;
+                default:
+                    break;
+            }
+        }
         /// <summary>
         /// initialisation Formulaire
         /// </summary>
         public Quinto()
         {
             InitializeComponent();
-
         }
 
         Jeux partie = new Jeux();
-        Manche manche = new Manche(new Pioche("soleil"));
-
-
-
-
+        Manche manche;
 
         private void refresh()
         {
             label2nbreErreur.Text = manche.NbreErreur.ToString();
             labelMotaDeviner.Text = manche.Pioche.ToString();
         }
-
-
         /// <summary>
         /// chargement de la page
         /// </summary>
@@ -57,11 +64,12 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void Quinto_Load(object sender, EventArgs e)
         {
-            watch.Reset();
-            watch.Start();
-            mancheNombreManche.Text = (partie.Count + 1) + "/" + partie.NbreManches;
+            GestionnaireContextes(Contextes.NouvelleManche);
             label2nbreErreur.Text = "0";
+        }
 
+        private void GenererClavier()
+        {
             int lettre = 0;
             char[] alphabet;
             alphabet = new char[26] { 'A', 'Z', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'Q', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'W', 'X', 'C', 'V', 'B', 'N' };
@@ -119,7 +127,6 @@ namespace WFQuinto
             }
         }
 
-
         /// <summary>
         /// Gestion du timer (rafraichissment horloge a la seconde)
         /// </summary>
@@ -127,12 +134,14 @@ namespace WFQuinto
         /// <param name="e"></param>                     
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
             labelTempsReel.Text = manche.TempsManche.ToString(@"hh\:mm\:ss");
+            label2ScoreTotal.Text = manche.ScoreManche.ToString();
         }
 
 
         #region saisie clavier
+
+        
 
         /// <summary>
         /// Saisie clavier physique
@@ -141,7 +150,7 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void Quinto_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            
             //gestion clavier ligne 1---------------------------------
             foreach (Control bouton in ClavierLigne1.Controls)
             {
@@ -174,10 +183,10 @@ namespace WFQuinto
                     toucheClavier_Click(bouton, e);
                 }
             }
-            //---------------------------------------------------------
-            manche.Pioche.LettreTrouve(e.KeyChar);
 
-            refresh();
+           
+            //---------------------------------------------------------
+
         }
 
         /// <summary>
@@ -203,115 +212,79 @@ namespace WFQuinto
             ((Button)sender).FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             ((Button)sender).FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             ((Button)sender).UseVisualStyleBackColor = true;
+            #region temporaire
 
+
+            char c = Char.Parse(((Button)sender).Text);
+            manche.Pioche.LettreTrouve(c);
+            refresh();
+        
+            if (manche.MancheTermine)
+            {
+                manche.FinManche = DateTime.Now;
+
+                if (manche.MancheGagne)
+                {
+                    PartieGagnee DialogueModalFRMPartieGagnee = new PartieGagnee();
+                    DialogResult Victoire = DialogueModalFRMPartieGagnee.ShowDialog();
+                    switch (Victoire)
+                    {
+                        case DialogResult.None:
+                            DialogueModalFRMPartieGagnee.ShowDialog();
+                            break;
+                        case DialogResult.OK:
+                            if (partie.Count ==partie.NbreManches)
+                            {
+                                this.Close();
+                            }
+                            GestionnaireContextes(Contextes.NouvelleManche);
+                            break;
+                        case DialogResult.Cancel:
+                            this.Close();
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+
+                    // watch.Stop();
+                    // TimeSpan tempsFinal = watch.Elapsed;
+                    // labelTempsFinal.Text = tempsFinal.ToString(@"hh\:mm\:ss");
+
+                    PartiePerdue DialogueModalFRMPartiePerdue = new PartiePerdue();
+                    DialogResult Gameover = DialogueModalFRMPartiePerdue.ShowDialog();
+                    switch (Gameover)
+                    {
+                        case DialogResult.None:
+                            DialogueModalFRMPartiePerdue.ShowDialog();
+                            break;
+                        case DialogResult.OK:
+                            DialogueModalFRMPartiePerdue.Close();
+                            this.Close();
+                            break;
+                        case DialogResult.Cancel:
+                            DialogueModalFRMPartiePerdue.Close();
+                            break;
+                        case DialogResult.Abort:
+                            DialogueModalFRMPartiePerdue.Close();
+                            break;
+                    }
+
+                }
+                
+
+            }
+
+            
+            #endregion 
         }
 
         #endregion
 
 
-        /// <summary>
-        /// depart de la partie
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //  private void startGame_Click(object sender, EventArgs e)
-        //  {
-        //      Dictionnaire dico = new Dictionnaire();
-        ////      dico.LoadTriage(@"E:\GitHubCDI Guillaume\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
-        //      dico.LoadTriage(Properties.Settings.Default.AppData+"liste_francais.csv");
-        //      Jeux partie = new Jeux();
 
-        //      while (partie.NbreManches > 0)
-        //      {
-        //          //depart chrono
-        //          watch.Reset();
-        //          watch.Start();
-
-
-
-        //          Manche manche = new Manche(new Pioche(dico.Random()));
-        //          partie.Add(manche);
-        //          mancheNombreManche.Text = partie.Count + "/" + partie.NbreManches.ToString();
-
-        //          label2nbreErreur.Text = manche.NbreManches.ToString();
-        //          labelMotaDeviner.Text = manche.Pioche.Mot;
-        //          //labelMotaDeviner.Text = "erer";
-
-
-        //          while (!manche.MancheGagne && manche.NbreErreurMax > manche.NbreErreur)
-        //          {
-        //              #region Deroulement des manches//ecoute clavier
-        //              //char toucheChar = ((Button)sender).Text[0];
-
-
-        //              //manche.Pioche.LettreTrouve(toucheChar);
-
-        //              #endregion
-        //          }
-
-
-        //          //si le mot est trouvé (fin de partie...)
-        //          if (manche.MancheGagne)
-        //          {
-        //              #region Partie Gagnee
-
-        //              PartieGagnee DialogueModalFRMPartieGagnee = new PartieGagnee();
-        //              DialogResult Victoire = DialogueModalFRMPartieGagnee.ShowDialog();
-        //              switch (Victoire)
-        //              {
-        //                  case DialogResult.None:
-        //                      DialogueModalFRMPartieGagnee.ShowDialog();
-        //                      break;
-        //                  case DialogResult.OK:
-        //                      this.Close();
-        //                      break;
-        //                  case DialogResult.Cancel:
-        //                      this.Close();
-        //                      break;
-        //                  default:
-        //                      break;
-        //              }
-
-        //              labelScore.Text = (" // currentscore : " + manche.ScoreManche);
-        //              label2ScoreTotal.Text = ("score : " + manche.ScoreManche);
-        //              //labelTempsFinal("Temps : " + manche.TempsFinManche + " // current temps : " + manche.CurrentTempsEcoule);
-
-
-        //              #endregion
-        //          }
-        //          else
-        //          {
-        //              #region Partie Perdue
-        //              watch.Stop();
-        //              TimeSpan tempsFinal = watch.Elapsed;
-        //              labelTempsFinal.Text = tempsFinal.ToString(@"hh\:mm\:ss");
-
-        //              PartiePerdue DialogueModalFRMPartiePerdue = new PartiePerdue();
-        //              DialogResult Gameover = DialogueModalFRMPartiePerdue.ShowDialog();
-        //              switch (Gameover)
-        //              {
-        //                  case DialogResult.None:
-        //                      DialogueModalFRMPartiePerdue.ShowDialog();
-        //                      break;
-        //                  case DialogResult.OK:
-        //                      DialogueModalFRMPartiePerdue.Close();
-        //                      this.Close();
-        //                      break;
-        //                  case DialogResult.Cancel:
-        //                      DialogueModalFRMPartiePerdue.Close();
-        //                      break;
-        //                  case DialogResult.Abort:
-        //                      DialogueModalFRMPartiePerdue.Close();
-        //                      break;
-        //              }
-
-        //              #endregion
-        //          }
-
-        //          partie.NbreManches--;
-
-        //      }
-        //  }
 
 
 
