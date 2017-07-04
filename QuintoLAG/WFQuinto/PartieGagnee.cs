@@ -18,7 +18,7 @@ namespace WFQuinto
 
 
             /////
-            button1Record.Visible = true;
+           
         }
 
 
@@ -37,36 +37,7 @@ namespace WFQuinto
         }
 
 
-       /// <summary>
-       /// partie gagnée avec meilleur score  et ouvre frm Highscore
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
-       /// Permuter les hide selon le cas
-       /// 
-        private void button1Record_Click(object sender, EventArgs e)
-        {
-            HighScore DialogueModalFRMhighscore = new HighScore();
-            DialogResult highscore = DialogueModalFRMhighscore.ShowDialog();
-            switch (highscore)
-            {
-                case DialogResult.None:
-                    DialogueModalFRMhighscore.ShowDialog();
-                    break;
-                case DialogResult.OK:
-                    DialogueModalFRMhighscore.Close();
-                    
-                    break;
-                case DialogResult.Cancel:
-                    DialogueModalFRMhighscore.ShowDialog();
-                    break;
-                case DialogResult.Abort:
-                    DialogueModalFRMhighscore.ShowDialog();
-                    break;
-            }
 
-           
-        }
 
        
     }

@@ -66,7 +66,7 @@ namespace QuintoLAG
                     scoreTotal += item.ScoreManche;
 
                 }
-                return (scoreTotal / _nbreTotalManches);
+                return (scoreTotal / _nbreManches);
             }
         }
         #endregion
