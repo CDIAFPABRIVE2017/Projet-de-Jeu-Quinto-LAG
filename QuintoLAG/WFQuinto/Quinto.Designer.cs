@@ -61,6 +61,7 @@
             // 
             // ClavierLigne1
             // 
+            this.ClavierLigne1.BackColor = System.Drawing.Color.Transparent;
             this.ClavierLigne1.Location = new System.Drawing.Point(3, 3);
             this.ClavierLigne1.Name = "ClavierLigne1";
             this.ClavierLigne1.Size = new System.Drawing.Size(737, 60);

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuintoLAG;
 
 namespace WFQuinto
 {
     public partial class MenuPrincipal : Form
     {
+      
         public MenuPrincipal()
         {
             InitializeComponent();

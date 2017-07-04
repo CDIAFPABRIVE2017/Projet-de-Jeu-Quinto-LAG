@@ -17,7 +17,7 @@ namespace QuintoLAG
        // ISauvegarde deserialiseur = new SauvegardeXML();
         
 
-
+        
         int tailleLeaderboard =10;
 
         public int TailleLeaderboard
