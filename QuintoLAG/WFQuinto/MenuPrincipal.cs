@@ -56,6 +56,10 @@ namespace WFQuinto
             AlimenterPioche alimenterPioche = new AlimenterPioche();
             alimenterPioche.MdiParent = this; 
             alimenterPioche.Show();            
+            AlimenterPioche alimenterPioche = AlimenterPioche.CreateInstance();
+            alimenterPioche.MdiParent = this;
+            alimenterPioche.Activate();
+            alimenterPioche.Show();
         }
 
          /// <summary>

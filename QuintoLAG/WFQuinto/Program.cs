@@ -17,6 +17,12 @@ namespace WFQuinto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+           
+            MonApplication.Dictionnaire.Load(Properties.Settings.Default.AppData);
+            if (MonApplication.Dictionnaire.Count<50)
+            {
+
+            }
             Application.Run(new MenuPrincipal());
            
         }
