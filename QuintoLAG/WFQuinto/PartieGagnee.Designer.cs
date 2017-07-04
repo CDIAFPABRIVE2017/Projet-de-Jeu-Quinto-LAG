@@ -59,7 +59,7 @@
             this.Controls.Add(this.button1OK);
             this.MinimumSize = new System.Drawing.Size(966, 688);
             this.Name = "PartieGagnee";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "PartieGagnee";
             this.ResumeLayout(false);
 
