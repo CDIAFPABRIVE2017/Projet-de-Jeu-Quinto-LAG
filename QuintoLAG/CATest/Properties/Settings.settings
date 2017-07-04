@@ -6,7 +6,7 @@
       <Value Profile="(Default)">E:\Data</Value>
     </Setting>
     <Setting Name="DossierFichier" Type="System.String" Scope="User">
-      <Value Profile="(Default)">D:\CDI\Projet-de-Jeu-Quinto-LAG\QuintoLAG\</Value>
+      <Value Profile="(Default)">E:\CDI\Projet-de-Jeu-Quinto-LAG\QuintoLAG\</Value>
     </Setting>
   </Settings>
 </SettingsFile>

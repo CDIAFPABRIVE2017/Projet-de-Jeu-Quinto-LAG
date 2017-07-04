@@ -227,7 +227,7 @@
             this.label2ScoreTotal.Name = "label2ScoreTotal";
             this.label2ScoreTotal.Size = new System.Drawing.Size(43, 15);
             this.label2ScoreTotal.TabIndex = 34;
-            this.label2ScoreTotal.Text = "label2";
+            this.label2ScoreTotal.Text = "0";
             this.label2ScoreTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Quinto

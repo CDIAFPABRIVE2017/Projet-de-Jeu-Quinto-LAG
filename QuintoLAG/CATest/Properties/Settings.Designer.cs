@@ -37,7 +37,7 @@ namespace CATest.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\CDI\\Projet-de-Jeu-Quinto-LAG\\QuintoLAG\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("E:\\CDI\\Projet-de-Jeu-Quinto-LAG\\QuintoLAG\\")]
         public string DossierFichier {
             get {
                 return ((string)(this["DossierFichier"]));

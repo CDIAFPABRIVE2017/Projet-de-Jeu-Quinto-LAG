@@ -28,28 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.textBoxCaractereMin = new System.Windows.Forms.TextBox();
+            this.textBoxEssaisMax = new System.Windows.Forms.TextBox();
+            this.textBoxPointErreur = new System.Windows.Forms.TextBox();
+            this.textBoxpointSeconde = new System.Windows.Forms.TextBox();
+            this.textBoxCharMax = new System.Windows.Forms.TextBox();
+            this.label6CharMax = new System.Windows.Forms.Label();
+            this.textBoxNbreManche = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(891, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 82);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Menu principal";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -59,28 +50,6 @@
             this.label1.Size = new System.Drawing.Size(130, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre de Manches (2-5)";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(27, 101);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
             // 
             // label2
             // 
@@ -118,74 +87,100 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Nombre de points/erreurs";
             // 
-            // textBox1
+            // textBoxCaractereMin
             // 
-            this.textBox1.Location = new System.Drawing.Point(467, 286);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.textBoxCaractereMin.Location = new System.Drawing.Point(467, 286);
+            this.textBoxCaractereMin.Name = "textBoxCaractereMin";
+            this.textBoxCaractereMin.ReadOnly = true;
+            this.textBoxCaractereMin.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCaractereMin.TabIndex = 7;
             // 
-            // textBox2
+            // textBoxEssaisMax
             // 
-            this.textBox2.Location = new System.Drawing.Point(467, 209);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.textBoxEssaisMax.Location = new System.Drawing.Point(467, 209);
+            this.textBoxEssaisMax.Name = "textBoxEssaisMax";
+            this.textBoxEssaisMax.ReadOnly = true;
+            this.textBoxEssaisMax.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEssaisMax.TabIndex = 8;
             // 
-            // textBox3
+            // textBoxPointErreur
             // 
-            this.textBox3.Location = new System.Drawing.Point(467, 124);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.textBoxPointErreur.Location = new System.Drawing.Point(467, 124);
+            this.textBoxPointErreur.Name = "textBoxPointErreur";
+            this.textBoxPointErreur.ReadOnly = true;
+            this.textBoxPointErreur.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPointErreur.TabIndex = 9;
             // 
-            // textBox4
+            // textBoxpointSeconde
             // 
-            this.textBox4.Location = new System.Drawing.Point(467, 46);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
+            this.textBoxpointSeconde.Location = new System.Drawing.Point(467, 46);
+            this.textBoxpointSeconde.Name = "textBoxpointSeconde";
+            this.textBoxpointSeconde.ReadOnly = true;
+            this.textBoxpointSeconde.Size = new System.Drawing.Size(100, 20);
+            this.textBoxpointSeconde.TabIndex = 10;
+            // 
+            // textBoxCharMax
+            // 
+            this.textBoxCharMax.Location = new System.Drawing.Point(467, 368);
+            this.textBoxCharMax.Name = "textBoxCharMax";
+            this.textBoxCharMax.ReadOnly = true;
+            this.textBoxCharMax.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharMax.TabIndex = 11;
+            // 
+            // label6CharMax
+            // 
+            this.label6CharMax.AutoSize = true;
+            this.label6CharMax.Location = new System.Drawing.Point(464, 352);
+            this.label6CharMax.Name = "label6CharMax";
+            this.label6CharMax.Size = new System.Drawing.Size(138, 13);
+            this.label6CharMax.TabIndex = 12;
+            this.label6CharMax.Text = "Nombre  de caracteres Max";
+            // 
+            // textBoxNbreManche
+            // 
+            this.textBoxNbreManche.Location = new System.Drawing.Point(27, 105);
+            this.textBoxNbreManche.Name = "textBoxNbreManche";
+            this.textBoxNbreManche.ReadOnly = true;
+            this.textBoxNbreManche.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNbreManche.TabIndex = 13;
             // 
             // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 498);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxNbreManche);
+            this.Controls.Add(this.label6CharMax);
+            this.Controls.Add(this.textBoxCharMax);
+            this.Controls.Add(this.textBoxpointSeconde);
+            this.Controls.Add(this.textBoxPointErreur);
+            this.Controls.Add(this.textBoxEssaisMax);
+            this.Controls.Add(this.textBoxCaractereMin);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Name = "Options";
             this.Text = "Options";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.Options_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxCaractereMin;
+        private System.Windows.Forms.TextBox textBoxEssaisMax;
+        private System.Windows.Forms.TextBox textBoxPointErreur;
+        private System.Windows.Forms.TextBox textBoxpointSeconde;
+        private System.Windows.Forms.TextBox textBoxCharMax;
+        private System.Windows.Forms.Label label6CharMax;
+        private System.Windows.Forms.TextBox textBoxNbreManche;
     }
 }
