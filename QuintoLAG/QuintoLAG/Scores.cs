@@ -10,15 +10,15 @@ using System.IO;
 namespace QuintoLAG
 {
     [Serializable]
-   // public class Scores: List<Score> 
-   public class Scores: List<Score>, ICollectionMetier
+    // public class Scores: List<Score> 
+    public class Scores : List<Score>, ICollectionMetier
     {
         ISauvegarde serialiseur = new SauvegardeXML();
-       // ISauvegarde deserialiseur = new SauvegardeXML();
-        
+        // ISauvegarde deserialiseur = new SauvegardeXML();
 
-        
-        int tailleLeaderboard =10;
+
+
+        int tailleLeaderboard = 10;
 
         public int TailleLeaderboard
         {
@@ -30,13 +30,13 @@ namespace QuintoLAG
 
         public Scores()
         {
-         
+
 
         }
 
         public void LoadScores()
         {
-           
+
             this.Load(serialiseur, Properties.Settings.Default.AppData);
         }
 
@@ -88,10 +88,21 @@ namespace QuintoLAG
         {
             this.LoadScores();
             Score scorepartie = new Score() { TopScore = scoreMoyenne };
-            if ((scorepartie.CompareTo(this[this.Count - 1]) < 0) || (this.Count < this.TailleLeaderboard))
-                return true;
-            return false;
-        }
+            if (this.Count < this.TailleLeaderboard)
+            { return true; }
+
+            if (scorepartie.CompareTo(this[this.Count - 1]) < 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                
+            }
+            
+        
 
         public void Save(ISauvegarde sauvegarde, string pathRepData)
         {
@@ -100,8 +111,15 @@ namespace QuintoLAG
 
         public void Load(ISauvegarde sauvegarde, string pathRepData)
         {
-            this.AddRange((Scores)sauvegarde.Load(pathRepData, this.GetType()));
-          //  this.sauvegarde.Load(pathRepData, this.GetType());
+            try
+            {
+                this.AddRange((Scores)sauvegarde.Load(pathRepData, this.GetType()));
+            }
+            catch
+            {
+
+            }
+            //  this.sauvegarde.Load(pathRepData, this.GetType());
         }
 
 

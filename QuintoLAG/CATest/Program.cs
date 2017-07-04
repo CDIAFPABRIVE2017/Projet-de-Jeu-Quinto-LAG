@@ -138,7 +138,7 @@ namespace CATest
    //         dico.LoadTriage(@"C:\Users\leopard\Documents\GitHub\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
  //           dico.LoadTriage(@"D:\CDI\Projet-de-Jeu-Quinto-LAG\QuintoLAG\liste_francais.csv");
 
-            dico.LoadTriage(@"E:\Data\liste_francais.csv");
+            dico.LoadTriage(@"D:\Data\liste_francais.csv");
             
 
             Jeux partie = new Jeux();
@@ -178,11 +178,13 @@ namespace CATest
 
             }
 
-            if(partie.IsLeaderBoard())
-            {
-                Console.WriteLine("Entrez Pseudo");
-                partie.addLeaderBoard(Console.ReadLine());
-            }
+
+            // ne fonctionne plus
+            //if(partie.IsLeaderBoard())
+            //{
+            //    Console.WriteLine("Entrez Pseudo");
+            //    partie.addLeaderBoard(Console.ReadLine());
+            //}
             Console.WriteLine("Moyenne Score Final :" + partie.ScoreMoyenne);
             Console.WriteLine("Les scores du leaderboard sont :");
             Console.WriteLine(partie.leaderboard);
