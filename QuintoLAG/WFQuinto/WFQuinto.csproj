@@ -100,11 +100,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ressources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Scores.cs">
+    <Compile Include="FrmScores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Scores.Designer.cs">
-      <DependentUpon>Scores.cs</DependentUpon>
+    <Compile Include="FrmScores.Designer.cs">
+      <DependentUpon>FrmScores.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Aide.resx">
       <DependentUpon>Aide.cs</DependentUpon>
@@ -133,8 +133,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ressources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Scores.resx">
-      <DependentUpon>Scores.cs</DependentUpon>
+    <EmbeddedResource Include="FrmScores.resx">
+      <DependentUpon>FrmScores.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,6 +153,10 @@
     <ProjectReference Include="..\QuintoLAG\QuintoLAG.csproj">
       <Project>{0a8613e8-95cc-4c4b-ac77-22ed0656df19}</Project>
       <Name>QuintoLAG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilitaires\Utilitaires.csproj">
+      <Project>{c24549e7-9d76-41df-a971-0767d9f005c8}</Project>
+      <Name>Utilitaires</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

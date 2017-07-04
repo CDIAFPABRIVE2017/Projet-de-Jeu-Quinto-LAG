@@ -71,7 +71,7 @@ namespace QuintoLAG
             string leaderboard = "";
             foreach (Score item in this)
             {
-                leaderboard += string.Format("#{0}  {1}  \n", IndexOf(item) + 1, item);
+                leaderboard += string.Format("({0})  {1}  \r\n", IndexOf(item) + 1, item);
             }
             return leaderboard;
         }
