@@ -32,7 +32,8 @@ namespace WFQuinto
                     ClavierLigne2.Controls.Clear();
                     ClavierLigne3.Controls.Clear();
                     GenererClavier();
-                    manche = new Manche(new Pioche("soleil"));
+                    //manche = new Manche(new Pioche(MonApplication.Dictionnaire.Random()));
+                    manche = new Manche(new Pioche("Soleil"));
                     refresh();
                     partie.Add(manche);
                     mancheNombreManche.Text = partie.Count + "/" + partie.NbreManches;
@@ -235,6 +236,11 @@ namespace WFQuinto
                         case DialogResult.OK:
                             if (partie.Count ==partie.NbreManches)
                             {
+                                if(MonApplication.Highscores.IsLeaderBoard(partie.ScoreMoyenne))
+                                {
+                                    MonApplication.Highscores.addLeaderBoard("pseudo",partie.ScoreMoyenne);
+                                }
+                                
                                 this.Close();
                             }
                             GestionnaireContextes(Contextes.NouvelleManche);

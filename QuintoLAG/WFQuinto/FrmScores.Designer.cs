@@ -33,12 +33,12 @@
             // 
             // textBox1top10
             // 
+            this.textBox1top10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1top10.Location = new System.Drawing.Point(28, 47);
             this.textBox1top10.Multiline = true;
             this.textBox1top10.Name = "textBox1top10";
             this.textBox1top10.Size = new System.Drawing.Size(388, 491);
             this.textBox1top10.TabIndex = 1;
-            this.textBox1top10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmScores
             // 
@@ -50,6 +50,7 @@
             this.Controls.Add(this.textBox1top10);
             this.Name = "FrmScores";
             this.Text = "Scores";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmScores_FormClosed);
             this.Shown += new System.EventHandler(this.FrmScores_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();

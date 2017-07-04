@@ -9,6 +9,7 @@ namespace QuintoLAG
     public class Jeux : List<Manche>
     {
         public Scores leaderboard = new Scores();
+        
         #region Champs
         private int _nbreManches = Properties.Settings.Default.NbManches;
         private int _nbreErreurMax = Properties.Settings.Default.NbEssais;
@@ -98,22 +99,7 @@ namespace QuintoLAG
         {
             this.Add(new Manche(new Pioche(motAtrouver)));
         }
-        public void addLeaderBoard(string pseudo)
-        {
-            Score scorepartie = new Score() { TopScore = ScoreMoyenne };
-            leaderboard.Add(scorepartie);
-            if ((scorepartie.CompareTo(leaderboard[leaderboard.Count - 1]) < 0) || (leaderboard.Count < leaderboard.TailleLeaderboard))
-            {
-                scorepartie.Pseudo = pseudo;
-            }
-        }
-        public bool IsLeaderBoard()
-        {
-            Score scorepartie = new Score() { TopScore = ScoreMoyenne };
-            if ((scorepartie.CompareTo(leaderboard[leaderboard.Count - 1]) < 0) || (leaderboard.Count < leaderboard.TailleLeaderboard))
-                return true;
-            return false;
-        }
+        
         #endregion
     }
 }

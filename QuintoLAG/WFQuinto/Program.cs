@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-
+using System.Xml.Serialization;
 namespace WFQuinto
 {
     static class Program
@@ -18,7 +18,8 @@ namespace WFQuinto
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            
-            MonApplication.Dictionnaire.Load(Properties.Settings.Default.AppData);
+            MonApplication.Dictionnaire.Load(Properties.Settings.Default.AppData+"\\Test.csv");
+            MonApplication.Highscores.LoadScores();
             if (MonApplication.Dictionnaire.Count<50)
             {
 

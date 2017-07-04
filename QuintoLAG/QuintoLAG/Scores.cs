@@ -75,6 +75,23 @@ namespace QuintoLAG
             }
             return leaderboard;
         }
+        public void addLeaderBoard(string pseudo, int scoreMoyenne)
+        {
+            Score scorepartie = new Score() { TopScore = scoreMoyenne };
+            this.Add(scorepartie);
+            if ((scorepartie.CompareTo(this[this.Count - 1]) < 0) || (this.Count < this.TailleLeaderboard))
+            {
+                scorepartie.Pseudo = pseudo;
+            }
+        }
+        public bool IsLeaderBoard(int scoreMoyenne)
+        {
+            this.LoadScores();
+            Score scorepartie = new Score() { TopScore = scoreMoyenne };
+            if ((scorepartie.CompareTo(this[this.Count - 1]) < 0) || (this.Count < this.TailleLeaderboard))
+                return true;
+            return false;
+        }
 
         public void Save(ISauvegarde sauvegarde, string pathRepData)
         {

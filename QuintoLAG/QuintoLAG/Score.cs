@@ -46,7 +46,7 @@ namespace QuintoLAG
         public override string ToString()
         {
 
-            return string.Format(@"# res.Name : {0}; res.Score : {1}", this.Pseudo, this.TopScore);
+            return string.Format(@"Name : {0}; Score : {1}", this.Pseudo, this.TopScore);
         }
     }
 }

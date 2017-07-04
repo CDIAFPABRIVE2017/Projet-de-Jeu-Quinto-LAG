@@ -13,7 +13,7 @@ namespace WFQuinto
 {
     public partial class MenuPrincipal : Form
     {
-      
+    
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -68,8 +68,9 @@ namespace WFQuinto
          /// <param name="e"></param>
         private void Scores_Click(object sender, EventArgs e)
         {
-            FrmScores scores = new FrmScores();
+            FrmScores scores = FrmScores.CreateInstance();
             scores.MdiParent = this;
+            scores.Activate();
             scores.Show(); 
         }
 
