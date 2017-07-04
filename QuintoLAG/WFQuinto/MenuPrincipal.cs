@@ -53,9 +53,6 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void AlimenterPioche_Click(object sender, EventArgs e)
         {
-            AlimenterPioche alimenterPioche = new AlimenterPioche();
-            alimenterPioche.MdiParent = this; 
-            alimenterPioche.Show();            
             AlimenterPioche alimenterPioche = AlimenterPioche.CreateInstance();
             alimenterPioche.MdiParent = this;
             alimenterPioche.Activate();
