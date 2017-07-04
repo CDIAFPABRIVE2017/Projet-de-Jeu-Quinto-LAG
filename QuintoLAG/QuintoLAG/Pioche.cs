@@ -76,10 +76,7 @@ namespace QuintoLAG
             CharDecouverts = new bool[lenght];
         }
         #endregion
-
-
         #region Méthodes
-
         public bool LettreTrouve(char c)
         {
             c = char.ToUpper(c);
@@ -95,7 +92,6 @@ namespace QuintoLAG
             Erreurs++;
             return false;
         }
-
         public bool MotTrouve()
         {
             foreach (var item in CharDecouverts)
@@ -105,7 +101,6 @@ namespace QuintoLAG
             }
             return true;
         }
-
         public override string ToString()
         {
             string s = "";

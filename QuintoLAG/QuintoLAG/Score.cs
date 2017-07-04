@@ -9,9 +9,11 @@ namespace QuintoLAG
 {
     public class Score : IComparable<Score>
     {
+        #region Champs
         private string _pseudo;
         private int _topScore;
-
+        #endregion
+        #region Propriétés
         public string Pseudo
         {
             get
@@ -24,9 +26,6 @@ namespace QuintoLAG
                 _pseudo = value;
             }
         }
-
-
-
         public int TopScore
         {
             get
@@ -39,14 +38,11 @@ namespace QuintoLAG
                 _topScore = value;
             }
         }
-
+        #endregion
         public int CompareTo(Score other)
         {
             return TopScore.CompareTo(other.TopScore);
         }
-
-
-
         public override string ToString()
         {
 
