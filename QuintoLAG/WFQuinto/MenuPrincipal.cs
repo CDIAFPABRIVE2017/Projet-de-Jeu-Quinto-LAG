@@ -19,6 +19,11 @@ namespace WFQuinto
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Lancement nouvelle partie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Quinto quinto = new Quinto();
@@ -27,6 +32,12 @@ namespace WFQuinto
 
         }
 
+
+        /// <summary>
+        /// Lancement options
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             Options option = new Options();
@@ -36,24 +47,37 @@ namespace WFQuinto
             
         }
 
+
+        /// <summary>
+        /// Alimentation de la pioche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AlimenterPioche_Click(object sender, EventArgs e)
         {
             AlimenterPioche alimenterPioche = new AlimenterPioche();
-            alimenterPioche.MdiParent = this;
-
-            alimenterPioche.Show();
-           
+            alimenterPioche.MdiParent = this; 
+            alimenterPioche.Show();            
         }
 
+         /// <summary>
+         /// Top 10 Scores
+         /// </summary>
+         /// <param name="sender"></param>
+         /// <param name="e"></param>
         private void Scores_Click(object sender, EventArgs e)
         {
-            Scores scores = new Scores();
+            FrmScores scores = new FrmScores();
             scores.MdiParent = this;
-            scores.Show();
-            
-
+            scores.Show(); 
         }
 
+
+        /// <summary>
+        /// Gestion MainMenu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aideToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Aide aide = new Aide();

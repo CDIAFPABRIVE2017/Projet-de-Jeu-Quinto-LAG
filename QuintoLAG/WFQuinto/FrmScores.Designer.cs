@@ -1,6 +1,6 @@
 ﻿namespace WFQuinto
 {
-    partial class Scores
+    partial class FrmScores
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,7 @@
             this.textBox1top10.TabIndex = 1;
             this.textBox1top10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Scores
+            // FrmScores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -48,8 +48,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(896, 586);
             this.Controls.Add(this.textBox1top10);
-            this.Name = "Scores";
+            this.Name = "FrmScores";
             this.Text = "Scores";
+            this.Shown += new System.EventHandler(this.FrmScores_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
