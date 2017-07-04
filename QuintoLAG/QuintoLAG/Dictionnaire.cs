@@ -29,7 +29,7 @@ namespace QuintoLAG
         }
         public void Save(string chemin)
         {
-            using (FileStream fs = new FileStream(chemin, FileMode.Truncate, FileAccess.Write, FileShare.Read))
+            using (FileStream fs = new FileStream(chemin, FileMode.Create, FileAccess.Write, FileShare.Read))
             {
                 StreamWriter sw = new StreamWriter(fs, Encoding.Default);
                 foreach (string item in this)
@@ -42,20 +42,24 @@ namespace QuintoLAG
         }
         public void Load(string chemin)
         {
-            using (FileStream fs = new FileStream(chemin, FileMode.Open, FileAccess.Read, FileShare.Read))
+            if (File.Exists(chemin))
             {
-                StreamReader sr = new StreamReader(fs, Encoding.Default);
-                string strLine = sr.ReadLine();
-
-                while (!string.IsNullOrEmpty(strLine))
+                using (FileStream fs = new FileStream(chemin, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
-                    this.Add(strLine);
-                    strLine = sr.ReadLine();
+                    StreamReader sr = new StreamReader(fs, Encoding.Default);
+                    string strLine = sr.ReadLine();
 
+                    while (!string.IsNullOrEmpty(strLine))
+                    {
+                        this.Add(strLine);
+                        strLine = sr.ReadLine();
+
+                    }
+                    sr.Close();
+                    fs.Close();
                 }
-                sr.Close();
-                fs.Close();
             }
+
         }
         public void LoadTriage(string chemin)
         {
