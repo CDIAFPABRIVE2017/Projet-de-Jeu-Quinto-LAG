@@ -58,6 +58,12 @@
     <Compile Include="AlimenterPioche.Designer.cs">
       <DependentUpon>AlimenterPioche.cs</DependentUpon>
     </Compile>
+    <Compile Include="highScoreInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="highScoreInput.Designer.cs">
+      <DependentUpon>highScoreInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AlimenterPioche.resx">
       <DependentUpon>AlimenterPioche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="highScoreInput.resx">
+      <DependentUpon>highScoreInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>

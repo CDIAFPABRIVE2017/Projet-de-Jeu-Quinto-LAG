@@ -141,9 +141,6 @@ namespace WFQuinto
 
 
         #region saisie clavier
-
-        
-
         /// <summary>
         /// Saisie clavier physique
         /// </summary>
@@ -213,7 +210,7 @@ namespace WFQuinto
             ((Button)sender).FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             ((Button)sender).FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             ((Button)sender).UseVisualStyleBackColor = true;
-            #region temporaire
+  
 
 
             char c = Char.Parse(((Button)sender).Text);
@@ -234,11 +231,18 @@ namespace WFQuinto
                             DialogueModalFRMPartieGagnee.ShowDialog();
                             break;
                         case DialogResult.OK:
-                            if (partie.Count ==partie.NbreManches)
+                            if (partie.Count == partie.NbreManches)
                             {
                                 if(MonApplication.Highscores.IsLeaderBoard(partie.ScoreMoyenne))
                                 {
-                                    MonApplication.Highscores.addLeaderBoard("pseudo",partie.ScoreMoyenne);
+                                    highScoreInput entrezNom = new highScoreInput();
+                                    DialogResult nom = entrezNom.ShowDialog();
+                                    if (nom == DialogResult.OK)
+                                    {
+                                        MonApplication.Highscores.addLeaderBoard(entrezNom.pseudo, partie.ScoreMoyenne);
+                                        entrezNom.Close();
+                                    }
+                                   
                                 }
                                 
                                 this.Close();
@@ -284,7 +288,7 @@ namespace WFQuinto
             }
 
             
-            #endregion 
+         
         }
 
         #endregion

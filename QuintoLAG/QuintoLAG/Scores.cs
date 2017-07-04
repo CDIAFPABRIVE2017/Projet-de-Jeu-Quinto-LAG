@@ -62,8 +62,8 @@ namespace QuintoLAG
             base.Add(score);
             this.Sort();
             if (this.Count > TailleLeaderboard)
-                this.RemoveAt(this.Count - 1);
-            this.Save(serialiseur, Properties.Settings.Default.AppData);
+            this.RemoveRange(tailleLeaderboard, this.Count - TailleLeaderboard);
+                this.Save(serialiseur, Properties.Settings.Default.AppData);
         }
 
         public override string ToString()
@@ -78,11 +78,12 @@ namespace QuintoLAG
         public void addLeaderBoard(string pseudo, int scoreMoyenne)
         {
             Score scorepartie = new Score() { TopScore = scoreMoyenne };
+            scorepartie.Pseudo = pseudo;
             this.Add(scorepartie);
-            if ((scorepartie.CompareTo(this[this.Count - 1]) < 0) || (this.Count < this.TailleLeaderboard))
-            {
-                scorepartie.Pseudo = pseudo;
-            }
+           // if ((scorepartie.CompareTo(this[this.Count - 1]) < 0) || (this.Count < this.TailleLeaderboard))
+            //{
+                
+            //}
         }
         public bool IsLeaderBoard(int scoreMoyenne)
         {
