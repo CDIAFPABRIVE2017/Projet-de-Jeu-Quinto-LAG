@@ -17,10 +17,8 @@ namespace QuintoLAG
         private static Random rand;
 
         protected Dictionnaire(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-            // derivedValue = info.GetInt32("derivedValue");
-        }
-        
+        { }
+
 
         /// <summary>
         /// Constructeur par défaut
@@ -80,7 +78,7 @@ namespace QuintoLAG
 
         public void StringToED(string S)
         {
-            char[] delimiterChars = { ' ', ',', '.', ':', '\t', '\n' };
+            char[] delimiterChars = { ' ', ',', ';', '.', ':', '\t', '\n' };
             string[] words = S.Split(delimiterChars);
 
             foreach (string s in words)

@@ -10,7 +10,6 @@ namespace QuintoLAG
     {
         public Scores leaderboard = new Scores();
         #region Champs
-        private int _nbreTotalManches = Properties.Settings.Default.NbManches;
         private int _nbreManches = Properties.Settings.Default.NbManches;
         private int _nbreErreurMax = Properties.Settings.Default.NbEssais;
         private bool _affichageLettre;
@@ -73,9 +72,7 @@ namespace QuintoLAG
         #endregion
         #region Constructeurs
         public Jeux()
-        {
-            leaderboard.LoadScores();
-        }
+        { }
         public Jeux(int nbreManches, int nbreErreurMax, bool affichageLettre)
         {
             NbreManches = nbreManches;
@@ -105,15 +102,10 @@ namespace QuintoLAG
         {
             Score scorepartie = new Score() { TopScore = ScoreMoyenne };
             leaderboard.Add(scorepartie);
-            //On compare ici le score avec ceux déjà present dans le LB,
-            //comme cela on demande uniquement le Pseudo si le score est dans le top 10
-            //il faut ss doute externaliser la methode pour que ça fonctionne en winform (faire un delegué ?)
-            // ps compare to renvois -1 ou 1
             if ((scorepartie.CompareTo(leaderboard[leaderboard.Count - 1]) < 0) || (leaderboard.Count < leaderboard.TailleLeaderboard))
             {
                 scorepartie.Pseudo = pseudo;
             }
-            
         }
         public bool IsLeaderBoard()
         {

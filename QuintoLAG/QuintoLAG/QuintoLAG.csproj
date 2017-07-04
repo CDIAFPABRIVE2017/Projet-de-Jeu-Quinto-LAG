@@ -41,12 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dictionnaire.cs" />
-    <Compile Include="EntreeDictionnaire.cs" />
     <Compile Include="ICollectionMetiers.cs" />
     <Compile Include="Jeux.cs" />
     <Compile Include="Manche.cs" />
     <Compile Include="Pioche.cs" />
-    <Compile Include="Pioches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="quintoRes.Designer.cs">
       <AutoGen>True</AutoGen>
