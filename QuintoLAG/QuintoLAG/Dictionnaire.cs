@@ -61,10 +61,6 @@ namespace QuintoLAG
             TailleMotMax = tailleMotMax;
             TailleMotMin = tailleMotMin;
         }
-        /// <summary>
-        /// Save a list of strings
-        /// </summary>
-        /// <param name="chemin"></param>
         public void Save(string chemin)
         {
             using (FileStream fs = new FileStream(chemin, FileMode.Create, FileAccess.Write, FileShare.Read))
@@ -78,11 +74,6 @@ namespace QuintoLAG
                 fs.Close();
             }
         }
-
-        /// <summary>
-        /// load a file, extract and normalize words from text contained in file
-        /// </summary>
-        /// <param name="chemin"></param>
         public void LoadTriage(string chemin)
         {
             using (FileStream fs = new FileStream(chemin, FileMode.Open, FileAccess.Read, FileShare.Read))
@@ -101,10 +92,6 @@ namespace QuintoLAG
         }
 
 
-        /// <summary>
-        /// return an uppercased list a words from a string
-        /// </summary>
-        /// <param name="S"></param>
         public void StringToED(string S)
         {
             char[] delimiterChars = { ' ', ',', ';', '.', ':', '\t', '\n' };
@@ -130,12 +117,6 @@ namespace QuintoLAG
                 }
             }
         }
-
-        /// <summary>
-        /// Return a normalized string
-        /// </summary>
-        /// <param name="mot"></param>
-        /// <returns></returns>
         public static string Normalization(string mot)
         {
             mot = mot.Normalize(NormalizationForm.FormD);
@@ -150,11 +131,6 @@ namespace QuintoLAG
             mot = motConverti;
             return mot;
         }
-
-        /// <summary>
-        /// Select a random word from the dictionnary
-        /// </summary>
-        /// <returns></returns>
         public string Random()
         {
             int randcount = rand.Next(1, this.Count);
