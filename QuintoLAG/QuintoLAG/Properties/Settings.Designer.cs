@@ -25,7 +25,7 @@ namespace QuintoLAG.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("E:\\Data")]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Data")]
         public string AppData {
             get {
                 return ((string)(this["AppData"]));

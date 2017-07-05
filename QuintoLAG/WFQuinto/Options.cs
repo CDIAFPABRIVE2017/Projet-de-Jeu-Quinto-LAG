@@ -28,5 +28,18 @@ namespace WFQuinto
             textBoxNbreManche.Text = Properties.Settings.Default.NbManches.ToString();
             //nombre manche = numericUpDownNbreManche.Value;
         }
+
+        private void textBoxNbreManche_Validating(object sender, CancelEventArgs e)
+        {
+            if(int.Parse(textBoxNbreManche.Text) > 1 && int.Parse(textBoxNbreManche.Text) < 6)
+            {
+                Properties.Settings.Default.NbManches = int.Parse(textBoxNbreManche.Text);
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

@@ -140,9 +140,9 @@
             // 
             this.textBoxNbreManche.Location = new System.Drawing.Point(27, 105);
             this.textBoxNbreManche.Name = "textBoxNbreManche";
-            this.textBoxNbreManche.ReadOnly = true;
             this.textBoxNbreManche.Size = new System.Drawing.Size(100, 20);
             this.textBoxNbreManche.TabIndex = 13;
+            this.textBoxNbreManche.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNbreManche_Validating);
             // 
             // Options
             // 
