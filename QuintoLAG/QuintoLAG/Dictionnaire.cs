@@ -14,18 +14,52 @@ namespace QuintoLAG
     [Serializable]
     public class Dictionnaire : HashSet<string>
     {
-        private static Random rand;
-
         protected Dictionnaire(SerializationInfo info, StreamingContext context) : base(info, context)
         { }
+        private static Random rand;
+        private int _tailleMotMax;
+        private int _tailleMotMin;
+
+        public int TailleMotMax
+        {
+            get
+            {
+                return _tailleMotMax;
+            }
+
+            set
+            {
+                _tailleMotMax = value;
+            }
+        }
+
+        public int TailleMotMin
+        {
+            get
+            {
+                return _tailleMotMin;
+            }
+
+            set
+            {
+                _tailleMotMin = value;
+            }
+        }
+
+       
 
 
         /// <summary>
         /// Constructeur par défaut
         /// </summary>
         public Dictionnaire()
+        {}
+
+        public Dictionnaire(int tailleMotMax,int tailleMotMin)
         {
             rand = new Random();
+            TailleMotMax = tailleMotMax;
+            TailleMotMin = tailleMotMin;
         }
         public void Save(string chemin)
         {
@@ -65,7 +99,7 @@ namespace QuintoLAG
 
             foreach (string s in words)
             {
-                if (s.Length > Properties.Settings.Default.TailleMotMin && s.Length < Properties.Settings.Default.TailleMotMax)
+                if (s.Length > this.TailleMotMin && s.Length < this.TailleMotMax)
                 {
                     bool test = true;
                     foreach (char caractere in s)

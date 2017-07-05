@@ -140,9 +140,9 @@
             // 
             this.textBoxNbreManche.Location = new System.Drawing.Point(27, 105);
             this.textBoxNbreManche.Name = "textBoxNbreManche";
-            this.textBoxNbreManche.ReadOnly = true;
             this.textBoxNbreManche.Size = new System.Drawing.Size(100, 20);
             this.textBoxNbreManche.TabIndex = 13;
+            this.textBoxNbreManche.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNbreManche_Validating);
             // 
             // Options
             // 
@@ -163,6 +163,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Options";
             this.Text = "Options";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Options_FormClosed);
             this.Load += new System.EventHandler(this.Options_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

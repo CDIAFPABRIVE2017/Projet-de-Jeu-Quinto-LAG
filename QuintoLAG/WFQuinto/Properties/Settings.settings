@@ -14,7 +14,7 @@
     <Setting Name="PointsParSec" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="NbEssais" Type="System.Int32" Scope="Application">
+    <Setting Name="NbErreurMax" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">9</Value>
     </Setting>
     <Setting Name="TailleMotMin" Type="System.Int32" Scope="Application">

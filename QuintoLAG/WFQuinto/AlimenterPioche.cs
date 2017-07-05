@@ -49,8 +49,9 @@ namespace WFQuinto
         {
             saveFileDialog1.DefaultExt = "csv";
             saveFileDialog1.Filter = "Text files (*.csv)|*.csv|All files (*.*)|*.*";
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK && lBoxPioche.Items.Count > 1)
             {
+                MonApplication.Dictionnaire.Clear();
                 foreach (var item in lBoxPioche.Items)
                 {
                     MonApplication.Dictionnaire.Add(item.ToString());
