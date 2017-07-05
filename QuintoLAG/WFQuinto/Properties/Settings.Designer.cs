@@ -68,9 +68,9 @@ namespace WFQuinto.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("9")]
-        public int NbEssais {
+        public int NbErreurMax {
             get {
-                return ((int)(this["NbEssais"]));
+                return ((int)(this["NbErreurMax"]));
             }
         }
         

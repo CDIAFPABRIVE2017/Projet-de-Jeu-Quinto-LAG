@@ -32,7 +32,7 @@ namespace WFQuinto
                     ClavierLigne2.Controls.Clear();
                     ClavierLigne3.Controls.Clear();
                     GenererClavier();
-                    manche = new Manche(new Pioche(MonApplication.Dictionnaire.Random()));
+                    manche = new Manche(new Pioche(MonApplication.Dictionnaire.Random()), Properties.Settings.Default.NbManches, Properties.Settings.Default.NbErreurMax, Properties.Settings.Default.PointsParSec, Properties.Settings.Default.PointsParErreurs);
                     //manche = new Manche(new Pioche("Soleil"));
                     refresh();
                     partie.Add(manche);
@@ -49,8 +49,7 @@ namespace WFQuinto
         {
             InitializeComponent();
         }
-
-        Jeux partie = new Jeux();
+        Jeux partie = new Jeux(Properties.Settings.Default.NbManches, Properties.Settings.Default.NbErreurMax, Properties.Settings.Default.PointsParSec, Properties.Settings.Default.PointsParErreurs);
         Manche manche;
 
         private void refresh()

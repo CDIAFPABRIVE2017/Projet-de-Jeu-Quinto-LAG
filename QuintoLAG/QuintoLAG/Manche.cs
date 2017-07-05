@@ -50,7 +50,7 @@ namespace QuintoLAG
         {
             get
             {
-                return (((int)TempsManche.TotalSeconds * Properties.Settings.Default.PointsParSec) + (Properties.Settings.Default.PointsParErreurs * NbreErreur));
+                return (((int)TempsManche.TotalSeconds * this.PointParSeconde) + (this.PointParErreur * NbreErreur));
             }
         }
         public DateTime DebutManche
@@ -121,11 +121,15 @@ namespace QuintoLAG
         /// Initialise une nouvelle manche
         /// </summary>
         /// <param name="pioche">instance de l'objet Pioche</param>
-        public Manche(Pioche pioche)
+        public Manche(Pioche pioche, int nbreManches, int nbreErreurMax, int pointParSeconde, int pointParErreur)
         {
             Pioche = pioche;
             NbreErreur = 0;
             DebutManche = DateTime.Now;
+            NbreManches = nbreManches;
+            NbreErreurMax = nbreErreurMax;
+            PointParSeconde = pointParSeconde;
+            PointParErreur = pointParErreur;
         }
         #endregion
     }

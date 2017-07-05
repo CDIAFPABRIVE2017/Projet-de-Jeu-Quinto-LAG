@@ -5,23 +5,5 @@
     <Setting Name="AppData" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\Data</Value>
     </Setting>
-    <Setting Name="NbManches" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">2</Value>
-    </Setting>
-    <Setting Name="PointsParErreurs" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">7</Value>
-    </Setting>
-    <Setting Name="PointsParSec" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">1</Value>
-    </Setting>
-    <Setting Name="NbEssais" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">9</Value>
-    </Setting>
-    <Setting Name="TailleMotMin" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">5</Value>
-    </Setting>
-    <Setting Name="TailleMotMax" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">25</Value>
-    </Setting>
   </Settings>
 </SettingsFile>

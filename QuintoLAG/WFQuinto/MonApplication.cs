@@ -9,7 +9,7 @@ namespace WFQuinto
 {
     public static class MonApplication
     {
-        static Dictionnaire _dictionnaire = new Dictionnaire();
+        static Dictionnaire _dictionnaire = new Dictionnaire(Properties.Settings.Default.TailleMotMax, Properties.Settings.Default.TailleMotMin);
         static Scores _highscores = new Scores();
         public static Dictionnaire Dictionnaire
         {

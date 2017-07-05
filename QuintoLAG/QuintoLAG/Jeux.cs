@@ -9,13 +9,15 @@ namespace QuintoLAG
     public class Jeux : List<Manche>
     {
         public Scores leaderboard = new Scores();
-        
+
         #region Champs
-        private int _nbreManches = Properties.Settings.Default.NbManches;
-        private int _nbreErreurMax = Properties.Settings.Default.NbEssais;
-        private bool _affichageLettre;
+        private int _nbreManches;
+        private int _nbreErreurMax;
+        private int _pointParSeconde;
+        private int _pointParErreur;
         private int _scoreMoyenne;
         private int scoreTotal;
+
         #endregion
         #region Propriétés
         public int NbreManches
@@ -24,7 +26,6 @@ namespace QuintoLAG
             {
                 return _nbreManches;
             }
-
             set
             {
                 _nbreManches = value;
@@ -37,26 +38,11 @@ namespace QuintoLAG
             {
                 return _nbreErreurMax;
             }
-
             set
             {
                 _nbreErreurMax = value;
             }
         }
-        public bool AffichageLettre
-        {
-            get
-            {
-
-                return _affichageLettre;
-            }
-
-            set
-            {
-                _affichageLettre = value;
-            }
-        }
-
         public int ScoreMoyenne
         {
             get
@@ -70,36 +56,41 @@ namespace QuintoLAG
                 return (scoreTotal / _nbreManches);
             }
         }
+
+        public int PointParSeconde
+        {
+            get
+            {
+                return _pointParSeconde;
+            }
+            set
+            {
+                _pointParSeconde = value;
+            }
+        }
+
+        public int PointParErreur
+        {
+            get
+            {
+                return _pointParErreur;
+            }
+            set
+            {
+                _pointParErreur = value;
+            }
+        }
         #endregion
         #region Constructeurs
         public Jeux()
         { }
-        public Jeux(int nbreManches, int nbreErreurMax, bool affichageLettre)
+        public Jeux(int nbreManches, int nbreErreurMax, int pointParSeconde, int pointParErreur)
         {
             NbreManches = nbreManches;
             NbreErreurMax = nbreErreurMax;
-            AffichageLettre = affichageLettre;
+            PointParSeconde = pointParSeconde;
+            PointParErreur = pointParErreur;
         }
-        #endregion
-        #region Méthodes
-
-        /// <summary>
-        /// Initialise une nouvelle manche avec pioche aléatoire
-        /// </summary>
-        public void NouvelleManche()
-        {
-            this.Add(new Manche(new Pioche()));
-        }
-
-        /// <summary>
-        /// Initialise une nouvelle manche
-        /// </summary>
-        /// <param name="motAtrouver"></param>
-        public void NouvelleManche(string motAtrouver)
-        {
-            this.Add(new Manche(new Pioche(motAtrouver)));
-        }
-        
         #endregion
     }
 }

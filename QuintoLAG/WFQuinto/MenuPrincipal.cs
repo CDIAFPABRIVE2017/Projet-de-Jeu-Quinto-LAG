@@ -40,11 +40,10 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            Options option = new Options();
+            Options option =  Options.CreateInstance();
             option.MdiParent = this;
-
+            option.Activate();
             option.Show();
-            
         }
 
 
@@ -82,8 +81,9 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void aideToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Aide aide = new Aide();
+            Aide aide = Aide.CreateInstance();
             aide.MdiParent = this;
+            aide.Activate();
             aide.Show();
         }
     }

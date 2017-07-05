@@ -76,6 +76,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Aide";
             this.Text = "Aide";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Aide_FormClosed);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
