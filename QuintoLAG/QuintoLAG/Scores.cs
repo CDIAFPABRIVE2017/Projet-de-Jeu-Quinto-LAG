@@ -87,7 +87,7 @@ namespace QuintoLAG
         }
         public bool IsLeaderBoard(int scoreMoyenne)
         {
-            this.LoadScores();
+            //this.LoadScores();
             Score scorepartie = new Score() { TopScore = scoreMoyenne };
             if (this.Count < this.TailleLeaderboard)
             { return true; }

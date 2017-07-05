@@ -15,15 +15,7 @@ namespace WFQuinto
         public PartieGagnee()
         {
             InitializeComponent();
-
-
-            /////
-           
         }
-
-
-       
-
         /// <summary>
         /// partie gagné sans meilleur score
         /// </summary>
@@ -33,12 +25,6 @@ namespace WFQuinto
         {
             DialogResult = DialogResult.OK;
             this.Close();
-
         }
-
-
-
-
-       
     }
 }

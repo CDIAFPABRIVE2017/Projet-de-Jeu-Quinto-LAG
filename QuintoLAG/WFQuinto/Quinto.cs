@@ -32,8 +32,8 @@ namespace WFQuinto
                     ClavierLigne2.Controls.Clear();
                     ClavierLigne3.Controls.Clear();
                     GenererClavier();
-                    //manche = new Manche(new Pioche(MonApplication.Dictionnaire.Random()));
-                    manche = new Manche(new Pioche("Soleil"));
+                    manche = new Manche(new Pioche(MonApplication.Dictionnaire.Random()));
+                    //manche = new Manche(new Pioche("Soleil"));
                     refresh();
                     partie.Add(manche);
                     mancheNombreManche.Text = partie.Count + "/" + partie.NbreManches;
@@ -81,8 +81,6 @@ namespace WFQuinto
                 toucheClavier.Size = new System.Drawing.Size(50, 50);
                 toucheClavier.Cursor = System.Windows.Forms.Cursors.Hand;
                 toucheClavier.Text = alphabet[lettre].ToString();
-
-
                 toucheClavier.FlatAppearance.BorderColor = System.Drawing.Color.Black;
                 toucheClavier.FlatAppearance.BorderSize = 2;
                 toucheClavier.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumBlue;
@@ -92,7 +90,6 @@ namespace WFQuinto
                 toucheClavier.Click += new System.EventHandler(this.toucheClavier_Click);
                 this.ClavierLigne1.Controls.Add(toucheClavier);
             }
-
             for (lettre = 10; lettre < 20; lettre++)
             {
                 Button toucheClavier = new Button();
@@ -109,7 +106,6 @@ namespace WFQuinto
                 toucheClavier.Click += new System.EventHandler(this.toucheClavier_Click);
                 this.ClavierLigne2.Controls.Add(toucheClavier);
             }
-
             for (lettre = 20; lettre < 26; lettre++)
             {
                 Button toucheClavier = new Button();
@@ -127,7 +123,6 @@ namespace WFQuinto
                 this.ClavierLigne3.Controls.Add(toucheClavier);
             }
         }
-
         /// <summary>
         /// Gestion du timer (rafraichissment horloge a la seconde)
         /// </summary>
@@ -138,8 +133,6 @@ namespace WFQuinto
             labelTempsReel.Text = manche.TempsManche.ToString(@"hh\:mm\:ss");
             label2ScoreTotal.Text = manche.ScoreManche.ToString();
         }
-
-
         #region saisie clavier
         /// <summary>
         /// Saisie clavier physique
@@ -148,7 +141,6 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void Quinto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
             //gestion clavier ligne 1---------------------------------
             foreach (Control bouton in ClavierLigne1.Controls)
             {
@@ -158,8 +150,6 @@ namespace WFQuinto
                 }
             }
             //---------------------------------------------------------
-
-
 
             //gestion clavier ligne 2----------------------------------
             foreach (Control bouton in ClavierLigne2.Controls)
@@ -171,8 +161,6 @@ namespace WFQuinto
             }
             //---------------------------------------------------------
 
-
-
             //gestion clavier ligne 3----------------------------------
             foreach (Control bouton in ClavierLigne3.Controls)
             {
@@ -181,10 +169,7 @@ namespace WFQuinto
                     toucheClavier_Click(bouton, e);
                 }
             }
-
-           
             //---------------------------------------------------------
-
         }
 
         /// <summary>
@@ -194,14 +179,12 @@ namespace WFQuinto
         /// <param name="e"></param>
         private void toucheClavier_Click(object sender, EventArgs e)
         {
-
             //réaffichage des boutons utilisés dans un autre label
             Button buttonCopie = new Button();
             buttonCopie.Text = ((Button)sender).Text;
             buttonCopie.Size = new System.Drawing.Size(40, 40);
             buttonCopie.Cursor = System.Windows.Forms.Cursors.No;
             toucheUtilisées.Controls.Add(buttonCopie);
-
             ///modification graphique des boutons utilisés
             ((Button)sender).Enabled = false;
             ((Button)sender).Cursor = System.Windows.Forms.Cursors.No;
@@ -210,13 +193,11 @@ namespace WFQuinto
             ((Button)sender).FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             ((Button)sender).FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             ((Button)sender).UseVisualStyleBackColor = true;
-  
-
 
             char c = Char.Parse(((Button)sender).Text);
             manche.Pioche.LettreTrouve(c);
             refresh();
-        
+
             if (manche.MancheTermine)
             {
                 manche.FinManche = DateTime.Now;
@@ -233,7 +214,7 @@ namespace WFQuinto
                         case DialogResult.OK:
                             if (partie.Count == partie.NbreManches)
                             {
-                                if(MonApplication.Highscores.IsLeaderBoard(partie.ScoreMoyenne))
+                                if (MonApplication.Highscores.IsLeaderBoard(partie.ScoreMoyenne))
                                 {
                                     highScoreInput entrezNom = new highScoreInput();
                                     DialogResult nom = entrezNom.ShowDialog();
@@ -242,9 +223,9 @@ namespace WFQuinto
                                         MonApplication.Highscores.addLeaderBoard(entrezNom.pseudo, partie.ScoreMoyenne);
                                         entrezNom.Close();
                                     }
-                                   
+
                                 }
-                                
+
                                 this.Close();
                             }
                             GestionnaireContextes(Contextes.NouvelleManche);
@@ -258,7 +239,6 @@ namespace WFQuinto
                 }
                 else
                 {
-
                     // watch.Stop();
                     // TimeSpan tempsFinal = watch.Elapsed;
                     // labelTempsFinal.Text = tempsFinal.ToString(@"hh\:mm\:ss");
@@ -281,24 +261,10 @@ namespace WFQuinto
                             DialogueModalFRMPartiePerdue.Close();
                             break;
                     }
-
                 }
-                
-
             }
-
-            
-         
         }
-
         #endregion
-
-
-
-
-
-
-
         /// <summary>
         /// Lien image/erreur
         /// 
@@ -309,7 +275,6 @@ namespace WFQuinto
         {
             switch (label2nbreErreur.Text)
             {
-
                 case "0":
                     pictureBox1.Image = WFQuinto.Properties.Resources.potence;
                     break;
@@ -340,33 +305,7 @@ namespace WFQuinto
                 case "9":
                     pictureBox1.Image = WFQuinto.Properties.Resources._9;
                     break;
-
-                    /// highscore
-
-                    //case "12": // test highscore                        
-                    //    HighScore DialogueModalFRMhighscore = new HighScore();
-                    //    DialogResult highscore = DialogueModalFRMhighscore.ShowDialog();
-                    //    switch (highscore)
-                    //    {
-                    //        case DialogResult.None:
-                    //            DialogueModalFRMhighscore.ShowDialog();
-                    //            break;
-                    //        case DialogResult.OK:
-                    //            DialogueModalFRMhighscore.Close();
-                    //            //this.Close();
-                    //            break;
-                    //        case DialogResult.Cancel:
-                    //            DialogueModalFRMhighscore.ShowDialog();
-                    //            break;
-                    //        case DialogResult.Abort:
-                    //            DialogueModalFRMhighscore.ShowDialog();
-                    //            break;
-
-                    // }
-                    // break;
-
             }
         }
-
     }
 }

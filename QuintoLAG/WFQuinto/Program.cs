@@ -17,13 +17,8 @@ namespace WFQuinto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
-            MonApplication.Dictionnaire.Load(Properties.Settings.Default.AppData+"\\Test.csv");
+            MonApplication.Dictionnaire.LoadTriage(Properties.Settings.Default.AppData+ "\\liste_francais.csv");
             MonApplication.Highscores.LoadScores();
-            if (MonApplication.Dictionnaire.Count<50)
-            {
-
-            }
             Application.Run(new MenuPrincipal());
            
         }

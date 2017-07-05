@@ -40,27 +40,6 @@ namespace QuintoLAG
                 fs.Close();
             }
         }
-        public void Load(string chemin)
-        {
-            if (File.Exists(chemin))
-            {
-                using (FileStream fs = new FileStream(chemin, FileMode.Open, FileAccess.Read, FileShare.Read))
-                {
-                    StreamReader sr = new StreamReader(fs, Encoding.Default);
-                    string strLine = sr.ReadLine();
-
-                    while (!string.IsNullOrEmpty(strLine))
-                    {
-                        this.Add(strLine);
-                        strLine = sr.ReadLine();
-
-                    }
-                    sr.Close();
-                    fs.Close();
-                }
-            }
-
-        }
         public void LoadTriage(string chemin)
         {
             using (FileStream fs = new FileStream(chemin, FileMode.Open, FileAccess.Read, FileShare.Read))
@@ -72,7 +51,6 @@ namespace QuintoLAG
                 {
                     this.StringToED(Normalization(strLine).ToUpper());
                     strLine = sr.ReadLine();
-
                 }
                 sr.Close();
                 fs.Close();

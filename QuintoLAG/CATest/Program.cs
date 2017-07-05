@@ -26,7 +26,7 @@ namespace CATest
 
             //TestLeo();
             // testLoad();
-            // testScore();
+             TestScore();
 
              //testAlimenter();
         }

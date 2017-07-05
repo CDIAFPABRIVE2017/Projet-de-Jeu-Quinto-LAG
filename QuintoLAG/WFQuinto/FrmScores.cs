@@ -14,21 +14,6 @@ namespace WFQuinto
 {
     public partial class FrmScores : Form
     {
-        //static AlimenterPioche instance;
-        //private AlimenterPioche()
-        //{
-        //    InitializeComponent();
-        //}
-        //public static AlimenterPioche CreateInstance()
-        //{
-        //    if (instance == null)
-        //    {
-        //        instance = new AlimenterPioche();
-        //    }
-        //    return instance;
-
-        //}
-
         static FrmScores instance;
         private FrmScores()
         {
@@ -50,11 +35,7 @@ namespace WFQuinto
        /// <param name="e"></param>
         private void FrmScores_Shown(object sender, EventArgs e)
         {
-            //ISauvegarde serialiseur = new SauvegardeXML();
-            //Scores scoresLb = new Scores();
-            //scoresLb.Load(serialiseur, Properties.Settings.Default.AppData);
             textBox1top10.Text = MonApplication.Highscores.ToString();
-
         }
 
         private void FrmScores_FormClosed(object sender, FormClosedEventArgs e)

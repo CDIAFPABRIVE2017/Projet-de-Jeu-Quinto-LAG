@@ -43,7 +43,6 @@ namespace WFQuinto
         private void btnValider_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-            //this.Close();
         }
     }
 }
