@@ -39,10 +39,19 @@ namespace QuintoLAG
             }
         }
         #endregion
+        /// <summary>
+        /// Compare one score with another
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public int CompareTo(Score other)
         {
             return TopScore.CompareTo(other.TopScore);
         }
+        /// <summary>
+        /// Return a score as a string
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
 

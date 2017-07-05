@@ -143,16 +143,18 @@ namespace CATest
 
             Jeux partie = new Jeux();
 
-            while (partie.NbreManches>0)
+
+            // !!!!! Ce test n'est plus valide. A refactoriser.
+           /* while (partie.NbreManches>0)
             {
                 
                 //Manche manche = new Manche(new Pioche(dico.Random()));                
-                Manche manche = new Manche(new Pioche("soleil"));
+                //Manche manche = Manche(new Pioche("soleil"));
                 //partie.nouvelleManche();
-                partie.Add(manche);
+                //partie.Add(manche);
                    
                 //Manche manche = partie.nouvelleManche();
-                Console.WriteLine(manche.Pioche);
+                Console.WriteLine(partie.Pioche);
                 while (!manche.MancheGagne && manche.NbreErreurMax > manche.NbreErreur)
                 {
 
@@ -176,7 +178,7 @@ namespace CATest
                 }
                 partie.NbreManches--;
 
-            }
+            }*/
 
 
             // ne fonctionne plus

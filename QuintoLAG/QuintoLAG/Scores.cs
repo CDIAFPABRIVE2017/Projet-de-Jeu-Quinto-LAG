@@ -34,6 +34,9 @@ namespace QuintoLAG
 
         }
 
+        /// <summary>
+        /// charge le contenu du fichier scores
+        /// </summary>
         public void LoadScores()
         {
 
@@ -45,7 +48,7 @@ namespace QuintoLAG
         /// </summary>
         public void ResetScores()
         {
-            //moyennement testé
+
             if (this.Count != 0)
             {
                 this.RemoveRange(0, TailleLeaderboard - 1);
@@ -57,15 +60,23 @@ namespace QuintoLAG
             }
         }
 
+        /// <summary>
+        /// Ajoute un score a la liste
+        /// </summary>
+        /// <param name="score"></param>
         new public void Add(Score score)
         {
             base.Add(score);
             this.Sort();
             if (this.Count > TailleLeaderboard)
-            this.RemoveRange(tailleLeaderboard, this.Count - TailleLeaderboard);
-                this.Save(serialiseur, Properties.Settings.Default.AppData);
+                this.RemoveRange(tailleLeaderboard, this.Count - TailleLeaderboard);
+            this.Save(serialiseur, Properties.Settings.Default.AppData);
         }
 
+        /// <summary>
+        /// Transforme tout les scores en chaines
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             string leaderboard = "";
@@ -75,41 +86,55 @@ namespace QuintoLAG
             }
             return leaderboard;
         }
+        /// <summary>
+        /// génère un score et l'ajoute a la liste
+        /// </summary>
+        /// <param name="pseudo"></param>
+        /// <param name="scoreMoyenne"></param>
         public void addLeaderBoard(string pseudo, int scoreMoyenne)
         {
             Score scorepartie = new Score() { TopScore = scoreMoyenne };
             scorepartie.Pseudo = pseudo;
             this.Add(scorepartie);
-           // if ((scorepartie.CompareTo(this[this.Count - 1]) < 0) || (this.Count < this.TailleLeaderboard))
-            //{
-                
-            //}
         }
+
+        /// <summary>
+        /// vérifie l'éligibilité d'un score par rapport au tableau des scores
+        /// </summary>
+        /// <param name="scoreMoyenne"></param>
+        /// <returns></returns>
         public bool IsLeaderBoard(int scoreMoyenne)
         {
             //this.LoadScores();
             Score scorepartie = new Score() { TopScore = scoreMoyenne };
             if (this.Count < this.TailleLeaderboard)
             { return true; }
-
             if (scorepartie.CompareTo(this[this.Count - 1]) < 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-                
+            {
+                return true;
             }
-            
-        
+            else
+            {
+                return false;
+            }
+        }
 
+
+        /// <summary>
+        /// Sauvegarde les scores
+        /// </summary>
+        /// <param name="sauvegarde"></param>
+        /// <param name="pathRepData"></param>
         public void Save(ISauvegarde sauvegarde, string pathRepData)
         {
             sauvegarde.Save(pathRepData, this);
         }
 
+        /// <summary>
+        /// Charge les scores
+        /// </summary>
+        /// <param name="sauvegarde"></param>
+        /// <param name="pathRepData"></param>
         public void Load(ISauvegarde sauvegarde, string pathRepData)
         {
             try

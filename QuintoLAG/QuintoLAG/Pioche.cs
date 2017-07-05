@@ -76,6 +76,11 @@ namespace QuintoLAG
         }
         #endregion
         #region Méthodes
+        /// <summary>
+        /// Return true if a char is contained into a string and mark this char as true
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public bool LettreTrouve(char c)
         {
             c = char.ToUpper(c);
@@ -91,6 +96,10 @@ namespace QuintoLAG
             Erreurs++;
             return false;
         }
+        /// <summary>
+        /// Return if all chars from the string has been discovered
+        /// </summary>
+        /// <returns></returns>
         public bool MotTrouve()
         {
             foreach (var item in CharDecouverts)
@@ -100,6 +109,10 @@ namespace QuintoLAG
             }
             return true;
         }
+        /// <summary>
+        /// Convert into string a representation of the chars found and not found
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             string s = "";
