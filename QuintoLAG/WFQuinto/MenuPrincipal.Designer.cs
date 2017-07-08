@@ -29,6 +29,7 @@
             /// </summary>
             private void InitializeComponent()
             {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nouvellePartieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alimenterPiocheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,66 +41,54 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nouvellePartieToolStripMenuItem,
             this.alimenterPiocheToolStripMenuItem,
             this.optionsToolStripMenuItem,
             this.scoresToolStripMenuItem,
             this.aideToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1098, 24);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // nouvellePartieToolStripMenuItem
             // 
+            resources.ApplyResources(this.nouvellePartieToolStripMenuItem, "nouvellePartieToolStripMenuItem");
             this.nouvellePartieToolStripMenuItem.Name = "nouvellePartieToolStripMenuItem";
-            this.nouvellePartieToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.nouvellePartieToolStripMenuItem.Text = "Nouvelle Partie";
             this.nouvellePartieToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
             // alimenterPiocheToolStripMenuItem
             // 
+            resources.ApplyResources(this.alimenterPiocheToolStripMenuItem, "alimenterPiocheToolStripMenuItem");
             this.alimenterPiocheToolStripMenuItem.Name = "alimenterPiocheToolStripMenuItem";
-            this.alimenterPiocheToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
-            this.alimenterPiocheToolStripMenuItem.Text = "Alimenter Pioche";
             this.alimenterPiocheToolStripMenuItem.Click += new System.EventHandler(this.AlimenterPioche_Click);
             // 
             // optionsToolStripMenuItem
             // 
+            resources.ApplyResources(this.optionsToolStripMenuItem, "optionsToolStripMenuItem");
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.optionsToolStripMenuItem.Text = "Options";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.button3_Click);
             // 
             // scoresToolStripMenuItem
             // 
+            resources.ApplyResources(this.scoresToolStripMenuItem, "scoresToolStripMenuItem");
             this.scoresToolStripMenuItem.Name = "scoresToolStripMenuItem";
-            this.scoresToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.scoresToolStripMenuItem.Text = "Scores";
             this.scoresToolStripMenuItem.Click += new System.EventHandler(this.Scores_Click);
             // 
             // aideToolStripMenuItem
             // 
+            resources.ApplyResources(this.aideToolStripMenuItem, "aideToolStripMenuItem");
             this.aideToolStripMenuItem.Name = "aideToolStripMenuItem";
-            this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.aideToolStripMenuItem.Text = "Aide";
             this.aideToolStripMenuItem.Click += new System.EventHandler(this.aideToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1098, 664);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -113,23 +113,44 @@
     <Compile Include="FrmScores.Designer.cs">
       <DependentUpon>FrmScores.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Aide.en.resx">
+      <DependentUpon>Aide.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aide.resx">
       <DependentUpon>Aide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlimenterPioche.en.resx">
+      <DependentUpon>AlimenterPioche.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AlimenterPioche.resx">
       <DependentUpon>AlimenterPioche.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="highScoreInput.en.resx">
+      <DependentUpon>highScoreInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="highScoreInput.resx">
       <DependentUpon>highScoreInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.en.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Options.en.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PartieGagnee.en.resx">
+      <DependentUpon>PartieGagnee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PartieGagnee.resx">
       <DependentUpon>PartieGagnee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartiePerdue.en.resx">
+      <DependentUpon>PartiePerdue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartiePerdue.resx">
       <DependentUpon>PartiePerdue.cs</DependentUpon>
@@ -138,6 +159,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quinto.en.resx">
+      <DependentUpon>Quinto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quinto.fr.resx">
+      <DependentUpon>Quinto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Quinto.resx">
       <DependentUpon>Quinto.cs</DependentUpon>

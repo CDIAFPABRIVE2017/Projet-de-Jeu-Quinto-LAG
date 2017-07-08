@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlimenterPioche));
             this.lBoxDictionnaire = new System.Windows.Forms.ListBox();
             this.lBoxPioche = new System.Windows.Forms.ListBox();
             this.butCharger = new System.Windows.Forms.Button();
@@ -45,119 +46,93 @@
             // 
             // lBoxDictionnaire
             // 
+            resources.ApplyResources(this.lBoxDictionnaire, "lBoxDictionnaire");
             this.lBoxDictionnaire.FormattingEnabled = true;
-            this.lBoxDictionnaire.Location = new System.Drawing.Point(12, 16);
             this.lBoxDictionnaire.Name = "lBoxDictionnaire";
             this.lBoxDictionnaire.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lBoxDictionnaire.Size = new System.Drawing.Size(140, 368);
-            this.lBoxDictionnaire.TabIndex = 0;
             this.lBoxDictionnaire.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // lBoxPioche
             // 
+            resources.ApplyResources(this.lBoxPioche, "lBoxPioche");
             this.lBoxPioche.FormattingEnabled = true;
-            this.lBoxPioche.Location = new System.Drawing.Point(332, 16);
             this.lBoxPioche.Name = "lBoxPioche";
             this.lBoxPioche.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lBoxPioche.Size = new System.Drawing.Size(140, 368);
-            this.lBoxPioche.TabIndex = 1;
             // 
             // butCharger
             // 
-            this.butCharger.Location = new System.Drawing.Point(12, 397);
+            resources.ApplyResources(this.butCharger, "butCharger");
             this.butCharger.Name = "butCharger";
-            this.butCharger.Size = new System.Drawing.Size(140, 23);
-            this.butCharger.TabIndex = 2;
-            this.butCharger.Text = "Charger";
             this.butCharger.UseVisualStyleBackColor = true;
             this.butCharger.Click += new System.EventHandler(this.butCharger_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             // 
             // butSauvegarde
             // 
-            this.butSauvegarde.Location = new System.Drawing.Point(332, 397);
+            resources.ApplyResources(this.butSauvegarde, "butSauvegarde");
             this.butSauvegarde.Name = "butSauvegarde";
-            this.butSauvegarde.Size = new System.Drawing.Size(140, 23);
-            this.butSauvegarde.TabIndex = 3;
-            this.butSauvegarde.Text = "Sauvegarder";
             this.butSauvegarde.UseVisualStyleBackColor = true;
             this.butSauvegarde.Click += new System.EventHandler(this.butSauvegarde_Click);
             // 
+            // saveFileDialog1
+            // 
+            resources.ApplyResources(this.saveFileDialog1, "saveFileDialog1");
+            // 
             // butToutAjouter
             // 
-            this.butToutAjouter.Location = new System.Drawing.Point(195, 182);
+            resources.ApplyResources(this.butToutAjouter, "butToutAjouter");
             this.butToutAjouter.Name = "butToutAjouter";
-            this.butToutAjouter.Size = new System.Drawing.Size(94, 23);
-            this.butToutAjouter.TabIndex = 4;
-            this.butToutAjouter.Text = "Tout ajouter";
             this.butToutAjouter.UseVisualStyleBackColor = true;
             this.butToutAjouter.Click += new System.EventHandler(this.butToutAjouter_Click);
             // 
             // butViderListDictionnaire
             // 
-            this.butViderListDictionnaire.Location = new System.Drawing.Point(12, 426);
+            resources.ApplyResources(this.butViderListDictionnaire, "butViderListDictionnaire");
             this.butViderListDictionnaire.Name = "butViderListDictionnaire";
-            this.butViderListDictionnaire.Size = new System.Drawing.Size(140, 23);
-            this.butViderListDictionnaire.TabIndex = 5;
-            this.butViderListDictionnaire.Text = "Vider liste";
             this.butViderListDictionnaire.UseVisualStyleBackColor = true;
             this.butViderListDictionnaire.Click += new System.EventHandler(this.butViderListDictionnaire_Click);
             // 
             // butViderListePioche
             // 
-            this.butViderListePioche.Location = new System.Drawing.Point(332, 426);
+            resources.ApplyResources(this.butViderListePioche, "butViderListePioche");
             this.butViderListePioche.Name = "butViderListePioche";
-            this.butViderListePioche.Size = new System.Drawing.Size(140, 23);
-            this.butViderListePioche.TabIndex = 6;
-            this.butViderListePioche.Text = "Vider liste";
             this.butViderListePioche.UseVisualStyleBackColor = true;
             this.butViderListePioche.Click += new System.EventHandler(this.butViderListePioche_Click);
             // 
             // butAjouter
             // 
-            this.butAjouter.Location = new System.Drawing.Point(195, 211);
+            resources.ApplyResources(this.butAjouter, "butAjouter");
             this.butAjouter.Name = "butAjouter";
-            this.butAjouter.Size = new System.Drawing.Size(94, 23);
-            this.butAjouter.TabIndex = 7;
-            this.butAjouter.Text = "Ajouter >>>>";
             this.butAjouter.UseVisualStyleBackColor = true;
             this.butAjouter.Click += new System.EventHandler(this.butAjouterSelection_Click);
             // 
             // butRetirer
             // 
-            this.butRetirer.Location = new System.Drawing.Point(195, 240);
+            resources.ApplyResources(this.butRetirer, "butRetirer");
             this.butRetirer.Name = "butRetirer";
-            this.butRetirer.Size = new System.Drawing.Size(94, 23);
-            this.butRetirer.TabIndex = 8;
-            this.butRetirer.Text = "<<<< Retirer";
             this.butRetirer.UseVisualStyleBackColor = true;
             this.butRetirer.Click += new System.EventHandler(this.butRetirer_Click);
             // 
             // tBoxMot
             // 
-            this.tBoxMot.Location = new System.Drawing.Point(158, 42);
+            resources.ApplyResources(this.tBoxMot, "tBoxMot");
             this.tBoxMot.Name = "tBoxMot";
-            this.tBoxMot.Size = new System.Drawing.Size(168, 20);
-            this.tBoxMot.TabIndex = 9;
             // 
             // butMot
             // 
-            this.butMot.Location = new System.Drawing.Point(195, 68);
+            resources.ApplyResources(this.butMot, "butMot");
             this.butMot.Name = "butMot";
-            this.butMot.Size = new System.Drawing.Size(94, 23);
-            this.butMot.TabIndex = 10;
-            this.butMot.Text = "Ajouter mot";
             this.butMot.UseVisualStyleBackColor = true;
             this.butMot.Click += new System.EventHandler(this.butMot_Click);
             // 
             // AlimenterPioche
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.butMot);
             this.Controls.Add(this.tBoxMot);
             this.Controls.Add(this.butRetirer);
@@ -170,7 +145,6 @@
             this.Controls.Add(this.lBoxPioche);
             this.Controls.Add(this.lBoxDictionnaire);
             this.Name = "AlimenterPioche";
-            this.Text = "AlimenterPioche";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AlimenterPioche_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

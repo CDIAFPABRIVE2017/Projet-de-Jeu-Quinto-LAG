@@ -38,44 +38,32 @@
             // 
             // labelRegles
             // 
+            resources.ApplyResources(this.labelRegles, "labelRegles");
             this.labelRegles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelRegles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelRegles.Location = new System.Drawing.Point(311, 7);
             this.labelRegles.Name = "labelRegles";
-            this.labelRegles.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelRegles.Size = new System.Drawing.Size(302, 432);
-            this.labelRegles.TabIndex = 6;
-            this.labelRegles.Text = resources.GetString("labelRegles.Text");
-            this.labelRegles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.labelRegles);
-            this.panel1.Location = new System.Drawing.Point(12, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(624, 444);
-            this.panel1.TabIndex = 9;
             // 
             // pictureBox1
             // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::WFQuinto.Properties.Resources.téléchargement;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 432);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // Aide
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 455);
             this.Controls.Add(this.panel1);
             this.Name = "Aide";
-            this.Text = "Aide";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Aide_FormClosed);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

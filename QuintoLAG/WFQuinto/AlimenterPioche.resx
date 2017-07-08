@@ -117,8 +117,298 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;butToutAjouter.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;butAjouter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="butCharger.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 397</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="butToutAjouter.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;butAjouter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;butRetirer.Name" xml:space="preserve">
+    <value>butRetirer</value>
+  </data>
+  <data name="butSauvegarde.Text" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
+  <data name="&gt;&gt;butMot.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="butRetirer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 240</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AlimenterPioche</value>
+  </data>
+  <data name="butAjouter.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lBoxDictionnaire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 368</value>
+  </data>
+  <data name="&gt;&gt;tBoxMot.Name" xml:space="preserve">
+    <value>tBoxMot</value>
+  </data>
+  <data name="tBoxMot.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lBoxPioche.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;butViderListDictionnaire.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tBoxMot.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;butViderListePioche.Name" xml:space="preserve">
+    <value>butViderListePioche</value>
+  </data>
+  <data name="butViderListDictionnaire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 426</value>
+  </data>
+  <data name="tBoxMot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 20</value>
+  </data>
+  <data name="lBoxPioche.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="butAjouter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 211</value>
+  </data>
+  <data name="&gt;&gt;butSauvegarde.Name" xml:space="preserve">
+    <value>butSauvegarde</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;butViderListDictionnaire.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;butSauvegarde.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;butViderListePioche.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lBoxPioche.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;butAjouter.Name" xml:space="preserve">
+    <value>butAjouter</value>
+  </data>
+  <data name="&gt;&gt;butRetirer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;butToutAjouter.Name" xml:space="preserve">
+    <value>butToutAjouter</value>
+  </data>
+  <data name="butViderListePioche.Text" xml:space="preserve">
+    <value>Vider liste</value>
+  </data>
+  <data name="&gt;&gt;butToutAjouter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="butMot.Text" xml:space="preserve">
+    <value>Ajouter mot</value>
+  </data>
+  <data name="&gt;&gt;butViderListDictionnaire.Name" xml:space="preserve">
+    <value>butViderListDictionnaire</value>
+  </data>
+  <data name="&gt;&gt;lBoxDictionnaire.Name" xml:space="preserve">
+    <value>lBoxDictionnaire</value>
+  </data>
+  <data name="&gt;&gt;butAjouter.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lBoxDictionnaire.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lBoxPioche.Name" xml:space="preserve">
+    <value>lBoxPioche</value>
+  </data>
+  <data name="butCharger.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="butSauvegarde.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="&gt;&gt;butViderListePioche.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="butMot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="butAjouter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="butRetirer.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;butCharger.Name" xml:space="preserve">
+    <value>butCharger</value>
+  </data>
+  <data name="butCharger.Text" xml:space="preserve">
+    <value>Charger</value>
+  </data>
+  <data name="&gt;&gt;lBoxDictionnaire.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="butAjouter.Text" xml:space="preserve">
+    <value>Ajouter &gt;&gt;&gt;&gt;</value>
+  </data>
+  <data name="butRetirer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="&gt;&gt;butToutAjouter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="butViderListePioche.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;butRetirer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="butViderListDictionnaire.Text" xml:space="preserve">
+    <value>Vider liste</value>
+  </data>
+  <data name="&gt;&gt;butMot.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="butViderListDictionnaire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="&gt;&gt;butSauvegarde.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="butViderListDictionnaire.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lBoxPioche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 368</value>
+  </data>
+  <data name="&gt;&gt;lBoxPioche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="butViderListePioche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 426</value>
+  </data>
+  <data name="&gt;&gt;butSauvegarde.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="butSauvegarde.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lBoxDictionnaire.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="butToutAjouter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 182</value>
+  </data>
+  <data name="lBoxDictionnaire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 16</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>AlimenterPioche</value>
+  </data>
+  <data name="butMot.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;butCharger.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tBoxMot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 42</value>
+  </data>
+  <data name="butSauvegarde.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 397</value>
+  </data>
+  <data name="butRetirer.Text" xml:space="preserve">
+    <value>&lt;&lt;&lt;&lt; Retirer</value>
+  </data>
+  <data name="&gt;&gt;butViderListDictionnaire.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tBoxMot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;butCharger.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tBoxMot.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;butViderListePioche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;butMot.Name" xml:space="preserve">
+    <value>butMot</value>
+  </data>
+  <data name="&gt;&gt;lBoxDictionnaire.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="butCharger.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="butMot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 68</value>
+  </data>
+  <data name="lBoxPioche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>484, 461</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;butMot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;butRetirer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="butToutAjouter.Text" xml:space="preserve">
+    <value>Tout ajouter</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
+    <value>saveFileDialog1</value>
+  </data>
+  <data name="butToutAjouter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="butViderListePioche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 23</value>
+  </data>
+  <data name="&gt;&gt;butCharger.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>157, 17</value>

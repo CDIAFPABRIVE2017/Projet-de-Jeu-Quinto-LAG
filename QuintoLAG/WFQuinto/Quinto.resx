@@ -117,8 +117,452 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ClavierLigne2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 252</value>
+  </data>
+  <data name="labelTempsReel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 16</value>
+  </data>
+  <data name="label2ScoreTotal.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label2nbreErreur.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="labelTempsReel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;labelTempsReel.Name" xml:space="preserve">
+    <value>labelTempsReel</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBoxErreur.Text" xml:space="preserve">
+    <value>Nombre d'erreurs</value>
+  </data>
+  <data name="&gt;&gt;labelMotaDeviner.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="mancheNombreManche.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>922, 558</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Quinto</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mancheNombreManche.Text" xml:space="preserve">
+    <value>x/X</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="labelMotaDeviner.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="ClavierLigne3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>521, 60</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;label2ScoreTotal.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelTempsReel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="labelMotaDeviner.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;toucheUtilisées.Name" xml:space="preserve">
+    <value>toucheUtilisées</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne1.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="groupBoxErreur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 12</value>
+  </data>
+  <data name="&gt;&gt;mancheNombreManche.Name" xml:space="preserve">
+    <value>mancheNombreManche</value>
+  </data>
+  <data name="ClavierLigne2.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label2ScoreTotal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="labelScore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="labelMotaDeviner.Text" xml:space="preserve">
+    <value>mot à Deviner (5 à 25 lettres max.)</value>
+  </data>
+  <data name="mancheNombreManche.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="label2nbreErreur.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne1.Name" xml:space="preserve">
+    <value>ClavierLigne1</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.Name" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="groupBoxErreur.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="ClavierLigne1.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ClavierLigne1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>737, 60</value>
+  </data>
+  <data name="&gt;&gt;label2ScoreTotal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelTempsReel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Italic, Underline</value>
+  </data>
+  <data name="&gt;&gt;toucheUtilisées.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label2ScoreTotal.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;labelTempsReel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 11</value>
+  </data>
+  <data name="ClavierLigne3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;label2nbreErreur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2ScoreTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 7</value>
+  </data>
+  <data name="labelScore.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;groupBoxErreur.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label2ScoreTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;groupBoxErreur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="toucheUtilisées.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="&gt;&gt;labelScore.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label2nbreErreur.Name" xml:space="preserve">
+    <value>label2nbreErreur</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mancheNombreManche.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelScore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 14</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 12</value>
+  </data>
+  <data name="&gt;&gt;toucheUtilisées.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTempsReel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="groupBoxErreur.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="labelTempsReel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 8</value>
+  </data>
+  <data name="&gt;&gt;labelScore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelMotaDeviner.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelScore.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="labelMotaDeviner.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 283</value>
+  </data>
+  <data name="&gt;&gt;mancheNombreManche.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ClavierLigne3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelScore.Text" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="ClavierLigne2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>737, 60</value>
+  </data>
+  <data name="label2nbreErreur.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 70pt, style=Bold, Italic</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne3.Name" xml:space="preserve">
+    <value>ClavierLigne3</value>
+  </data>
+  <data name="ClavierLigne1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label2nbreErreur.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Quinto</value>
+  </data>
+  <data name="mancheNombreManche.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 96</value>
+  </data>
+  <data name="&gt;&gt;labelScore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toucheUtilisées.Size" type="System.Drawing.Size, System.Drawing">
+    <value>452, 147</value>
+  </data>
+  <data name="ClavierLigne3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 135</value>
+  </data>
+  <data name="ClavierLigne3.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2ScoreTotal.Name" xml:space="preserve">
+    <value>label2ScoreTotal</value>
+  </data>
+  <data name="&gt;&gt;groupBoxErreur.Name" xml:space="preserve">
+    <value>groupBoxErreur</value>
+  </data>
+  <data name="labelMotaDeviner.Size" type="System.Drawing.Size, System.Drawing">
+    <value>901, 57</value>
+  </data>
+  <data name="mancheNombreManche.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 50pt, style=Bold, Italic</value>
+  </data>
+  <data name="&gt;&gt;labelMotaDeviner.Name" xml:space="preserve">
+    <value>labelMotaDeviner</value>
+  </data>
+  <data name="&gt;&gt;toucheUtilisées.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ClavierLigne1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panelClavier.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 343</value>
+  </data>
+  <data name="&gt;&gt;groupBoxErreur.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="&gt;&gt;mancheNombreManche.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2nbreErreur.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Temps écoulé</value>
+  </data>
+  <data name="panelClavier.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panelClavier.Size" type="System.Drawing.Size, System.Drawing">
+    <value>770, 202</value>
+  </data>
+  <data name="&gt;&gt;mancheNombreManche.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 28</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne2.Name" xml:space="preserve">
+    <value>ClavierLigne2</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne3.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="label2nbreErreur.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="label2nbreErreur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 96</value>
+  </data>
+  <data name="&gt;&gt;ClavierLigne2.Parent" xml:space="preserve">
+    <value>panelClavier</value>
+  </data>
+  <data name="labelScore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 7</value>
+  </data>
+  <data name="&gt;&gt;label2ScoreTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 115</value>
+  </data>
+  <data name="labelMotaDeviner.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 26.25pt, style=Bold, Underline</value>
+  </data>
+  <data name="toucheUtilisées.Location" type="System.Drawing.Point, System.Drawing">
+    <value>453, 133</value>
+  </data>
+  <data name="mancheNombreManche.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ClavierLigne2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 69</value>
+  </data>
+  <data name="label2ScoreTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="&gt;&gt;labelMotaDeviner.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBoxErreur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 115</value>
+  </data>
+  <data name="&gt;&gt;label2nbreErreur.Parent" xml:space="preserve">
+    <value>groupBoxErreur</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelScore.Name" xml:space="preserve">
+    <value>labelScore</value>
+  </data>
+  <data name="label2nbreErreur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Manche  / Nombre de Manches</value>
+  </data>
+  <data name="&gt;&gt;panelClavier.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>942, 600</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>2, 12</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>fr</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>36</value>

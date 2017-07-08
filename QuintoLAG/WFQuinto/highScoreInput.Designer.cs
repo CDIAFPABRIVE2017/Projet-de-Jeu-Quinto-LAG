@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(highScoreInput));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -38,47 +39,45 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 37);
+            resources.ApplyResources(this.label1, "label1");
+            this.errorProvider1.SetError(this.label1, resources.GetString("label1.Error"));
+            this.errorProvider1.SetIconAlignment(this.label1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("label1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.label1, ((int)(resources.GetObject("label1.IconPadding"))));
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nouveau record ! Entrez votre pseudo...";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 80);
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.errorProvider1.SetError(this.textBox1, resources.GetString("textBox1.Error"));
+            this.errorProvider1.SetIconAlignment(this.textBox1, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("textBox1.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.textBox1, ((int)(resources.GetObject("textBox1.IconPadding"))));
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 20);
-            this.textBox1.TabIndex = 1;
             this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider1, "errorProvider1");
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(129, 123);
+            resources.ApplyResources(this.btnValider, "btnValider");
+            this.errorProvider1.SetError(this.btnValider, resources.GetString("btnValider.Error"));
+            this.errorProvider1.SetIconAlignment(this.btnValider, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("btnValider.IconAlignment"))));
+            this.errorProvider1.SetIconPadding(this.btnValider, ((int)(resources.GetObject("btnValider.IconPadding"))));
             this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(75, 23);
-            this.btnValider.TabIndex = 2;
-            this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // highScoreInput
             // 
             this.AcceptButton = this.btnValider;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 179);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "highScoreInput";
-            this.Text = "highScoreInput";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
